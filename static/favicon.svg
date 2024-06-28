@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="3 0 55 58">
+  <polygon fill="url(#redGrad)" points="29,58 3,45 3,13 29,26" />
+  <polygon fill="url(#blueGrad)" points="29,58 55,45 55,13 29,26" />
+  <polygon fill="url(#greenGrad)" points="3,13 28,0 55,13 29,26" />
+  <linearGradient id="redGrad" gradientTransform="rotate(135 0.5 0.5)">
+    <stop stop-color="#FFF" />
+    <stop offset="80%" stop-color="#F00" />
+  </linearGradient>
+  <linearGradient id="blueGrad" gradientTransform="rotate(55 0.5 0.5)">
+    <stop stop-color="#FFF" />
+    <stop offset="80%" stop-color="#00F" />
+  </linearGradient>
+  <linearGradient id="greenGrad" gradientTransform="rotate(-90 0.5 0.5)">
+    <stop stop-color="#FFF" />
+    <stop offset="80%" stop-color="#0F0" />
+  </linearGradient>
+</svg>
