@@ -18,17 +18,17 @@ const languageMessages = {
 }
 
 const themeMessages = {
+  'activate-dark-theme': 'Activer le thème sombre',
+  'activate-light-theme': 'Activer le thème clair',
   'theme-dark': 'Thème sombre',
   'theme-light': 'Thème clair',
-  'theme-system': 'Thème du système',
 }
 
 const iconDescriptionMessages = {
   'github-svg-desc': 'Le logo de GitHub, indique que la ressource est disponible sur GitHub.',
   'flag-svg-desc': ({ flag, language }) => `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
-  'theme-dark-svg-desc': 'Icône de nuit, la page est affichée avec un thème sombre.',
-  'theme-light-svg-desc': 'Icône de jour, la page est affichée avec un thème clair.',
-  'theme-system-svg-desc': 'Icône noir et blanc, la page est affichée selon le thème par défaut du système.',
+  'theme-dark-svg-desc': 'Icône de nuit, la page est affichée avec le thème sombre.',
+  'theme-light-svg-desc': 'Icône de jour, la page est affichée avec le thème clair.',
 }
 
 export default {

@@ -1,25 +1,23 @@
 <script context="module">
   import Dark from '$components/icons/themes/Dark.svelte';
   import Light from '$components/icons/themes/Light.svelte';
-  import System from '$components/icons/themes/System.svelte';
-  import Theme from '$runes/theme/enum.js';
-  import theme from '$runes/theme/theme.svelte.js';
-
-  const icons = {
-    [Theme.LIGHT]: Light,
-    [Theme.DARK]: Dark,
-    [Theme.SYSTEM]: System,
-  };
-  const themeValues = Object.values(Theme);
-  const targets = Object.fromEntries(
-    themeValues.map((value, index) => [value, themeValues[(index + 1) % themeValues.length]])
-  );
+  import messages from '$stores/i18n/messages.svelte.js';
+  import classes from '$utils/classes.js';
 </script>
 
 <script>
-  const { ...restProps } = $props();
+  const { elementClass, iconClass } = $props();
+  const enhancedIconClass = $derived(classes(iconClass, 'hover:cursor-pointer'));
 </script>
 
-<button {...restProps} onclick={() => (theme.selected = targets[theme.selected])}>
-  <svelte:component this={icons[theme.selected]} />
-</button>
+<div class={elementClass}>
+  <label for="theme-selector" class="dark-only">
+    <span class="sr-only">{$messages.get('activate-light-theme')}</span>
+    <Dark class={enhancedIconClass} />
+  </label>
+
+  <label for="theme-selector" class="light-only">
+    <span class="sr-only">{$messages.get('activate-dark-theme')}</span>
+    <Light class={enhancedIconClass} />
+  </label>
+</div>

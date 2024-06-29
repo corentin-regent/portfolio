@@ -10,11 +10,11 @@
 
 <footer
   class={classes(
-    'text-center align-middle grid gap-2 mt-auto pb-6',
+    'text-center align-middle grid gap-2 mt-auto pb-4 lg:pb-6',
     'grid-cols-1 lg:grid-cols-3',
     'before:col-span-1 lg:before:col-span-3',
-    'before:bg-gradient-to-r before:from-transparent before:via-dark dark:before:via-light',
-    'before:h-[0.08rem] before:my-4 before:mx-12 2xl:before:mx-24'
+    'before:bg-gradient-to-r before:from-transparent before:via-anti-bg1',
+    'before:h-[0.08rem] before:my-2 lg:before:my-4 before:mx-12 2xl:before:mx-24'
   )}
 >
   <small>&copy; 2024 {$messages.get('my-name')}</small>

@@ -1,16 +1,15 @@
-import colors from 'tailwindcss/colors';
-
 export default {
   content: ['./src/**/*.{html,svelte}'],
-  darkMode: 'selector',
   theme: {
     extend: {
-      colors: {
-        light: colors.zinc['100'],
-        gray: colors.zinc['500'],
-        dark: colors.zinc['900'],
-        primary: '#FF5700',
-      },
+      colors: Object.fromEntries([
+        'anti-bg1',
+        'anti-bg2',
+        'bg1',
+        'primary1',
+        'text1',
+        'text2'
+      ].map(colorName => [colorName, `var(--${colorName})`])),
       grayscale: {
         75: '75%',
       },

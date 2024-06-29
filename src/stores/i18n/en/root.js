@@ -18,17 +18,17 @@ const languageMessages = {
 }
 
 const themeMessages = {
+  'activate-dark-theme': 'Activate the dark theme',
+  'activate-light-theme': 'Activate the light theme',
   'theme-dark': 'Dark theme',
   'theme-light': 'Light theme',
-  'theme-system': 'System theme',
 }
 
 const iconDescriptionMessages = {
   'github-svg-desc': 'The GitHub logo, indicates that the resource is available on GitHub.',
   'flag-svg-desc': ({ flag, language }) => `The ${languageMessages[flag]}. Represents the ability to translate the page in ${languageMessages[language]}.`,
-  'theme-dark-svg-desc': 'Night icon, the page is rendered using a dark theme.',
-  'theme-light-svg-desc': 'Day icon, the page is rendered using a light theme.',
-  'theme-system-svg-desc': 'Black and white icon, the page is rendered using the default theme of the system.',
+  'theme-dark-svg-desc': 'Night icon, the page is rendered using the dark theme.',
+  'theme-light-svg-desc': 'Day icon, the page is rendered using the light theme.',
 }
 
 export default {

@@ -1,3 +1,51 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  /* Light theme */
+  --anti-bg1: #18181B;
+  --anti-bg2: #71717A;
+  --bg1: #F4F4F5;
+  --primary1: #FF5700;
+  --text1: black;
+  --text2: #71717A;
+}
+
+@define-mixin light-theme {
+  ~div .dark-only {
+    display: none;
+  }
+}
+
+@define-mixin dark-theme {
+  ~div {
+    --anti-bg1: #F4F4F5;
+    --bg1: #18181B;
+    --text1: white;
+
+    .light-only {
+      display: none;
+    }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  #theme-selector:not(:checked) {
+    @mixin dark-theme;
+  }
+
+  #theme-selector:checked {
+    @mixin light-theme;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  #theme-selector:not(:checked) {
+    @mixin light-theme;
+  }
+
+  #theme-selector:checked {
+    @mixin dark-theme;
+  }
+}

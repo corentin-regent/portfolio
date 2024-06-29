@@ -1,32 +1,24 @@
 import { browser } from '$app/environment';
-import Theme from './enum.js';
+import systemTheme from './system.svelte.js';
 
 const storageKey = 'theme';
 
 function selectedThemeRune() {
   if (!browser) {
-    return { get: () => Theme.SYSTEM };
+    return systemTheme;
   }
 
-  let selectedTheme = $state(window.localStorage.getItem(storageKey) ?? Theme.SYSTEM);
+  let selectedTheme = $state(window.localStorage.getItem(storageKey));
   window.addEventListener('storage', event => {
-    if (event.key !== storageKey) {
-      return;
-    }
-    const newSelectedTheme = event.newValue ?? Theme.SYSTEM;
-    if (selectedTheme !== newSelectedTheme) {
-      selectedTheme = newSelectedTheme;
+    if (event.key === storageKey && event.newValue !== selectedTheme) {
+      selectedTheme = event.newValue;
     }
   });
 
   return {
-    get: () => selectedTheme,
+    get: () => selectedTheme ?? systemTheme.get(),
     set(theme) {
-      if (theme === Theme.SYSTEM) {
-        window.localStorage.removeItem(storageKey);
-      } else {
-        window.localStorage.setItem(storageKey, theme);
-      }
+      window.localStorage.setItem(storageKey, theme);
       selectedTheme = theme;
     },
   };

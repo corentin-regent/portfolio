@@ -1,24 +1,17 @@
 <script context="module">
   import Footer from '$components/Footer.svelte';
   import Header from '$components/Header.svelte';
-  import Theme from '$runes/theme/enum.js';
-  import theme from '$runes/theme/theme.svelte.js';
+  import theme from '$runes/theme/index.svelte.js';
   import messages from '$stores/i18n/messages.svelte.js';
   import availableLanguages from '$stores/language/available.js';
   import defaultLanguage from '$stores/language/default.js';
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import resolve from '$stores/navigation/resolve.svelte.js';
-  import classes from '$utils/classes.js';
   import '../app.css';
 </script>
 
 <script>
   const { children } = $props();
-
-  let isDarkTheme = $derived.by(() => {
-    const themeColor = theme.selected === Theme.SYSTEM ? theme.system : theme.selected;
-    return themeColor === Theme.DARK;
-  });
 </script>
 
 <svelte:head>
@@ -43,12 +36,15 @@
   <link rel="author" href={$resolve({ endpoint: '/', absolute: true })} />
 </svelte:head>
 
-<div
-  class={classes(
-    'flex flex-col w-screen h-screen bg-light text-dark dark:bg-dark dark:text-light',
-    isDarkTheme && 'dark'
-  )}
->
+<input
+  id="theme-selector"
+  type="checkbox"
+  class="sr-only"
+  checked={!theme.isSameAsSystem}
+  onchange={theme.toggle}
+/>
+
+<div class="flex flex-col w-screen h-screen bg-bg1 text-text1">
   <Header />
   <div>⚠️ {$messages.get('wip')}</div>
   {@render children()}

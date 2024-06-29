@@ -2,7 +2,6 @@
   import ChooseLanguage from '$components/ChooseLanguage.svelte';
   import ChooseTheme from '$components/ChooseTheme.svelte';
   import Menu from '$components/Menu.svelte';
-  import js from '$runes/js/js.svelte.js';
 
   const menuItems = [
     { message: 'home', endpoint: '/' },
@@ -12,16 +11,15 @@
   ];
 </script>
 
-<header class="py-3 lg:py-6 border-b border-gray grid grid-cols-3">
+<header class="py-2 md:py-4 lg:py-6 border-b border-anti-bg2 flex">
+  <ChooseTheme elementClass="pl-4 flex items-center flex-1" iconClass="w-8" />
   <Menu
     items={menuItems}
-    elementClass="col-start-2 text-center"
-    liClass="lg:inline lg:mx-1 xl:mx-1.5"
+    elementClass="col-span-2 text-center md:leading-8 flex-grow"
+    liClass="md:inline md:mx-1.5"
   />
-  <div class="flex items-center justify-end">
-    {#if js.isEnabled}
-      <ChooseTheme class="w-8 mr-3" />
-    {/if}
-    <ChooseLanguage elementClass="mr-2 lg:mr-4" flagClass="h-8 mx-1 inline rounded-sm" />
-  </div>
+  <ChooseLanguage
+    elementClass="flex items-center justify-end pr-2 lg:pr-4 flex-1"
+    flagClass="h-8 mx-1 inline rounded-sm"
+  />
 </header>

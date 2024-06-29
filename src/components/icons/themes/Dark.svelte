@@ -2,7 +2,11 @@
   import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+<script>
+  const { ...restProps } = $props();
+</script>
+
+<svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
   <title>{$messages.get('theme-dark')}</title>
   <desc>{$messages.get('theme-dark-svg-desc')}</desc>
 
