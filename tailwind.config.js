@@ -13,6 +13,9 @@ export default {
       grayscale: {
         75: '75%',
       },
+      screens: {
+        xs: '512px',
+      }
     },
   },
 };

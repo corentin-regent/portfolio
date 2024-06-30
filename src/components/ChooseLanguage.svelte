@@ -7,14 +7,14 @@
 </script>
 
 <script>
-  const { elementClass, flagClass } = $props();
+  const { elementClass, wrapperClass, flagClass } = $props();
 </script>
 
 <nav class={elementClass}>
   <ul>
     {#each availableLanguages as language}
       <li class="inline">
-        <Link {language} data-sveltekit-noscroll>
+        <Link class={wrapperClass} {language} data-sveltekit-noscroll>
           <Flag
             {language}
             class={classes(

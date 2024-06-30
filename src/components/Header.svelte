@@ -20,6 +20,7 @@
   />
   <ChooseLanguage
     elementClass="flex items-center justify-end pr-2 lg:pr-4 flex-1"
-    flagClass="h-8 mx-1 inline rounded-sm"
+    wrapperClass="flex justify-center xs:inline"
+    flagClass="w-12 xs:w-fit xs:h-8 my-1 mx-1 inline rounded-sm"
   />
 </header>
