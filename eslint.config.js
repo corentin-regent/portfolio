@@ -14,7 +14,7 @@ export default [
         $derived: 'readonly',
         $state: 'readonly',
         describe: 'readonly',
-        expect: "readonly",
+        expect: 'readonly',
         it: 'readonly',
       },
     },

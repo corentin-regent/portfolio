@@ -4,24 +4,24 @@
 
 :root {
   /* Light theme */
-  --anti-bg1: #18181B;
-  --anti-bg2: #71717A;
-  --bg1: #F4F4F5;
-  --primary1: #FF5700;
+  --anti-bg1: #18181b;
+  --anti-bg2: #71717a;
+  --bg1: #f4f4f5;
+  --primary1: #ff5700;
   --text1: black;
-  --text2: #71717A;
+  --text2: #71717a;
 }
 
 @define-mixin light-theme {
-  ~div .dark-only {
+  ~ div .dark-only {
     display: none;
   }
 }
 
 @define-mixin dark-theme {
-  ~div {
-    --anti-bg1: #F4F4F5;
-    --bg1: #18181B;
+  ~ div {
+    --anti-bg1: #f4f4f5;
+    --bg1: #18181b;
     --text1: white;
 
     .light-only {

@@ -1,3 +1,3 @@
 export default function withTrailingSlash(str) {
-  return str.endsWith('/') ? str : str + '/'
+  return str.endsWith('/') ? str : str + '/';
 }
