@@ -9,6 +9,6 @@ export default derived([page, resolve], ([$page, $resolve]) => {
   return [
     '/',
     ...accumulate(pathParts, (path, part) => `${path}/${part}`).map(endpoint => `/${endpoint}/`),
-    ...($page.error ? [$resolve({ endpoint: '/error', includeDefaultLanguage: true })] : [])
+    ...($page.error ? [$resolve({ endpoint: '/error', includeDefaultLanguage: true })] : []),
   ];
 });

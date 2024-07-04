@@ -1,7 +1,8 @@
 const metadata = {
-  'page-description': "Corentin Régent est un ingénieur logiciel passionné, dévoué au renforcement continu de ses vastes compétences techniques.",
+  'page-description':
+    'Corentin Régent est un ingénieur logiciel passionné, dévoué au renforcement continu de ses vastes compétences techniques.',
   'page-title': "Page d'accueil",
-}
+};
 
 const rootPageMessages = {
   contact: 'Contact',
@@ -19,21 +20,22 @@ const languageMessages = {
   french: 'Français',
   'french-flag': 'drapeau Français',
   'united-kingdom-flag': 'drapeau du Royaume-Uni',
-}
+};
 
 const themeMessages = {
   'activate-dark-theme': 'Activer le thème sombre',
   'activate-light-theme': 'Activer le thème clair',
   'theme-dark': 'Thème sombre',
   'theme-light': 'Thème clair',
-}
+};
 
 const iconDescriptionMessages = {
   'github-svg-desc': 'Le logo de GitHub, indique que la ressource est disponible sur GitHub.',
-  'flag-svg-desc': ({ flag, language }) => `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
+  'flag-svg-desc': ({ flag, language }) =>
+    `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
   'theme-dark-svg-desc': 'Icône de nuit, la page est affichée avec le thème sombre.',
   'theme-light-svg-desc': 'Icône de jour, la page est affichée avec le thème clair.',
-}
+};
 
 export default {
   ...metadata,
@@ -41,4 +43,4 @@ export default {
   ...languageMessages,
   ...themeMessages,
   ...iconDescriptionMessages,
-}
+};

@@ -25,7 +25,7 @@
   <meta name="color-scheme" content="dark light" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="canonical" href={$resolve({absolute: true})} />
+  <link rel="canonical" href={$resolve({ absolute: true })} />
   {#each availableLanguages as language}
     <link rel="alternate" hreflang={language} href={$resolve({ language, absolute: true })} />
   {/each}
