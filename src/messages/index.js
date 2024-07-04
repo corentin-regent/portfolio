@@ -1,3 +1,4 @@
+import withTrailingSlash from '$utils/withTrailingSlash.js'
 import enContact from './en/contact.js'
 import enError from './en/error.js'
 import enExperience from './en/experience.js'
@@ -32,10 +33,6 @@ export default {
     Object.entries({
       en,
       fr,
-    }).flatMap(([language, languageMessages]) => Object.entries(languageMessages).map(([route, routeMessages]) => [addTrailingSlash(`/${language}${route}`), routeMessages]))
+    }).flatMap(([language, languageMessages]) => Object.entries(languageMessages).map(([route, routeMessages]) => [withTrailingSlash(`/${language}${route}`), routeMessages]))
   )
-}
-
-function addTrailingSlash(str) {
-  return str.endsWith('/') ? str : str + '/'
 }
