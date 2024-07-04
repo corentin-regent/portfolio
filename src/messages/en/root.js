@@ -1,10 +1,14 @@
+const metadata = {
+  'page-description': 'Corentin Régent is a passionate software engineer from France, dedicated to continuously enhancing his broad technical skills.',
+  'page-title': 'Home page',
+}
+
 const rootPageMessages = {
   contact: 'Contact',
   experience: 'Experience',
   home: 'Home',
   'made-with': 'Made with',
   'my-portfolio': "Corentin Régent's Portfolio",
-  'page-title': 'Home page',
   projects: 'Projects',
   'view-github-repo': 'View the GitHub repository',
   wip: 'This page is a Work In Progress.',
@@ -32,6 +36,7 @@ const iconDescriptionMessages = {
 }
 
 export default {
+  ...metadata,
   ...rootPageMessages,
   ...languageMessages,
   ...themeMessages,

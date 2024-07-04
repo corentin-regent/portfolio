@@ -10,11 +10,11 @@ export default [
   {
     languageOptions: {
       globals: {
-        console: 'readonly',
         window: 'readonly',
         $derived: 'readonly',
         $state: 'readonly',
         describe: 'readonly',
+        expect: "readonly",
         it: 'readonly',
       },
     },

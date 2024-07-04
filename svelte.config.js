@@ -11,6 +11,7 @@ export default {
     }),
     alias: {
       '$components/*': 'src/components/*',
+      '$messages/*': 'src/messages/*',
       '$runes/*': 'src/runes/*',
       '$stores/*': 'src/stores/*',
       '$utils/*': 'src/utils/*',

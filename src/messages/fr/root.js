@@ -1,10 +1,14 @@
+const metadata = {
+  'page-description': "Corentin Régent est un ingénieur logiciel passionné, dévoué au renforcement continu de ses vastes compétences techniques.",
+  'page-title': "Page d'accueil",
+}
+
 const rootPageMessages = {
   contact: 'Contact',
   experience: 'Expérience',
   home: 'Accueil',
   'made-with': 'Réalisé avec',
   'my-portfolio': 'Portfolio de Corentin Régent',
-  'page-title': "Page d'accueil",
   projects: 'Projets',
   'view-github-repo': 'Voir le dépôt GitHub',
   wip: 'Cette page est en cours de développement.',
@@ -32,6 +36,7 @@ const iconDescriptionMessages = {
 }
 
 export default {
+  ...metadata,
   ...rootPageMessages,
   ...languageMessages,
   ...themeMessages,

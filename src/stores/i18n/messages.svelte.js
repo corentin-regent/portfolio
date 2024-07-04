@@ -1,16 +1,20 @@
+import allMessages from '$messages/index.js';
 import { derived } from 'svelte/store';
-import allMessages from './allMessages.svelte.js';
 import namespaces from './namespaces.svelte.js';
 
-export default derived([allMessages, namespaces], ([$allMessages, $namespaces]) => {
+export default derived(namespaces, $namespaces => {
   const availableMessages = $namespaces.reduce(
-    (messages, namespace) => ({ ...messages, ...$allMessages[namespace] }),
+    (messages, namespace) => ({ ...messages, ...allMessages[namespace] }),
     {}
   );
   return {
     get(messageId, interpolated) {
       const message = availableMessages[messageId]
-      return interpolated ? message(interpolated) : message
+      const ret = interpolated ? message(interpolated) : message
+      if (ret === undefined) {
+        throw new Error(`Message '${messageId}' not found in namespaces: ${$namespaces.map(namespace => `'${namespace}'`).join(', ')}`)
+      }
+      return ret
     }
   };
 });
