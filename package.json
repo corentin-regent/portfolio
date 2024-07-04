@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vite build",
     "dev": "vite dev",
-    "serve": "http-server build/",
+    "serve": "http-server -c-1 build/",
     "lint": "prettier --write --check . && eslint .",
     "test": "NODE_OPTIONS='--experimental-vm-modules' npx jest"
   },
