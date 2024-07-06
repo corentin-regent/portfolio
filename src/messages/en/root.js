@@ -40,7 +40,7 @@ const iconDescriptionMessages = {
 
 const placeHolders = {
   'email-placeholder': 'name@example.com',
-}
+};
 
 export default {
   ...metadata,

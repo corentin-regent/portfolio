@@ -6,8 +6,8 @@ This is the GitHub repository for [my portfolio website](https://corentin-regent
 made with the [SvelteKit](https://kit.svelte.dev/) framework, pre-rendered and built as a static
 website, and hosted on [GitHub Pages](https://docs.github.com/en/pages).
 
-The website was designed with performance, accessibility and SEO in mind, therefore it works just fine [when
-Javascript is unavailable](https://www.kryogenix.org/code/browser/everyonehasjs.html).
+The website was designed with performance, accessibility and SEO in mind, therefore it works just
+fine [when Javascript is unavailable](https://www.kryogenix.org/code/browser/everyonehasjs.html).
 Javascript users will have their experience improved though, thanks to progressive enhancement.
 
 ## License
