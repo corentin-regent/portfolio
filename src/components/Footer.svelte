@@ -1,5 +1,5 @@
 <script context="module">
-  import Github from '$components/icons/Github.svelte';
+  import Github from '$components/icons/logos/Github.svelte';
   import BaseLink from '$components/links/Base.svelte';
   import SimpleLink from '$components/links/Simple.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

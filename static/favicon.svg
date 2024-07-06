@@ -7,6 +7,6 @@
   </linearGradient>
   <linearGradient id="arrowGrad" gradientTransform="rotate(90 0.5 0.5)">
     <stop stop-color="#cf022b" />
-    <stop offset="1" stop-color="#EC6E05" />
+    <stop offset="1" stop-color="#ec6e05" />
   </linearGradient>
 </svg>

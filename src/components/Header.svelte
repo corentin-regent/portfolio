@@ -15,7 +15,7 @@
   <ChooseTheme elementClass="pl-4 flex items-center flex-1" iconClass="w-8" />
   <Menu
     items={menuItems}
-    elementClass="col-span-2 text-center md:leading-8 flex-grow"
+    elementClass="text-center md:leading-10 flex-grow"
     liClass="md:inline md:mx-1.5"
   />
   <ChooseLanguage

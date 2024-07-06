@@ -31,11 +31,16 @@ const themeMessages = {
 
 const iconDescriptionMessages = {
   'github-svg-desc': 'The GitHub logo, indicates that the resource is available on GitHub.',
+  'favicon-desc': 'The favicon of the website, representing an arrow in a circle.',
   'flag-svg-desc': ({ flag, language }) =>
     `The ${languageMessages[flag]}. Represents the ability to translate the page in ${languageMessages[language]}.`,
   'theme-dark-svg-desc': 'Night icon, the page is rendered using the dark theme.',
   'theme-light-svg-desc': 'Day icon, the page is rendered using the light theme.',
 };
+
+const placeHolders = {
+  'email-placeholder': 'name@example.com',
+}
 
 export default {
   ...metadata,
@@ -43,4 +48,5 @@ export default {
   ...languageMessages,
   ...themeMessages,
   ...iconDescriptionMessages,
+  ...placeHolders,
 };
