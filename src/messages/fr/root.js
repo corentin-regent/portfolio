@@ -30,8 +30,8 @@ const themeMessages = {
 };
 
 const otherIconTitles = {
-  "email": 'E-mail',
-}
+  email: 'E-mail',
+};
 
 const iconDescriptionMessages = {
   'email-svg-desc': "Icône d'enveloppe, accompagne une référence à une adresse e-mail.",
