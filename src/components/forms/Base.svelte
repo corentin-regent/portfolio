@@ -13,7 +13,7 @@
 <form
   {...restProps}
   inert={isSending}
-  class={classes(cls, 'grid grid-cols-1 gap-4')}
+  class={classes(cls, 'grid grid-cols-1')}
   use:enhance={() => {
     isSending = true;
     return async ({ update }) => {
@@ -23,7 +23,7 @@
   }}
 >
   {@render children()}
-  <div class="grid grid-cols-5">
+  <div class="grid grid-cols-5 mt-4">
     <div class={classes('duration-500', isSending ? 'opacity-100' : 'opacity-0')}>
       <Favicon class="animate-spin-non-uniform w-10 mx-4 ml-auto" />
     </div>

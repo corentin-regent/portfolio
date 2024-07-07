@@ -14,10 +14,10 @@ const pageMessages = {
 };
 
 const formMessages = {
-  'email-label': 'Votre email',
-  'email-subject-label': 'Objet',
+  'email-label': 'Votre email :',
+  'email-subject-label': 'Objet :',
   'email-subject-placeholder': 'Invitation à une soirée pizza',
-  'email-body-label': 'Votre message',
+  'email-body-label': 'Votre message :',
   'email-body-placeholder': 'Laissez-moi un message...',
   'submit-email-form': 'Envoyer',
 };

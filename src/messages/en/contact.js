@@ -13,10 +13,10 @@ const pageMessages = {
 };
 
 const formMessages = {
-  'email-label': 'Your email',
-  'email-subject-label': 'Subject',
+  'email-label': 'Your email:',
+  'email-subject-label': 'Subject:',
   'email-subject-placeholder': 'Invitation to a pizza party',
-  'email-body-label': 'Your message',
+  'email-body-label': 'Your message:',
   'email-body-placeholder': 'Leave me a message...',
   'submit-email-form': 'Send',
 };
