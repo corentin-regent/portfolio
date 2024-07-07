@@ -1,3 +1,4 @@
+import { base as basePath } from '$app/paths';
 import withTrailingSlash from '$utils/withTrailingSlash.js';
 import enContact from './en/contact.js';
 import enError from './en/error.js';
@@ -27,7 +28,7 @@ const fr = {
   '/projects': frProjects,
 };
 
-export default {
+export default Object.fromEntries(Object.entries({
   '/': root,
   ...Object.fromEntries(
     Object.entries({
@@ -40,4 +41,4 @@ export default {
       ])
     )
   ),
-};
+}).map(([path, messages]) => [basePath + path, messages]));

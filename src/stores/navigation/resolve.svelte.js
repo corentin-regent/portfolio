@@ -1,3 +1,4 @@
+import { base as basePath } from '$app/paths';
 import { page } from '$app/stores';
 import defaultLanguage from '$stores/language/default.js';
 import selectedLanguage from '$stores/language/selected.svelte.js';
@@ -15,9 +16,10 @@ export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) =>
   }) => {
     const endpointWithoutLanguage = endpoint.replace(new RegExp(`^/${$selectedLanguage}/`), '/');
     const includeLanguage = includeDefaultLanguage || language !== defaultLanguage;
-    const resolvedEndpoint = includeLanguage
+    const endpointWithLanguage = includeLanguage
       ? `/${language}${endpointWithoutLanguage}`
       : endpointWithoutLanguage;
-    return withTrailingSlash(absolute ? origin + resolvedEndpoint : resolvedEndpoint);
+    const endpointIncludingBase = basePath.startsWith('/') ? basePath + endpointWithLanguage : endpointWithLanguage
+    return withTrailingSlash(absolute ? origin + endpointIncludingBase : endpointIncludingBase);
   };
 });
