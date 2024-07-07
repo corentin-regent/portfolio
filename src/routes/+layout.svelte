@@ -50,7 +50,7 @@
   onchange={theme.toggle}
 />
 
-<div class="flex flex-col w-screen h-screen bg-bg1 text-text1">
+<div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
   <Header />
   <div>⚠️ {$messages.get('wip')}</div>
   {@render children()}

@@ -29,7 +29,12 @@ const themeMessages = {
   'theme-light': 'Thème clair',
 };
 
+const otherIconTitles = {
+  "email": 'E-mail',
+}
+
 const iconDescriptionMessages = {
+  'email-svg-desc': "Icône d'enveloppe, accompagne une référence à une adresse e-mail.",
   'github-svg-desc': 'Le logo de GitHub, indique que la ressource est disponible sur GitHub.',
   'favicon-desc': 'Le favicon du site, représentant une flèche dans un cercle.',
   'flag-svg-desc': ({ flag, language }) =>
@@ -47,6 +52,7 @@ export default {
   ...rootPageMessages,
   ...languageMessages,
   ...themeMessages,
+  ...otherIconTitles,
   ...iconDescriptionMessages,
   ...placeHolders,
 };

@@ -9,20 +9,20 @@
     --bg2: #d4d4d8;
     --bg3: #9ca3af;
     --primary1: #ff5700;
-    --primary-lighter1: #f07d00;
     --primary-darker1: #cf022b;
+    --primary-lighter1: #f07d00;
     --text1: black;
     --text2: #27272a;
   }
 
   @define-mixin light-theme {
-    ~ div .dark-only {
+    ~div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~ div {
+    ~div {
       --anti-bg1: #fafafa;
       --anti-bg2: #d4d4d8;
       --bg1: #09090b;

@@ -3,9 +3,9 @@
 </script>
 
 <script>
-  const { email, ...restProps } = $props();
+  const { email } = $props();
 </script>
 
-<Link {...restProps} url={`mailto:${email}`} target="_blank" class="font-bold">
+<Link url={`mailto:${email}`} target="_blank">
   {email}
 </Link>

@@ -15,6 +15,8 @@ export default {
           'bg2',
           'bg3',
           'primary1',
+          'primary-darker1',
+          'primary-lighter1',
           'text1',
           'text2',
           'text-light',

@@ -4,6 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-svg {
-  fill: currentColor;
+@layer base {
+  svg {
+    fill: currentColor;
+  }
+}
+
+@layer utilities {
+  .gradient-bg {
+    @apply from-primary-lighter1 to-primary-darker1;
+  }
 }

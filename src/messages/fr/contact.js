@@ -14,7 +14,7 @@ const pageMessages = {
 };
 
 const formMessages = {
-  'email-label': 'Votre email :',
+  'email-label': 'Votre adresse e-mail :',
   'email-subject-label': 'Objet :',
   'email-subject-placeholder': 'Invitation à une soirée pizza',
   'email-body-label': 'Votre message :',

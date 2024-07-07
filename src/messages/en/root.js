@@ -29,7 +29,12 @@ const themeMessages = {
   'theme-light': 'Light theme',
 };
 
+const otherIconTitles = {
+  "email": 'Email',
+}
+
 const iconDescriptionMessages = {
+  'email-svg-desc': 'Envelope icon, accompanies a reference to an email address.',
   'github-svg-desc': 'The GitHub logo, indicates that the resource is available on GitHub.',
   'favicon-desc': 'The favicon of the website, representing an arrow in a circle.',
   'flag-svg-desc': ({ flag, language }) =>
@@ -47,6 +52,7 @@ export default {
   ...rootPageMessages,
   ...languageMessages,
   ...themeMessages,
+  ...otherIconTitles,
   ...iconDescriptionMessages,
   ...placeHolders,
 };
