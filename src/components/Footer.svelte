@@ -20,8 +20,7 @@
   <small>&copy; 2024 {$messages.get('my-name')}</small>
 
   <div>
-    {$messages.get('made-with')}
-    <SimpleLink url="https://kit.svelte.dev/" target="_blank">
+    {$messages.get('made-with')}&nbsp;<SimpleLink url="https://kit.svelte.dev/" target="_blank">
       {$messages.get('svelte-kit')}
     </SimpleLink>
   </div>
