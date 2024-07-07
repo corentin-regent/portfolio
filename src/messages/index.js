@@ -28,17 +28,19 @@ const fr = {
   '/projects': frProjects,
 };
 
-export default Object.fromEntries(Object.entries({
-  '/': root,
-  ...Object.fromEntries(
-    Object.entries({
-      en,
-      fr,
-    }).flatMap(([language, languageMessages]) =>
-      Object.entries(languageMessages).map(([route, routeMessages]) => [
-        withTrailingSlash(`/${language}${route}`),
-        routeMessages,
-      ])
-    )
-  ),
-}).map(([path, messages]) => [basePath + path, messages]));
+export default Object.fromEntries(
+  Object.entries({
+    '/': root,
+    ...Object.fromEntries(
+      Object.entries({
+        en,
+        fr,
+      }).flatMap(([language, languageMessages]) =>
+        Object.entries(languageMessages).map(([route, routeMessages]) => [
+          withTrailingSlash(`/${language}${route}`),
+          routeMessages,
+        ])
+      )
+    ),
+  }).map(([path, messages]) => [basePath + path, messages])
+);
