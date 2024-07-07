@@ -10,7 +10,13 @@ export default derived(namespaces, $namespaces => {
   return {
     get(messageId, interpolated) {
       const message = availableMessages[messageId];
-      return interpolated ? message(interpolated) : message;
+      const ret = interpolated ? message(interpolated) : message;
+      if (ret === undefined) {
+        throw new Error(
+          `Message '${messageId}' not found in namespaces: ${$namespaces.map(namespace => `'${namespace}'`).join(', ')}`
+        );
+      }
+      return ret;
     },
   };
 });
