@@ -42,6 +42,6 @@ const routeToMessages = {
       ])
     )
   ),
-}
+};
 
 export default mapKeys(routeToMessages, ({ key: path }) => basePath + path);

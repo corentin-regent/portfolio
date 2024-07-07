@@ -14,9 +14,7 @@ export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) =>
     absolute = false,
     includeDefaultLanguage = false,
   }) => {
-    const routeWithoutBasePath = basePath
-      ? route.replace(new RegExp(`^${basePath}`), '')
-      : route;
+    const routeWithoutBasePath = basePath ? route.replace(new RegExp(`^${basePath}`), '') : route;
     const routeWithoutLanguage = routeWithoutBasePath.replace(
       new RegExp(`^/${$selectedLanguage}/`),
       '/'
