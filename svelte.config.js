@@ -41,6 +41,6 @@ export default {
     moduleExtensions: ['.js'],
     paths: {
       base: process.env.BASE_PATH ?? '',
-    }
+    },
   },
 };

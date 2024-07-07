@@ -2,9 +2,10 @@
 
 ⚠️ The website is a Work In Progress.
 
-This is the GitHub repository for [my portfolio website](https://corentin-regent.github.io/portfolio/). It was
-made with the [SvelteKit](https://kit.svelte.dev/) framework, pre-rendered and built as a static
-website, and hosted on [GitHub Pages](https://docs.github.com/en/pages).
+This is the GitHub repository for
+[my portfolio website](https://corentin-regent.github.io/portfolio/). It was made with the
+[SvelteKit](https://kit.svelte.dev/) framework, pre-rendered and built as a static website, and
+hosted on [GitHub Pages](https://docs.github.com/en/pages).
 
 The website was designed with performance, accessibility and SEO in mind, therefore it works just
 fine [when Javascript is unavailable](https://www.kryogenix.org/code/browser/everyonehasjs.html).
