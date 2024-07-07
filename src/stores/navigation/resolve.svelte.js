@@ -14,8 +14,13 @@ export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) =>
     absolute = false,
     includeDefaultLanguage = false,
   }) => {
-    const endpointWithoutBasePath = basePath ? endpoint.replace(new RegExp(`^${basePath}`), '') : endpoint
-    const endpointWithoutLanguage = endpointWithoutBasePath.replace(new RegExp(`^/${$selectedLanguage}/`), '/')
+    const endpointWithoutBasePath = basePath
+      ? endpoint.replace(new RegExp(`^${basePath}`), '')
+      : endpoint;
+    const endpointWithoutLanguage = endpointWithoutBasePath.replace(
+      new RegExp(`^/${$selectedLanguage}/`),
+      '/'
+    );
     const includeLanguage = includeDefaultLanguage || language !== defaultLanguage;
     const endpointWithLanguage = includeLanguage
       ? `/${language}${endpointWithoutLanguage}`
