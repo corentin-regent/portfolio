@@ -10,6 +10,7 @@ export default [
   {
     languageOptions: {
       globals: {
+        setTimeout: 'readonly',
         window: 'readonly',
         $derived: 'readonly',
         $state: 'readonly',
