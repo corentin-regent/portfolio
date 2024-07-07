@@ -6,8 +6,8 @@
   const { icon, children, class: cls, width, height } = $props();
 </script>
 
-<div class="font-semibold flex items-center text-text-light">
-  <div class="rounded-full overflow-hidden z-[1]">
+<div class="font-semibold flex items-center">
+  <div class="rounded-full overflow-hidden z-[1] text-text-light">
     <svelte:component
       this={icon}
       class={classes(cls, width, height, 'bg-gradient-to-t gradient-bg')}
