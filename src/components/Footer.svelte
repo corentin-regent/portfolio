@@ -5,7 +5,7 @@
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 
-  const githubRepoLink = 'https://github.com/corentin-regent/corentin-regent.github.io';
+  const githubRepoLink = 'https://github.com/corentin-regent/portfolio';
 </script>
 
 <footer

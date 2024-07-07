@@ -38,7 +38,7 @@
   <link rel="author" href={$resolve({ endpoint: '/', absolute: true })} />
   <link
     rel="license"
-    href="https://github.com/corentin-regent/corentin-regent.github.io?tab=readme-ov-file#license"
+    href="https://github.com/corentin-regent/portfolio?tab=readme-ov-file#license"
   />
 </svelte:head>
 

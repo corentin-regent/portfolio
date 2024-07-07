@@ -39,5 +39,8 @@ export default {
       '$utils/*': 'src/utils/*',
     },
     moduleExtensions: ['.js'],
+    paths: {
+      base: process.env.BASE_PATH ?? '',
+    }
   },
 };

@@ -4,7 +4,7 @@ import selectedLanguage from '$stores/language/selected.svelte.js';
 import withTrailingSlash from '$utils/withTrailingSlash.js';
 import { derived } from 'svelte/store';
 
-const origin = 'https://corentin-regent.github.io';
+const origin = 'https://corentin-regent.github.io/portfolio';
 
 export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) => {
   return ({

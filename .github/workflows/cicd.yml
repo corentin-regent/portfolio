@@ -59,6 +59,8 @@ jobs:
         run: npm ci
 
       - name: Build the static website
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
         run: npm run build
 
       - name: Execute tests

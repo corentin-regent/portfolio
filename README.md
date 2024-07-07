@@ -2,7 +2,7 @@
 
 ⚠️ The website is a Work In Progress.
 
-This is the GitHub repository for [my portfolio website](https://corentin-regent.github.io/). It was
+This is the GitHub repository for [my portfolio website](https://corentin-regent.github.io/portfolio/). It was
 made with the [SvelteKit](https://kit.svelte.dev/) framework, pre-rendered and built as a static
 website, and hosted on [GitHub Pages](https://docs.github.com/en/pages).
 

@@ -1,5 +1,5 @@
 {
-  "name": "corentin-regent/corentin-regent.github.io",
+  "name": "corentin-regent/portfolio",
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
     "ghcr.io/devcontainers/features/node": {},
