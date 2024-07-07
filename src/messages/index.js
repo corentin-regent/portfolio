@@ -1,4 +1,5 @@
 import { base as basePath } from '$app/paths';
+import mapKeys from '$utils/mapKeys.js';
 import withTrailingSlash from '$utils/withTrailingSlash.js';
 import enContact from './en/contact.js';
 import enError from './en/error.js';
@@ -28,19 +29,19 @@ const fr = {
   '/projects': frProjects,
 };
 
-export default Object.fromEntries(
-  Object.entries({
-    '/': root,
-    ...Object.fromEntries(
-      Object.entries({
-        en,
-        fr,
-      }).flatMap(([language, languageMessages]) =>
-        Object.entries(languageMessages).map(([route, routeMessages]) => [
-          withTrailingSlash(`/${language}${route}`),
-          routeMessages,
-        ])
-      )
-    ),
-  }).map(([path, messages]) => [basePath + path, messages])
-);
+const routeToMessages = {
+  '/': root,
+  ...Object.fromEntries(
+    Object.entries({
+      en,
+      fr,
+    }).flatMap(([language, languageMessages]) =>
+      Object.entries(languageMessages).map(([route, routeMessages]) => [
+        withTrailingSlash(`/${language}${route}`),
+        routeMessages,
+      ])
+    )
+  ),
+}
+
+export default mapKeys(routeToMessages, ({ key: path }) => basePath + path);

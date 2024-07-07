@@ -4,10 +4,10 @@
   import Menu from '$components/Menu.svelte';
 
   const menuItems = [
-    { message: 'home', endpoint: '/' },
-    { message: 'experience', endpoint: '/experience' },
-    { message: 'projects', endpoint: '/projects' },
-    { message: 'contact', endpoint: '/contact' },
+    { message: 'home', route: '/' },
+    { message: 'experience', route: '/experience' },
+    { message: 'projects', route: '/projects' },
+    { message: 'contact', route: '/contact' },
   ];
 </script>
 

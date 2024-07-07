@@ -9,23 +9,23 @@ const origin = 'https://corentin-regent.github.io';
 export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) => {
   const basePath = $page.url.pathname.includes('/portfolio') ? '/portfolio' : '';
   return ({
-    endpoint = $page.url.pathname,
+    route = $page.url.pathname,
     language = $selectedLanguage,
     absolute = false,
     includeDefaultLanguage = false,
   }) => {
-    const endpointWithoutBasePath = basePath
-      ? endpoint.replace(new RegExp(`^${basePath}`), '')
-      : endpoint;
-    const endpointWithoutLanguage = endpointWithoutBasePath.replace(
+    const routeWithoutBasePath = basePath
+      ? route.replace(new RegExp(`^${basePath}`), '')
+      : route;
+    const routeWithoutLanguage = routeWithoutBasePath.replace(
       new RegExp(`^/${$selectedLanguage}/`),
       '/'
     );
     const includeLanguage = includeDefaultLanguage || language !== defaultLanguage;
-    const endpointWithLanguage = includeLanguage
-      ? `/${language}${endpointWithoutLanguage}`
-      : endpointWithoutLanguage;
-    const endpointWithBasePath = basePath + endpointWithLanguage;
-    return withTrailingSlash(absolute ? origin + endpointWithBasePath : endpointWithBasePath);
+    const routeWithLanguage = includeLanguage
+      ? `/${language}${routeWithoutLanguage}`
+      : routeWithoutLanguage;
+    const routeWithBasePath = basePath + routeWithLanguage;
+    return withTrailingSlash(absolute ? origin + routeWithBasePath : routeWithBasePath);
   };
 });

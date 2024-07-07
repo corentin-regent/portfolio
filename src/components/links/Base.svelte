@@ -3,8 +3,8 @@
 </script>
 
 <script>
-  const { children, url, endpoint, language, ...restProps } = $props();
-  let href = $derived(url ?? $resolve({ endpoint, language }));
+  const { children, url, route, language, ...restProps } = $props();
+  let href = $derived(url ?? $resolve({ route, language }));
 </script>
 
 <a {...restProps} {href}>

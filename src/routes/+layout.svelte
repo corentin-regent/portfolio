@@ -35,7 +35,7 @@
     hreflang="x-default"
     href={$resolve({ language: defaultLanguage, absolute: true })}
   />
-  <link rel="author" href={$resolve({ endpoint: '/', absolute: true })} />
+  <link rel="author" href={$resolve({ route: '/', absolute: true })} />
   <link
     rel="license"
     href="https://github.com/corentin-regent/portfolio?tab=readme-ov-file#license"

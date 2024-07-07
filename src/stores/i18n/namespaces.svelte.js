@@ -8,7 +8,7 @@ export default derived([page, resolve], ([$page, $resolve]) => {
   const pathParts = pathWithLang.split('/').filter(Boolean);
   return [
     '/',
-    ...accumulate(pathParts, (path, part) => `${path}/${part}`).map(endpoint => `/${endpoint}/`),
-    ...($page.error ? [$resolve({ endpoint: '/error', includeDefaultLanguage: true })] : []),
+    ...accumulate(pathParts, (path, part) => `${path}/${part}`).map(route => `/${route}/`),
+    ...($page.error ? [$resolve({ route: '/error', includeDefaultLanguage: true })] : []),
   ];
 });
