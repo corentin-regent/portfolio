@@ -1,7 +1,7 @@
 <script context="module">
   import Github from '$components/icons/logos/Github.svelte';
   import BaseLink from '$components/links/Base.svelte';
-  import SimpleLink from '$components/links/Simple.svelte';
+  import PrimaryLink from '$components/links/Primary.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 
@@ -20,15 +20,15 @@
   <small>&copy; 2024 {$messages.get('my-name')}</small>
 
   <div>
-    {$messages.get('made-with')}&nbsp;<SimpleLink url="https://kit.svelte.dev/" target="_blank">
+    {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/" target="_blank">
       {$messages.get('svelte-kit')}
-    </SimpleLink>
+    </PrimaryLink>
   </div>
 
   <div>
-    <SimpleLink url={githubRepoLink} target="_blank">
+    <PrimaryLink url={githubRepoLink} target="_blank">
       {$messages.get('view-github-repo')}
-    </SimpleLink>
+    </PrimaryLink>
     <BaseLink url={githubRepoLink} target="_blank" class="ml-1.5">
       <Github class="w-6 lg:w-8 inline" />
     </BaseLink>
