@@ -19,7 +19,9 @@ export default derived([page, selectedLanguage], ([$page, $selectedLanguage]) =>
     const endpointWithLanguage = includeLanguage
       ? `/${language}${endpointWithoutLanguage}`
       : endpointWithoutLanguage;
-    const endpointIncludingBase = basePath.startsWith('/') ? basePath + endpointWithLanguage : endpointWithLanguage
+    const endpointIncludingBase = basePath.startsWith('/')
+      ? basePath + endpointWithLanguage
+      : endpointWithLanguage;
     return withTrailingSlash(absolute ? origin + endpointIncludingBase : endpointIncludingBase);
   };
 });
