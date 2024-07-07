@@ -16,12 +16,15 @@
     points="15,2 24.9,24.9 15,15 5.1,24.9"
   />
   <circle cx="15" cy="15" r="14" stroke="url(#circleGrad)" stroke-width="2" fill="none" />
-  <linearGradient id="circleGrad" gradientTransform="rotate(90 0.5 0.5)">
-    <stop stop-color="#cf022b" />
-    <stop offset="1" stop-color="#f07d00" />
-  </linearGradient>
-  <linearGradient id="arrowGrad" gradientTransform="rotate(90 0.5 0.5)">
-    <stop stop-color="#cf022b" />
-    <stop offset="1" stop-color="#EC6E05" />
-  </linearGradient>
+
+  <defs>
+    <linearGradient id="circleGrad" gradientTransform="rotate(90 0.5 0.5)">
+      <stop stop-color="#cf022b" />
+      <stop offset="1" stop-color="#f07d00" />
+    </linearGradient>
+    <linearGradient id="arrowGrad" gradientTransform="rotate(90 0.5 0.5)">
+      <stop stop-color="#cf022b" />
+      <stop offset="1" stop-color="#EC6E05" />
+    </linearGradient>
+  </defs>
 </svg>
