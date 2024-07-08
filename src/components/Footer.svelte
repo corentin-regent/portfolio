@@ -10,7 +10,7 @@
 
 <footer
   class={classes(
-    'text-center align-middle grid gap-2 mt-auto pb-4 lg:pb-6 leading-6',
+    'text-center align-middle grid gap-2 pb-4 lg:pb-6 leading-6',
     'grid-cols-1 lg:grid-cols-3',
     'before:col-span-1 lg:before:col-span-3',
     'before:bg-gradient-to-r before:from-transparent before:via-anti-bg1',

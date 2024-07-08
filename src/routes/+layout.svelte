@@ -52,7 +52,9 @@
 
 <div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
   <Header />
-  <div>⚠️ {$messages.get('wip')}</div>
-  {@render children()}
+  <div class="flex-1">
+    <p>⚠️ {$messages.get('wip')}</p>
+    {@render children()}
+  </div>
   <Footer />
 </div>
