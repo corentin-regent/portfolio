@@ -1,5 +1,4 @@
 <script context="module">
-  import EmailForm from '$components/forms/Email.svelte';
   import Email from '$components/icons/Email.svelte';
   import MailtoLink from '$components/links/Mailto.svelte';
   import Social from '$components/Social.svelte';
@@ -12,8 +11,11 @@
     <H2>{$messages.get('page-header')}</H2>
     <p>{$messages.get('page-main-text')}</p>
 
+    <!--
+    Email form, currently disabled to due CORS
     <p>{$messages.get('contact-through-form')}</p>
     <EmailForm />
+    -->
 
     <p>{$messages.get('contact-through-socials')}</p>
   </div>
