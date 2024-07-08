@@ -1,9 +1,10 @@
 <script context="module">
   import Email from '$components/icons/Email.svelte';
-  import MailtoLink from '$components/links/Mailto.svelte';
   import Social from '$components/Social.svelte';
   import H2 from '$components/text/H2.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
+
+  const myEmail = 'corentin.regent.pro@gmail.com';
 </script>
 
 <article class="w-full px-4 text-center">
@@ -19,7 +20,12 @@
 
     <p>{$messages.get('contact-through-socials')}</p>
   </div>
-  <Social icon={Email} class="p-2" height="h-12" width="w-12">
-    <MailtoLink email="corentin.regent.pro@gmail.com" />
-  </Social>
+  <Social
+    icon={Email}
+    text={myEmail}
+    linkUrl={`mailto:${myEmail}`}
+    height="h-12"
+    width="w-12"
+    iconClass="p-2"
+  />
 </article>
