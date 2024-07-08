@@ -16,7 +16,7 @@
   <Menu
     items={menuItems}
     elementClass="text-center md:leading-10 flex-grow"
-    liClass="md:inline md:mx-1.5"
+    liClass="md:inline md:mx-1.5 my-0.5"
   />
   <ChooseLanguage
     elementClass="flex items-center justify-end pr-2 lg:pr-4 flex-1"
