@@ -11,7 +11,7 @@
 }
 
 @layer utilities {
-  .gradient-bg {
+  .primary-gradient-bg {
     @apply from-primary-lighter1 to-primary-darker1;
   }
 }

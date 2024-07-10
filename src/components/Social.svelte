@@ -7,23 +7,26 @@
   const { icon, linkUrl, text, width, height, iconClass } = $props();
 </script>
 
-<div class="font-semibold flex items-center">
+<div class="flex items-center">
   <Link url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
     <svelte:component
       this={icon}
-      class={classes(iconClass, width, height, 'bg-gradient-to-t gradient-bg')}
+      class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')}
     />
   </Link>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 10" class={classes(height, '-ml-0.5')}>
-    <path d="M 0 5 L 5 9" stroke="currentColor" stroke-width="0.4" />
-  </svg>
-  <Link
-    url={linkUrl}
-    class={classes(
-      'pt-1 relative after:absolute after:-bottom-1.5 after:left-0 after:-ml-[1px]',
-      'after:h-[0.15rem] after:w-full after:bg-text1 after:rounded'
-    )}
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 603 110"
+    class={classes(height, 'absolute ml-11')}
+    stroke="currentColor"
+    stroke-width="5"
+    fill="none"
   >
+    <line x1="0" y1="50" x2="36" y2="80" />
+    <path d="M36,80 C48,90 50,90 60,90" />
+    <line x1="60" y1="90" x2="600" y2="90" stroke-linecap="round" />
+  </svg>
+  <Link url={linkUrl} class="font-semibold text-center ml-5 w-56 z-[1]">
     {text}
   </Link>
 </div>
