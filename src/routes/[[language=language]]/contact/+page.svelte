@@ -1,10 +1,27 @@
 <script context="module">
   import Email from '$components/icons/Email.svelte';
+  import Discord from '$components/icons/logos/Discord.svelte';
+  import Github from '$components/icons/logos/Github.svelte';
+  import Linkedin from '$components/icons/logos/Linkedin.svelte';
   import Social from '$components/Social.svelte';
   import H2 from '$components/text/H2.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
 
   const myEmail = 'corentin.regent.pro@gmail.com';
+  const socials = [
+    { icon: Email, text: myEmail, linkUrl: `mailto:${myEmail}` },
+    {
+      icon: Linkedin,
+      text: 'Corentin Régent',
+      linkUrl: 'https://www.linkedin.com/in/corentin-regent',
+    },
+    { icon: Github, text: 'corentin-regent', linkUrl: 'https://github.com/corentin-regent' },
+    {
+      icon: Discord,
+      text: '@cocorigon',
+      linkUrl: `https://discord.com/users/497849667728703497`,
+    },
+  ];
 </script>
 
 <article class="w-full px-4 text-center">
@@ -20,12 +37,8 @@
 
     <p>{$messages.get('contact-through-socials')}</p>
   </div>
-  <Social
-    icon={Email}
-    text={myEmail}
-    linkUrl={`mailto:${myEmail}`}
-    height="h-12"
-    width="w-12"
-    iconClass="p-2"
-  />
+
+  {#each socials as social}
+    <Social {...social} height="h-12" width="w-12" iconClass="p-2" />
+  {/each}
 </article>
