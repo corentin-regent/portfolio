@@ -17,7 +17,7 @@
     'before:h-[0.08rem] before:my-2 lg:before:my-4 before:mx-12 2xl:before:mx-24'
   )}
 >
-  <small>&copy; 2024 {$messages.get('my-name')}</small>
+  <small>&copy; 2024 Corentin Régent</small>
 
   <div>
     {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/" target="_blank">
