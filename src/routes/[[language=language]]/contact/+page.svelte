@@ -30,7 +30,7 @@
     <p>{$messages.get('page-main-text')}</p>
 
     <!--
-    Email form, currently disabled to due CORS
+    Email form, currently disabled due to CORS
     <p>{$messages.get('contact-through-form')}</p>
     <EmailForm />
     -->
@@ -38,7 +38,11 @@
     <p>{$messages.get('contact-through-socials')}</p>
   </div>
 
-  {#each socials as social}
-    <Social {...social} height="h-12" width="w-12" iconClass="p-2" />
-  {/each}
+  <ul class="grid lg:grid-cols-2 justify-center gap-y-3 mt-4">
+    {#each socials as social}
+      <li>
+        <Social {...social} height="h-12" width="w-12" iconClass="p-2" />
+      </li>
+    {/each}
+  </ul>
 </article>

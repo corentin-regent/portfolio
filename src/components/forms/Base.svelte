@@ -14,7 +14,7 @@
 <form
   {...restProps}
   inert={isSending}
-  class={classes(cls, 'grid grid-cols-1')}
+  class={classes(cls, 'grid')}
   use:enhance={() => {
     // use timeouts to support animations
     showLoadingIcon = true;

@@ -11,7 +11,7 @@
   ];
 </script>
 
-<header class="py-2 md:py-4 lg:py-6 border-b border-anti-bg2 flex">
+<header class="py-2 md:py-4 lg:py-6 border-b border-anti-bg2 flex mb-2 lg:mb-4">
   <ChooseTheme elementClass="pl-4 flex items-center flex-1" iconClass="w-8" />
   <Menu
     items={menuItems}
