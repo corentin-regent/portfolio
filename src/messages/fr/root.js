@@ -34,8 +34,10 @@ const otherIconTitles = {
 };
 
 const iconDescriptionMessages = {
+  'discord-svg-desc': 'Le logo de Discord, accompagne une référence à un compte Discord.',
   'email-svg-desc': "Icône d'enveloppe, accompagne une référence à une adresse e-mail.",
   'github-svg-desc': 'Le logo de GitHub, indique que la ressource est disponible sur GitHub.',
+  'linkedin-svg-desc': 'Le logo de LinkedIn, accompagne une référence à un profil LinkedIn.',
   'favicon-desc': 'Le favicon du site, représentant une flèche dans un cercle.',
   'flag-svg-desc': ({ flag, language }) =>
     `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
