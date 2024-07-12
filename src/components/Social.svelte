@@ -26,7 +26,9 @@
     <path d="M36,80 C48,90 50,90 60,90" />
     <line x1="60" y1="90" x2="600" y2="90" stroke-linecap="round" />
   </svg>
-  <Link url={linkUrl} class="font-semibold text-center ml-5 w-56 z-[1]">
-    {text}
-  </Link>
+  <div class="flex justify-center ml-5 w-56 font-semibold z-[1]">
+    <Link url={linkUrl}>
+      {text}
+    </Link>
+  </div>
 </div>
