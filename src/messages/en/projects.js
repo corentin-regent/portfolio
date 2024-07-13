@@ -7,7 +7,7 @@ const metadata = {
 const projects = {
   'rate-control': 'rate-control',
   'rate-control-text': 'desc',
-}
+};
 
 export default {
   ...metadata,
