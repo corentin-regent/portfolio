@@ -38,7 +38,7 @@
     <p>{$messages.get('contact-through-socials')}</p>
   </div>
 
-  <ul class="grid lg:grid-cols-2 justify-center gap-y-3 mt-4">
+  <ul class="grid lg:grid-cols-2 lg:mx-8 xl:mx-28 2xl:mx-40 justify-center gap-y-3 mt-4">
     {#each socials as social}
       <li>
         <Social {...social} height="h-12" width="w-12" iconClass="p-2" />
