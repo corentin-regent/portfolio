@@ -40,7 +40,8 @@ const iconDescriptionMessages = {
   'favicon-desc': 'Le favicon du site, représentant une flèche dans un cercle.',
   'flag-svg-desc': ({ flag, language }) =>
     `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
-  'technology-svg-desc': technology => `Le logo de ${technology}, indique que le projet a été développé avec ${technology}.`,
+  'technology-svg-desc': technology =>
+    `Le logo de ${technology}, indique que le projet a été développé avec ${technology}.`,
   'theme-dark-svg-desc': 'Icône de nuit, la page est affichée avec le thème sombre.',
   'theme-light-svg-desc': 'Icône de jour, la page est affichée avec le thème clair.',
 };

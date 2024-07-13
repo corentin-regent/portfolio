@@ -10,4 +10,4 @@ export default {
   '/error': error,
   '/experience': experience,
   '/projects': projects,
-}
+};
