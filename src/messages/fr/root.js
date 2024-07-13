@@ -12,7 +12,6 @@ const rootPageMessages = {
   'my-portfolio': 'Portfolio de Corentin Régent',
   projects: 'Projets',
   'view-github-repo': 'Voir le dépôt GitHub',
-  wip: 'Cette page est en cours de développement.',
 };
 
 const languageMessages = {
