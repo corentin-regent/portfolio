@@ -4,6 +4,7 @@
   import Link from '$components/links/Base.svelte';
   import H2 from '$components/text/H2.svelte';
   import H3 from '$components/text/H3.svelte';
+  import P from '$components/text/P.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
 
   const projects = [
@@ -16,7 +17,7 @@
 
 <div class="max-w-screen-md mx-auto">
   <H2>{$messages.get('page-header')}</H2>
-  <p>{$messages.get('page-main-text')}</p>
+  <P>{$messages.get('page-main-text')}</P>
 </div>
 
 {#each projects as { nameId, embed }}
@@ -29,7 +30,7 @@
           <Github class="inline w-7" />
         </Link>
       </H3>
-      <p>{$messages.get(nameId + '-text')}</p>
+      <P>{$messages.get(nameId + '-text')}</P>
     </div>
   </section>
 {/each}

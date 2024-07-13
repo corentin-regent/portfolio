@@ -6,6 +6,7 @@
   import Social from '$components/Social.svelte';
   import H2 from '$components/text/H2.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
+  import P from '$components/text/P.svelte';
 
   const myEmail = 'corentin.regent.pro@gmail.com';
   const socials = [
@@ -26,15 +27,15 @@
 
 <div class="max-w-screen-md mx-auto">
   <H2>{$messages.get('page-header')}</H2>
-  <p>{$messages.get('page-main-text')}</p>
+  <P>{$messages.get('page-main-text')}</p>
 
   <!--
     Email form, currently disabled due to CORS
-    <p>{$messages.get('contact-through-form')}</p>
+    <P>{$messages.get('contact-through-form')}</P>
     <EmailForm />
     -->
 
-  <p>{$messages.get('contact-through-socials')}</p>
+  <P>{$messages.get('contact-through-socials')}</p>
 </div>
 
 <ul class="grid lg:grid-cols-2 lg:mx-8 xl:mx-28 2xl:mx-40 justify-center gap-y-3 mt-4">
