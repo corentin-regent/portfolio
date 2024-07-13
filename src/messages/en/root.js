@@ -40,6 +40,7 @@ const iconDescriptionMessages = {
   'favicon-desc': 'The favicon of the website, representing an arrow in a circle.',
   'flag-svg-desc': ({ flag, language }) =>
     `The ${languageMessages[flag]}. Represents the ability to translate the page in ${languageMessages[language]}.`,
+  'technology-svg-desc': technology => `The ${technology} logo, indicates that the project was developed using ${technology}.`,
   'theme-dark-svg-desc': 'Night icon, the page is rendered using the dark theme.',
   'theme-light-svg-desc': 'Day icon, the page is rendered using the light theme.',
 };

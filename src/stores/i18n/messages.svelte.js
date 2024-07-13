@@ -9,9 +9,9 @@ export default derived(namespaces, $namespaces => {
     {}
   );
   return {
-    get(messageId, interpolated) {
+    get(messageId, param) {
       const message = availableMessages[messageId];
-      const ret = interpolated ? message?.(interpolated) : message;
+      const ret = param ? message?.(param) : message;
       if (ret === undefined && building) {
         throw new Error(
           `Message '${messageId}' not found in namespaces: ${$namespaces.map(namespace => `'${namespace}'`).join(', ')}`
