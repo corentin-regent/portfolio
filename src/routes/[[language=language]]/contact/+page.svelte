@@ -5,8 +5,8 @@
   import Linkedin from '$components/icons/logos/Linkedin.svelte';
   import Social from '$components/Social.svelte';
   import H2 from '$components/text/H2.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
   import P from '$components/text/P.svelte';
+  import messages from '$stores/i18n/messages.svelte.js';
 
   const myEmail = 'corentin.regent.pro@gmail.com';
   const socials = [
@@ -27,7 +27,7 @@
 
 <div class="max-w-screen-md mx-auto">
   <H2>{$messages.get('page-header')}</H2>
-  <P>{$messages.get('page-main-text')}</p>
+  <P>{$messages.get('page-main-text')}</P>
 
   <!--
     Email form, currently disabled due to CORS
@@ -35,7 +35,7 @@
     <EmailForm />
     -->
 
-  <P>{$messages.get('contact-through-socials')}</p>
+  <P>{$messages.get('contact-through-socials')}</P>
 </div>
 
 <ul class="grid lg:grid-cols-2 lg:mx-8 xl:mx-28 2xl:mx-40 justify-center gap-y-3 mt-4">
