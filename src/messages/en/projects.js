@@ -4,6 +4,12 @@ const metadata = {
   'page-title': 'Personal projects',
 };
 
+const projects = {
+  'rate-control': 'rate-control',
+  'rate-control-text': 'desc',
+}
+
 export default {
   ...metadata,
+  ...projects,
 };
