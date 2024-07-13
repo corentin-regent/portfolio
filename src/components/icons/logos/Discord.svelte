@@ -7,7 +7,7 @@
 </script>
 
 <svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 198">
-  <title>{$messages.get('discord')}</title>
+  <title>Discord</title>
   <desc>{$messages.get('discord-svg-desc')}</desc>
 
   <path

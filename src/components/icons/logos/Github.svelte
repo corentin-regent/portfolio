@@ -7,7 +7,7 @@
 </script>
 
 <svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
-  <title>{$messages.get('github')}</title>
+  <title>GitHub</title>
   <desc>{$messages.get('github-svg-desc')}</desc>
 
   <path

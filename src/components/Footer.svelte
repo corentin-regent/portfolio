@@ -20,7 +20,7 @@
 
   <div>
     {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/" target="_blank">
-      {$messages.get('svelte-kit')}
+      SvelteKit
     </PrimaryLink>
   </div>
 
