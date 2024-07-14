@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.ansible.com/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class={width}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" class={height}>
     <title>Ansible</title>
     <desc>{$messages.get('technology-svg-desc', 'Ansible')}</desc>
 

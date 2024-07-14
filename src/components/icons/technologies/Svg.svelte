@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.w3.org/Graphics/SVG/">
-  <svg xmlns="http://www.w3.org/2000/svg" class={width} viewBox="0 0 100 100">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" class={height}>
     <title>SVG</title>
     <desc>{$messages.get('technology-svg-desc', 'SVG')}</desc>
 

@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://scala-lang.org/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 16 135 213" class={width}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="30 16 135 213" class={height}>
     <title>Scala</title>
     <desc>{$messages.get('technology-svg-desc', 'Scala')}</desc>
 

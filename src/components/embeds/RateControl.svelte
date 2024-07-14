@@ -1,12 +1,12 @@
 <script context="module">
-  import classes from '$utils/classes.js';
+  import EmbeddedIcon from '$components/embeds/Icon.svelte';
 </script>
 
 <script>
-  const { class: cls, ...restProps } = $props();
+  const { ...restProps } = $props();
 </script>
 
-<div {...restProps} class={classes(cls, 'noisy-bg bg-dark-bg1 px-20 flex items-center')}>
+<EmbeddedIcon {...restProps}>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
     <path
       fill="url(#dashedGrad)"
@@ -35,4 +35,4 @@
       </linearGradient>
     </defs>
   </svg>
-</div>
+</EmbeddedIcon>

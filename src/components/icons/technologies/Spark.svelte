@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://spark.apache.org/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-7.872 -3.87 66.541 66.28" class={width}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-7.872 -3.87 66.541 66.28" class={height}>
     <title>Spark</title>
     <desc>{$messages.get('technology-svg-desc', 'Spark')}</desc>
 

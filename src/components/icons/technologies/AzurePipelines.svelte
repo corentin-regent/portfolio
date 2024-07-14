@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://azure.microsoft.com/products/devops/pipelines/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 5 195 195" class={width}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 5 195 195" class={height}>
     <title>Azure Pipelines</title>
     <desc>{$messages.get('technology-svg-desc', 'Azure Pipelines')}</desc>
 

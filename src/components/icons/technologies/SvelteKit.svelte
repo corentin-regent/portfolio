@@ -4,11 +4,11 @@
 </script>
 
 <script>
-  const { width, ...restProps } = $props();
+  const { height, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://kit.svelte.dev/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 98.1 118" class={width}>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 99 118" class={height}>
     <title>SvelteKit</title>
     <desc>{$messages.get('technology-svg-desc', 'SvelteKit')}</desc>
 
