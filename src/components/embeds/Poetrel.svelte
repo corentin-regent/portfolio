@@ -3,7 +3,7 @@
 </script>
 
 <script>
-  const { class: cls, children, ...restProps } = $props();
+  const { class: cls, ...restProps } = $props();
 </script>
 
 <div

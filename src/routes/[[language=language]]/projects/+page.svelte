@@ -35,7 +35,7 @@
       nameId: 'rate-control',
       embed: RateControlEmbed,
       text: RateControlText,
-      technologies: [Python],
+      technologies: [Python, GithubActions],
     },
     {
       nameId: 'poetrel',
@@ -53,7 +53,7 @@
       nameId: 'portfolio',
       embed: PortfolioEmbed,
       text: PortfolioText,
-      technologies: [SvelteKit, Html, Css, Javascript, Svg],
+      technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions],
     },
   ].map(({ nameId, ...rest }) => ({
     nameId,

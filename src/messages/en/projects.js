@@ -9,7 +9,7 @@ const pageMessages = {
   'open-source-contributions': 'Contributions to other open-source projects',
   'page-header': 'Personal projects',
   'page-main-text':
-    "I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have been working on, with the aim of becoming insanely good and versatile.",
+    "I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have been working on, with the aim of becoming extremely talented and versatile.",
 };
 
 const rateControl = {
@@ -19,8 +19,8 @@ const rateControl = {
 
 const poetrel = {
   'poetrel': 'Poetrel',
-  'poetrel-text-until-github-actions': 'Poetrel is a collection of Continuous Delivery pipelines for',
-  'poetrel-text-until-pypi': '. It was originally developed for automatically releasing Python projects and publishing them to',
+  'poetrel-text-until-github-actions': 'Poetrel is a collection of Continuous Delivery pipelines for ',
+  'poetrel-text-until-pypi': '. I originally developed it for automatically releasing Python projects and publishing them to ',
   'poetrel-text-until-github-marketplace': ", while also managing the release notes and Changelog file. Additionally, as all things should, Poetrel leverages itself for its own Continuous Delivery to the",
 };
 
@@ -31,12 +31,13 @@ const assemblife = {
 
 const portfolio = {
   'portfolio': 'This portfolio website',
-  'portfolio-text': 'desc',
+  'portfolio-text-until-github-pages': 'This web application has been the opportunity for me to demonstrate and further enhance my web development skills, while handling the entire workflow, from UI design to the automatic deployment of the website on ',
+  'portfolio-text-after-github-pages': '. I also gained more experience with performance, accessibility and SEO concerns, which are a top priority for any public web application.',
 };
 
 const msgspec = {
   'msgspec': 'msgspec',
-  'msgspec-text-until-pr': "msgspec is the fastest and most memory-efficient library for JSON serialization in the Python ecosystem. It is a highly optimized project written in C, that interacts directly with Python's C API. In",
+  'msgspec-text-until-pr': "msgspec is the fastest and most memory-efficient library for JSON serialization in the Python ecosystem. It is a highly optimized project written in C, that interacts directly with Python's C API. In ",
   'this-pr': 'this Pull Request',
   'msgspec-text-after-pr': ', I implemented a feature for enforcing validation constraints when parsing arbitrary precision numbers.',
 };
