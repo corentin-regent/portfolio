@@ -1,0 +1,18 @@
+<!--
+Does weird stuff to trick anti-aliasing.
+Otherwise we would see a bit of gray near the blue edges.
+-->
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600">
+  <defs>
+    <linearGradient id="frGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#002395" />
+      <stop offset="33.33%" stop-color="#002395" />
+      <stop offset="33.33%" stop-color="#FFF" />
+      <stop offset="66.67%" stop-color="#FFF" />
+      <stop offset="66.67%" stop-color="#ED2939" />
+      <stop offset="100%" stop-color="#ED2939" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="600" fill="url(#frGrad)" />
+</svg>

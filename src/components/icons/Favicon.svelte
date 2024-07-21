@@ -1,30 +1,9 @@
 <script context="module">
-  import messages from '$stores/i18n/messages.svelte.js';
+  import Image from '$components/Image.svelte';
 </script>
 
 <script>
   const { ...restProps } = $props();
 </script>
 
-<svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30">
-  <desc>{$messages.get('favicon-desc')}</desc>
-
-  <polygon
-    stroke="url(#arrowGrad)"
-    stroke-width="2"
-    fill="none"
-    points="15,2 24.9,24.9 15,15 5.1,24.9"
-  />
-  <circle cx="15" cy="15" r="14" stroke="url(#circleGrad)" stroke-width="2" fill="none" />
-
-  <defs>
-    <linearGradient id="circleGrad" gradientTransform="rotate(90 0.5 0.5)">
-      <stop stop-color="#cf022b" />
-      <stop offset="1" stop-color="#f07d00" />
-    </linearGradient>
-    <linearGradient id="arrowGrad" gradientTransform="rotate(90 0.5 0.5)">
-      <stop stop-color="#cf022b" />
-      <stop offset="1" stop-color="#EC6E05" />
-    </linearGradient>
-  </defs>
-</svg>
+<Image {...restProps} src="/favicon.svg" alt="Favicon" />

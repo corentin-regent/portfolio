@@ -1,6 +1,6 @@
 <script context="module">
+  import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
 <script>
@@ -8,34 +8,5 @@
 </script>
 
 <Link {...restProps} url="https://azure.microsoft.com/products/devops/pipelines/">
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="40 5 195 195" class={height}>
-    <title>Azure Pipelines</title>
-    <desc>{$messages.get('technology-svg-desc', 'Azure Pipelines')}</desc>
-
-    <path fill="#91b0f2" d="M40.01245,151.4481H56.24688V183.917H88.71573v16.23445H40.01245Z" />
-    <path
-      d="M40.01245,61.82051V106.4652L68.4227,135.55188l12.17583-12.85225L117.126,159.56532l-12.17582,12.17582,28.41026,28.41025h44.64468a8.23019,8.23019,0,0,0,8.11722-8.11722V126.75824L113.06739,53.70329H48.12966A8.23018,8.23018,0,0,0,40.01245,61.82051Z"
-      fill="#0f46bd"
-    />
-    <path
-      d="M75.18705,122.36142c-2.70574-2.70574-3.38218-7.10256-1.01465-10.14652l66.62881-99.77412A16.84958,16.84958,0,0,1,154.3299,5h72.37852a8.23018,8.23018,0,0,1,8.11722,8.11721V85.49572a16.01243,16.01243,0,0,1-7.44077,13.5287l-99.43592,66.967a7.73408,7.73408,0,0,1-10.14652-1.01464Z"
-      fill="#2560e0"
-    />
-    <path
-      fill="#0a44c2"
-      d="M80.59853,147.38949,142.4923,85.49572l11.8376,11.83761-61.89377,62.232Z"
-    />
-    <path
-      d="M80.59853,147.38949,142.4923,85.49572l11.8376,11.83761-61.89377,62.232Z"
-      fill="#729af2"
-    />
-    <path
-      d="M102.24443,149.757,90.40682,137.91941,142.4923,85.83394l11.8376,11.83761Z"
-      fill="#4c80f0"
-    />
-    <path
-      fill="#0a44c2"
-      d="M182.06373,82.11355a24.35165,24.35165,0,1,0-24.35165-24.35164A24.25041,24.25041,0,0,0,182.06373,82.11355Z"
-    />
-  </svg>
+  <Image class={height} src="/technologies/azure-pipelines.svg" alt="Azure Pipelines" showTooltip />
 </Link>

@@ -17,8 +17,6 @@ const rootPageMessages = {
 const languageMessages = {
   english: 'Anglais',
   french: 'Français',
-  'french-flag': 'drapeau Français',
-  'united-kingdom-flag': 'drapeau du Royaume-Uni',
 };
 
 const themeMessages = {
@@ -37,11 +35,6 @@ const iconDescriptionMessages = {
   'email-svg-desc': "Icône d'enveloppe, accompagne une référence à une adresse e-mail.",
   'github-svg-desc': 'Le logo de GitHub, indique que la ressource est disponible sur GitHub.',
   'linkedin-svg-desc': 'Le logo de LinkedIn, accompagne une référence à un profil LinkedIn.',
-  'favicon-desc': 'Le favicon du site, représentant une flèche dans un cercle.',
-  'flag-svg-desc': ({ flag, language }) =>
-    `Le ${languageMessages[flag]}. Représente la possibilité de traduire la page en ${languageMessages[language]}.`,
-  'technology-svg-desc': technology =>
-    `Le logo de ${technology}, indique que le projet a été développé avec ${technology}.`,
   'theme-dark-svg-desc': 'Icône de nuit, la page est affichée avec le thème sombre.',
   'theme-light-svg-desc': 'Icône de jour, la page est affichée avec le thème clair.',
 };
