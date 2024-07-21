@@ -6,6 +6,6 @@
   const { children, class: cls } = $props();
 </script>
 
-<h4 class={classes(cls, 'mb-1 text-lg font-semibold')}>
+<h4 class={classes(cls, 'text-lg font-semibold')}>
   {@render children()}
 </h4>

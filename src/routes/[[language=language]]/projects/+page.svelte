@@ -5,6 +5,12 @@
   import PortfolioEmbed from '$components/embeds/Portfolio.svelte';
   import RateControlEmbed from '$components/embeds/RateControl.svelte';
 
+  import AssemblifeText from './AssemblifeText.svelte';
+  import MsgspecText from './MsgspecText.svelte';
+  import PoetrelText from './PoetrelText.svelte';
+  import PortfolioText from './PortfolioText.svelte';
+  import RateControlText from './RateControlText.svelte';
+
   import Bash from '$components/icons/technologies/Bash.svelte';
   import C from '$components/icons/technologies/C.svelte';
   import Css from '$components/icons/technologies/Css.svelte';
@@ -23,12 +29,7 @@
   import H3 from '$components/text/H3.svelte';
   import P from '$components/text/P.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
-
-  import AssemblifeText from './AssemblifeText.svelte';
-  import MsgspecText from './MsgspecText.svelte';
-  import PoetrelText from './PoetrelText.svelte';
-  import PortfolioText from './PortfolioText.svelte';
-  import RateControlText from './RateControlText.svelte';
+  import classes from '$utils/classes.js';
 
   const myProjects = [
     {
@@ -73,16 +74,30 @@
 </script>
 
 <div class="max-w-screen-md mx-auto">
-  <H2>{$messages.get('page-header')}</H2>
+  <H2 class="mb-2">{$messages.get('page-header')}</H2>
   <P>{$messages.get('page-main-text')}</P>
 </div>
 
 {#snippet projects(titleId, projectList)}
   <section id={titleId}>
     <H3 class="my-4">{$messages.get(titleId)}</H3>
-    {#each projectList as project, index}
-      <Project {...project} toLeft={index % 2} class="my-4" />
-    {/each}
+    <ul class="flex flex-col">
+      {#each projectList as project, index}
+        <li
+          class={classes(
+            'py-4 lg:py-0 px-2 lg:px-0 mx-auto max-w-screen-sm lg:max-w-none',
+            '[&:not(:first-child)]:border-t-2 [&:not(:first-child)]:border-anti-bg1 lg:border-none',
+            'lg:[&:not(:first-child)]:before:block lg:[&:not(:first-child)]:before:h-0.5 lg:[&:not(:first-child)]:before:my-4',
+            'lg:[&:not(:first-child)]:before:bg-gradient-to-r',
+            index % 2
+              ? 'lg:[&:not(:first-child)]:before:from-transparent lg:[&:not(:first-child)]:before:to-anti-bg1'
+              : 'lg:[&:not(:first-child)]:before:from-anti-bg1'
+          )}
+        >
+          <Project {...project} toLeft={index % 2} />
+        </li>
+      {/each}
+    </ul>
   </section>
 {/snippet}
 

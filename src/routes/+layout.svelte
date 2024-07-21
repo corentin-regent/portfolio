@@ -52,7 +52,7 @@
 
 <div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
   <Header />
-  <article class="w-full px-4 text-center">
+  <article class="w-full px-2 lg:px-4 text-center">
     {@render children()}
   </article>
   <Footer />

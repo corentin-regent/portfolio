@@ -6,6 +6,6 @@
   const { children, class: cls } = $props();
 </script>
 
-<h2 class={classes(cls, 'uppercase mb-2 text-2xl font-bold')}>
+<h2 class={classes(cls, 'uppercase text-2xl font-bold')}>
   {@render children()}
 </h2>

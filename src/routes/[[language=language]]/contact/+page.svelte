@@ -26,7 +26,7 @@
 </script>
 
 <div class="max-w-screen-md mx-auto">
-  <H2>{$messages.get('page-header')}</H2>
+  <H2 class="mb-2">{$messages.get('page-header')}</H2>
   <P>{$messages.get('page-main-text')}</P>
 
   <!--
