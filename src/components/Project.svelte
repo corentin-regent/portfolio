@@ -14,7 +14,11 @@
 
 <article
   {...restProps}
-  class={classes(cls, 'text-justify flex flex-col', toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row')}
+  class={classes(
+    cls,
+    'sm:text-justify flex flex-col',
+    toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
+  )}
 >
   <div class="flex items-center mx-auto">
     <svelte:component this={embed} class="aspect-video min-w-72 w-72 rounded-lg" />
