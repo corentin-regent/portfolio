@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "vite build",
+    "build": "vite build && node scripts/minify.js",
     "dev": "vite dev",
     "serve": "http-server -c-1 build/",
     "lint": "prettier --write --check . && eslint .",
@@ -17,6 +17,7 @@
     "eslint": "^9.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-svelte": "^2.36.0",
+    "html-minifier": "^4.0.0",
     "http-server": "^14.1.1",
     "jest": "^29.7.0",
     "node-html-parser": "^6.1.13",
@@ -28,7 +29,7 @@
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
     "svelte": "^5.0.0-next.155",
-    "sveltekit-html-minifier": "^1.0.3",
+    "svgo": "^3.3.2",
     "tailwindcss": "^3.4.4",
     "vite": "^5.0.3"
   },
