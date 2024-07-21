@@ -21,7 +21,7 @@ const poetrel = {
   'poetrel': 'Poetrel',
   'poetrel-text-until-github-actions': 'Poetrel is a collection of Continuous Delivery pipelines for ',
   'poetrel-text-until-pypi': '. I originally developed it for automatically releasing Python projects and publishing them to ',
-  'poetrel-text-until-github-marketplace': ", while also managing the release notes and Changelog file. Additionally, as all things should, Poetrel leverages itself for its own Continuous Delivery to the",
+  'poetrel-text-until-github-marketplace': ", while also managing the release notes and Changelog file. Additionally, as all things should, Poetrel leverages itself for its own Continuous Delivery to the ",
 };
 
 const assemblife = {

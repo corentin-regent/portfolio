@@ -3,6 +3,6 @@
   import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
-{$messages.get('portfolio-text-until-github-pages')}
-<Link url="https://pages.github.com/">Github Pages</Link>
-{$messages.get('portfolio-text-after-github-pages')}
+{$messages.get('portfolio-text-until-github-pages')}<Link url="https://pages.github.com/">
+  Github Pages
+</Link>{$messages.get('portfolio-text-after-github-pages')}
