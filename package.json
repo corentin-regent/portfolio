@@ -5,7 +5,8 @@
   "scripts": {
     "build": "vite build && node scripts/minify.js",
     "dev": "vite dev",
-    "docker": "docker run --rm -p 8080:80 $(docker build -q .)",
+    "docker-build": "docker build . -t portfolio-webserver",
+    "docker-run": "docker run --rm -p 8080:80 portfolio-webserver",
     "lint": "prettier --write --check . && eslint .",
     "test": "NODE_OPTIONS='--experimental-vm-modules' npx jest"
   },
