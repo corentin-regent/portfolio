@@ -14,11 +14,13 @@
   import Bash from '$components/icons/technologies/Bash.svelte';
   import C from '$components/icons/technologies/C.svelte';
   import Css from '$components/icons/technologies/Css.svelte';
+  import Docker from '$components/icons/technologies/Docker.svelte';
   import GithubActions from '$components/icons/technologies/GithubActions.svelte';
   import Html from '$components/icons/technologies/Html.svelte';
   import Javascript from '$components/icons/technologies/Javascript.svelte';
   import Linux from '$components/icons/technologies/Linux.svelte';
   import Nasm from '$components/icons/technologies/Nasm.svelte';
+  import Nginx from '$components/icons/technologies/Nginx.svelte';
   import Python from '$components/icons/technologies/Python.svelte';
   import SvelteKit from '$components/icons/technologies/SvelteKit.svelte';
   import Svg from '$components/icons/technologies/Svg.svelte';
@@ -54,7 +56,7 @@
       nameId: 'portfolio',
       embed: PortfolioEmbed,
       text: PortfolioText,
-      technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions],
+      technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
     },
   ].map(({ nameId, ...rest }) => ({
     nameId,

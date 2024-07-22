@@ -40,7 +40,7 @@
       <Technologies
         {technologies}
         class={classes(
-          'my-2 lg:mb-0 lg:mt-auto mx-auto lg:mx-0',
+          'my-2 lg:mb-0 lg:mt-auto justify-center',
           toLeft ? 'lg:justify-end' : 'lg:justify-start'
         )}
       />
