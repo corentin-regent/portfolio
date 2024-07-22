@@ -79,7 +79,7 @@ jobs:
       - build-test
 
     env:
-      REGISTRY: ghcr.io  # GitHub Container Registry
+      REGISTRY: ghcr.io # GitHub Container Registry
       IMAGE_NAME: ${{ github.repository }}
     permissions:
       contents: read
