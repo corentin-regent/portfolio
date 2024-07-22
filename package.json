@@ -5,7 +5,7 @@
   "scripts": {
     "build": "vite build && node scripts/minify.js",
     "dev": "vite dev",
-    "serve": "http-server -c-1 build/",
+    "docker": "docker run --rm -p 8080:80 $(docker build -q .)",
     "lint": "prettier --write --check . && eslint .",
     "test": "NODE_OPTIONS='--experimental-vm-modules' npx jest"
   },

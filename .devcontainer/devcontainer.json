@@ -2,15 +2,18 @@
   "name": "corentin-regent/portfolio",
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": {},
     "ghcr.io/devcontainers/features/node": {},
     "ghcr.io/devcontainers-contrib/features/prettier": {}
   },
   "customizations": {
     "vscode": {
       "extensions": [
+        "ahmadalli.vscode-nginx-conf",
         "bierner.markdown-preview-github-styles",
         "dbaeumer.vscode-eslint",
-        "ms-vscode.live-server",
+        "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
         "orta.vscode-jest",
         "svelte.svelte-vscode",
         "yzhang.markdown-all-in-one"
