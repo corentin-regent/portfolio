@@ -37,8 +37,7 @@
       }
     },
     "upload": {
-      "target": "filesystem",
-      "outputDir": "./lighthouse/"
+      "target": "filesystem"
     }
   }
 }

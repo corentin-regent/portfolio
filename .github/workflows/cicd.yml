@@ -153,12 +153,18 @@ jobs:
             core.setOutput('urls', allUrls);
 
       - name: Run Lighthouse
+        id: lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: './lighthouserc.json'
           uploadArtifacts: true
           urls: |
             ${{ steps.urls.outputs.urls }}
+
+      - name: Debug Lighthouse outputs
+        run: |
+          echo ${{ steps.lighthouse.outputs.resultsPath }}
+          ls ${{ steps.lighthouse.outputs.resultsPath }}
 
   deploy:
     name: Deploy
