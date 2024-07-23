@@ -11,7 +11,7 @@ on:
       - 'README.md'
 
 env:
-  REGISTRY: ghcr.io  # GitHub Container Registry
+  REGISTRY: ghcr.io # GitHub Container Registry
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
@@ -136,7 +136,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull Docker image
-        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
+        run:
+          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
 
       - name: Generate URLs to audit
         id: urls
@@ -152,15 +153,17 @@ jobs:
               .filter(path => path.endsWith('+page.svelte'))
               .map(path => path.replace('+page.svelte', ''))
               .flatMap(route =>
-                  route.includes('[[language=language]]')
-                  ? availableLanguages.map(language => route.replace(
-                    '[[language=language]]/',
-                    language === defaultLanguage ? '' : language + '/'
-                  ))
+                route.includes('[[language=language]]')
+                  ? availableLanguages.map(language =>
+                      route.replace(
+                        '[[language=language]]/',
+                        language === defaultLanguage ? '' : language + '/'
+                      )
+                    )
                   : [route]
               )
               .map(route => 'http://localhost/' + route)
-              .join('\n')
+              .join('\n');
 
             core.setOutput('urls', allUrls);
 
