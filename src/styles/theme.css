@@ -9,7 +9,7 @@
     --bg1: #fafafa;
     --bg2: #d4d4d8;
     --bg3: #9ca3af;
-    --primary1: #ff5700;
+    --primary1: #dc3000;
     --primary-darker1: #cf022b;
     --primary-lighter1: #f07d00;
     --text1: black;
@@ -17,18 +17,19 @@
   }
 
   @define-mixin light-theme {
-    ~ div .dark-only {
+    ~div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~ div {
+    ~div {
       --anti-bg1: #fafafa;
       --anti-bg2: #d4d4d8;
       --bg1: var(--dark-bg1);
       --bg2: #18181b;
       --bg3: #27272a;
+      --primary1: #ff5700;
       --text1: white;
       --text2: #9ca3af;
 
