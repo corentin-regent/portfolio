@@ -143,22 +143,10 @@ jobs:
           script: |
             const { readdirSync } = require('fs');
 
-            const availableLanguages = ['en', 'fr'];
-            const defaultLanguage = 'en';
-
             const allUrls = readdirSync('src/routes/', { recursive: true })
               .filter(path => path.endsWith('+page.svelte'))
               .map(path => path.replace('+page.svelte', ''))
-              .flatMap(route =>
-                route.includes('[[language=language]]')
-                  ? availableLanguages.map(language =>
-                      route.replace(
-                        '[[language=language]]/',
-                        language === defaultLanguage ? '' : language + '/'
-                      )
-                    )
-                  : [route]
-              )
+              .map(route => route.replace('[[language=language]]/', '')
               .map(route => 'http://localhost/' + route)
               .join('\n');
 
