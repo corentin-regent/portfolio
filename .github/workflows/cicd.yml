@@ -10,6 +10,10 @@ on:
       - 'LICENSE*'
       - 'README.md'
 
+env:
+  REGISTRY: ghcr.io  # GitHub Container Registry
+  IMAGE_NAME: ${{ github.repository }}
+
 jobs:
   lint:
     name: Lint codebase
@@ -77,10 +81,9 @@ jobs:
     needs:
       - lint
       - build-test
+    outputs:
+      digest: ${{ steps.build-push.outputs.digest }}
 
-    env:
-      REGISTRY: ghcr.io  # GitHub Container Registry
-      IMAGE_NAME: ${{ github.repository }}
     permissions:
       contents: read
       packages: write
@@ -107,6 +110,7 @@ jobs:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
       - name: Build and push Docker image
+        id: build-push
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -114,12 +118,37 @@ jobs:
           tags: ${{ steps.metadata.outputs.tags }}
           labels: ${{ steps.metadata.outputs.labels }}
 
+  lighthouse:
+    name: Run Lighthouse audits
+    runs-on: ubuntu-latest
+    needs:
+      - docker
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull Docker image
+        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
+
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: './lighthouserc.js'
+          uploadArtifacts: true
+
   deploy:
     name: Deploy
     runs-on: ubuntu-latest
     needs:
-      - lint
-      - build-test
+      - lighthouse
 
     permissions:
       pages: write
