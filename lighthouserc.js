@@ -7,15 +7,20 @@ const allUrls = readdirSync('src/routes/', { recursive: true })
   .map(path => path.replace('+page.svelte', ''))
   .flatMap(route =>
     route.includes('[[language=language]]')
-      ? availableLanguages.map(language => route.replace('[[language=language]]/', language === defaultLanguage ? '' : language + '/'))
+      ? availableLanguages.map(language =>
+          route.replace(
+            '[[language=language]]/',
+            language === defaultLanguage ? '' : language + '/'
+          )
+        )
       : [route]
   )
-  .map(route => 'http://localhost/' + route)
+  .map(route => 'http://localhost/' + route);
 
 export default {
   ci: {
     collect: {
-      method: "node",
+      method: 'node',
       headful: false,
       additive: false,
       numberOfRuns: 3,
@@ -23,14 +28,14 @@ export default {
       url: allUrls,
     },
     assert: {
-      preset: "lighthouse:all",
+      preset: 'lighthouse:all',
       assertions: {
-        'is-crawlable': 'off',  // TODO: enable this when we go public
-      }
+        'is-crawlable': 'off', // TODO: enable this when we go public
+      },
     },
     upload: {
       target: 'filesystem',
-      outputDir: './lighthouse/'
+      outputDir: './lighthouse/',
     },
-  }
-}
+  },
+};

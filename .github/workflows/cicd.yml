@@ -11,7 +11,7 @@ on:
       - 'README.md'
 
 env:
-  REGISTRY: ghcr.io  # GitHub Container Registry
+  REGISTRY: ghcr.io # GitHub Container Registry
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
@@ -136,7 +136,8 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Pull Docker image
-        run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
+        run:
+          docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
 
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v12
