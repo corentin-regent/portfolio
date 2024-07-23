@@ -163,8 +163,7 @@ jobs:
 
       - name: Debug Lighthouse outputs
         run: |
-          echo ${{ steps.lighthouse.outputs.resultsPath }}
-          ls ${{ steps.lighthouse.outputs.resultsPath }}
+          cat ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json
 
   deploy:
     name: Deploy
