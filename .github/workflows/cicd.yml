@@ -146,7 +146,7 @@ jobs:
             const allUrls = readdirSync('src/routes/', { recursive: true })
               .filter(path => path.endsWith('+page.svelte'))
               .map(path => path.replace('+page.svelte', ''))
-              .map(route => route.replace('[[language=language]]/', '')
+              .map(route => route.replace('[[language=language]]/', ''))
               .map(route => 'http://localhost/' + route)
               .join('\n');
 
