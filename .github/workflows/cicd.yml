@@ -138,11 +138,39 @@ jobs:
       - name: Pull Docker image
         run: docker pull ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
 
+      - name: Generate URLs to audit
+        id: urls
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            const { readdirSync } = require('fs');
+            const availableLanguages = require('./src/stores/language/available.js');
+            const defaultLanguage = require('./src/stores/language/default.js');
+
+            const allUrls = readdirSync('src/routes/', { recursive: true })
+              .filter(path => path.endsWith('+page.svelte'))
+              .map(path => path.replace('+page.svelte', ''))
+              .flatMap(route =>
+                  route.includes('[[language=language]]')
+                  ? availableLanguages.map(language => route.replace(
+                    '[[language=language]]/',
+                    language === defaultLanguage ? '' : language + '/'
+                  ))
+                  : [route]
+              )
+              .map(route => 'http://localhost/' + route)
+              .join('\n')
+
+            core.setOutput('urls', allUrls);
+
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
           configPath: './lighthouserc.js'
           uploadArtifacts: true
+          urls: |
+            ${{ steps.urls.outputs.urls }}
 
   deploy:
     name: Deploy
