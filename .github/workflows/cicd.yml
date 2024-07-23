@@ -171,7 +171,7 @@ jobs:
       - name: Run Lighthouse
         uses: treosh/lighthouse-ci-action@v12
         with:
-          configPath: './lighthouserc.js'
+          configPath: './lighthouserc.json'
           uploadArtifacts: true
           urls: |
             ${{ steps.urls.outputs.urls }}

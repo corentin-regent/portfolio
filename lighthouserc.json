@@ -1,0 +1,21 @@
+{
+  "ci": {
+    "collect": {
+      "method": "node",
+      "headful": false,
+      "additive": false,
+      "numberOfRuns": 3,
+      "startServerCommand": "docker run --rm -p 80:80 portfolio"
+    },
+    "assert": {
+      "preset": "lighthouse:all",
+      "assertions": {
+        "is-crawlable": "off"
+      }
+    },
+    "upload": {
+      "target": "filesystem",
+      "outputDir": "./lighthouse/"
+    }
+  }
+}
