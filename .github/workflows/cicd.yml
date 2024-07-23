@@ -146,8 +146,9 @@ jobs:
           result-encoding: string
           script: |
             const { readdirSync } = require('fs');
-            const availableLanguages = require('./src/stores/language/available.js');
-            const defaultLanguage = require('./src/stores/language/default.js');
+
+            const availableLanguages = ['en', 'fr'];
+            const defaultLanguage = 'en';
 
             const allUrls = readdirSync('src/routes/', { recursive: true })
               .filter(path => path.endsWith('+page.svelte'))
