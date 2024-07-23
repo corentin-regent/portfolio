@@ -5,7 +5,7 @@
       "headful": false,
       "additive": false,
       "numberOfRuns": 3,
-      "startServerCommand": "docker run --rm -p 80:80 portfolio:main"
+      "startServerCommand": "docker run --rm -p 80:80 portfolio"
     },
     "assert": {
       "preset": "lighthouse:all",
