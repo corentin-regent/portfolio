@@ -161,9 +161,28 @@ jobs:
           urls: |
             ${{ steps.urls.outputs.urls }}
 
-      - name: Debug Lighthouse outputs
-        run: |
-          cat ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install NPM Dependencies
+        run: npm ci
+
+      - name: Get the list of Chromium dependencies
+        id: chromium-dependencies
+        run:
+          dependencies=$(cat chromium-dependencies.txt) echo "dependencies=$dependencies" >>
+          $GITHUB_OUTPUT
+
+      - name: Install Chromium dependencies
+        uses: awalsh128/cache-apt-pkgs-action@latest
+        with:
+          packages: ${{ steps.chromium-dependencies.outputs.dependencies }}
+
+      - name: Update Lighthouse report in Readme file
+        run: node scripts/update-lighthouse-report.js ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json
 
   deploy:
     name: Deploy

@@ -1,6 +1,7 @@
 {
   "name": "corentin-regent/portfolio",
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
+  "postCreateCommand": "sudo apt update && cat ./chromium-dependencies.txt | xargs sudo apt install -y & npm ci",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker": {},
     "ghcr.io/devcontainers/features/node": {},
