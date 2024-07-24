@@ -124,9 +124,14 @@ jobs:
     needs:
       - docker
 
+    permissions:
+      contents: write
+
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT }}
 
       - name: Pull Docker image
         env:
@@ -181,8 +186,14 @@ jobs:
         with:
           packages: ${{ steps.chromium-dependencies.outputs.dependencies }}
 
-      - name: Update Lighthouse report in Readme file
+      - name: Generate Lighthouse report
         run: node scripts/update-lighthouse-report.js ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json
+
+      - name: Commit Lighthouse report
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: 'Refresh Lighthouse report [skip ci]'
+          file_pattern: docs/lighthouse-report.png
 
   deploy:
     name: Deploy
