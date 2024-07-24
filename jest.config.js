@@ -1,7 +1,7 @@
 export default {
   moduleFileExtensions: ['js'],
   globals: {
-    ROOT_URL: 'http://localhost:5173',
+    ROOT_URL: 'http://localhost:8080',
   },
   modulePaths: ['<rootDir>'],
   preset: 'jest-puppeteer',

@@ -5,7 +5,7 @@ export default {
   },
   server: {
     command: 'npm run dev',
-    port: 5173,
+    port: 8080,
     debug: true,
   },
 };
