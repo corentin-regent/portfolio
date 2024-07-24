@@ -8,5 +8,6 @@ export default {
     command: 'npm run preview',
     port: 3000,
     debug: true,
+    launchTimeout: 30 * 1000,
   },
 };
