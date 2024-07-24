@@ -45,30 +45,36 @@ jobs:
         with:
           commit_message: 'Lint codebase [skip ci]'
 
-  build-test:
-    name: Build and test
+  test:
+    name: Run tests
     runs-on: ubuntu-latest
 
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install Dependencies
-        run: npm ci
-
-      - name: Build the static website
-        env:
-          BASE_PATH: '/${{ github.event.repository.name }}'
-        run: npm run build
+      - uses: ./.github/actions/setup
 
       - name: Execute tests
         run: npm test
+
+  build:
+    name: Build the static website
+    runs-on: ubuntu-latest
+    needs:
+      - lint
+      - test
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - uses: ./.github/actions/setup
+
+      - name: Build the HTML output
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
+        run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
@@ -79,8 +85,8 @@ jobs:
     name: Build & Push Docker Image
     runs-on: ubuntu-latest
     needs:
-      - lint
-      - build-test
+      - build
+
     outputs:
       digest: ${{ steps.build-push.outputs.digest }}
 
@@ -166,25 +172,7 @@ jobs:
           urls: |
             ${{ steps.urls.outputs.urls }}
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-
-      - name: Install NPM Dependencies
-        run: npm ci
-
-      - name: Get the list of Chromium dependencies
-        id: chromium-dependencies
-        run: |
-          dependencies="$(cat chromium-dependencies.txt)"
-          echo "dependencies='$dependencies'" >> $GITHUB_OUTPUT
-
-      - name: Install Chromium dependencies
-        uses: awalsh128/cache-apt-pkgs-action@latest
-        with:
-          packages: ${{ steps.chromium-dependencies.outputs.dependencies }}
+      - uses: ./.github/actions/setup
 
       - name: Generate Lighthouse report
         run: node scripts/update-lighthouse-report.js ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json

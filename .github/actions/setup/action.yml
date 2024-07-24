@@ -1,0 +1,25 @@
+name: Setup
+description: Setup Node.js and dependencies
+
+runs:
+  using: composite
+  steps:
+    - name: Install Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+        cache: npm
+
+    - name: Install Javascript Dependencies
+      run: npm ci
+
+    - name: Get the list of Chromium dependencies
+      id: chromium-dependencies
+      run: |
+        dependencies="$(cat chromium-dependencies.txt)"
+        echo "dependencies='$dependencies'" >> $GITHUB_OUTPUT
+
+    - name: Install Chromium dependencies
+      uses: awalsh128/cache-apt-pkgs-action@latest
+      with:
+        packages: ${{ steps.chromium-dependencies.outputs.dependencies }}
