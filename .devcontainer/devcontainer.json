@@ -20,8 +20,7 @@
         "yzhang.markdown-all-in-one"
       ],
       "settings": {
-        "jest.runMode": "on-demand",
-        "rust-analyzer.checkOnSave.enable": false
+        "jest.runMode": "on-demand"
       }
     }
   }
