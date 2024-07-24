@@ -177,9 +177,9 @@ jobs:
 
       - name: Get the list of Chromium dependencies
         id: chromium-dependencies
-        run:
-          dependencies=$(cat chromium-dependencies.txt) echo "dependencies=$dependencies" >>
-          $GITHUB_OUTPUT
+        run: |
+          dependencies="$(cat chromium-dependencies.txt)"
+          echo "dependencies='$dependencies'" >> $GITHUB_OUTPUT
 
       - name: Install Chromium dependencies
         uses: awalsh128/cache-apt-pkgs-action@latest
