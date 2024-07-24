@@ -22,6 +22,6 @@ export default [
     },
   },
   {
-    ignores: ['build/', '.svelte-kit/', 'package-lock.json', 'node_modules/'],
+    ignores: ['build/', '.svelte-kit/', 'package-lock.json', 'node_modules/', '.github/**/*.yml'],
   },
 ];
