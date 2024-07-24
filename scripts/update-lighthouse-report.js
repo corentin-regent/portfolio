@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import puppeteer from 'puppeteer';
+import mapValues from '../src/utils/mapValues.js';
 
 const manifestFilePath = process.argv[2];
 let lighthouseReport = readFileSync('docs/lighthouse-report-template.html', { encoding: 'utf-8' });
@@ -15,11 +16,9 @@ const summaries = JSON.parse(readFileSync(manifestFilePath, { encoding: 'utf-8' 
 
 const sumScores = summaries.reduce(
   (agg, incoming) =>
-    Object.fromEntries(
-      Object.entries(incoming).map(([category, incomingScore]) => [
-        category,
-        (agg[category] ?? 0) + incomingScore,
-      ])
+    mapValues(
+      incoming,
+      ({ key: category, value: incomingScore }) => (agg[category] ?? 0) + incomingScore
     ),
   {}
 );
