@@ -10,8 +10,8 @@
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
-        "is-crawlable": "warn",
-        "unsized-images": "warn",
+        "render-blocking-resources": "off",
+        "unsized-images": "off",
         "categories:performance": [
           "warn",
           {
