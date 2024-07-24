@@ -13,11 +13,17 @@ export default [
         process: 'readonly',
         setTimeout: 'readonly',
         window: 'readonly',
+
         $derived: 'readonly',
         $state: 'readonly',
+
+        beforeAll: 'readonly',
         describe: 'readonly',
         expect: 'readonly',
         it: 'readonly',
+
+        ROOT_URL: 'readonly',
+        page: 'readonly',
       },
     },
   },

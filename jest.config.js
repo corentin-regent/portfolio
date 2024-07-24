@@ -1,7 +1,9 @@
 export default {
   moduleFileExtensions: ['js'],
-  testEnvironment: 'node',
-  testMatch: ['**/*.test.js'],
-  testPathIgnorePatterns: ['node_modules/', 'build/'],
-  transform: {},
+  globals: {
+    ROOT_URL: 'http://localhost:5173',
+  },
+  modulePaths: ['<rootDir>'],
+  preset: 'jest-puppeteer',
+  testMatch: ['<rootDir>/tests/**/*.test.js'],
 };

@@ -1,4 +1,4 @@
-import mapKeys from './mapKeys.js';
+import mapKeys from 'src/utils/mapKeys.js';
 
 describe('mapKeys', () => {
   it("should map the object's keys using the provided function", () => {

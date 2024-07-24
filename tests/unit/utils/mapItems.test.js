@@ -1,4 +1,4 @@
-import mapItems from './mapItems.js';
+import mapItems from 'src/utils/mapItems.js';
 
 describe('mapItems', () => {
   it("should map the object's items using the provided functions", () => {

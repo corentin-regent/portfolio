@@ -1,4 +1,4 @@
-import accumulate from './accumulate.js';
+import accumulate from 'src/utils/accumulate.js';
 
 function add(a, b) {
   return a + b;

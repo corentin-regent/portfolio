@@ -1,4 +1,4 @@
-import classes from './classes.js';
+import classes from 'src/utils/classes.js';
 
 describe('classes', () => {
   it('should combine CSS classes', () => {

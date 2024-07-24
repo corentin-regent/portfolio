@@ -1,4 +1,4 @@
-import mapValues from './mapValues.js';
+import mapValues from 'src/utils/mapValues.js';
 
 describe('mapValues', () => {
   it("should map the object's values using the provided function", () => {
