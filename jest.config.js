@@ -6,4 +6,5 @@ export default {
   modulePaths: ['<rootDir>'],
   preset: 'jest-puppeteer',
   testMatch: ['<rootDir>/tests/**/*.test.js'],
+  verbose: true,
 };

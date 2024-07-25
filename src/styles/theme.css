@@ -1,10 +1,9 @@
 @layer base {
   :root {
     --text-light: white;
-    --dark-bg1: #09090b;
 
     /* Light theme */
-    --anti-bg1: var(--dark-bg1);
+    --anti-bg1: #09090b;
     --anti-bg2: #18181b;
     --bg1: #fafafa;
     --bg2: #d4d4d8;
@@ -17,16 +16,16 @@
   }
 
   @define-mixin light-theme {
-    ~ div .dark-only {
+    ~div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~ div {
+    ~div {
       --anti-bg1: #fafafa;
       --anti-bg2: #d4d4d8;
-      --bg1: var(--dark-bg1);
+      --bg1: #09090b;
       --bg2: #18181b;
       --bg3: #27272a;
       --primary1: #ff5700;
