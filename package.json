@@ -5,7 +5,6 @@
   "scripts": {
     "build": "vite build && node scripts/minify.js",
     "dev": "vite dev",
-    "preview": "npm run build && vite preview",
     "lint": "prettier --write --check . && eslint .",
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest --runInBand"
   },

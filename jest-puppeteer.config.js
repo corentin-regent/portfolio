@@ -5,8 +5,8 @@ export default {
     headless: true,
   },
   server: {
-    command: 'npm run preview',
-    port: 3000,
+    command: 'npm run dev',
+    port: 5173,
     debug: true,
     launchTimeout: 30 * 1000,
   },
