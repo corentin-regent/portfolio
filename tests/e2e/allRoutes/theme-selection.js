@@ -64,7 +64,7 @@ export default function testThemeSelection(page) {
           await expectOtherThemeEnabled();
         });
 
-        it('should switch the theme back to default toggled twice', async () => {
+        it('should switch the theme back to default when toggled twice', async () => {
           await defaultThemeEnabledLabelElement.evaluate(element => element.click());
           await otherThemeEnabledLabelElement.evaluate(element => element.click());
           await expectDefaultThemeEnabled();
