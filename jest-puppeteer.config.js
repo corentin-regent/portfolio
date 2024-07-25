@@ -7,5 +7,6 @@ export default {
     command: 'npm run dev',
     host: 'localhost',
     port: 5173,
+    protocol: 'http',
   },
 };
