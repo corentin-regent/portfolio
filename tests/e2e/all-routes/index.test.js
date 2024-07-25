@@ -19,11 +19,11 @@ describe('Tests for all routes', () => {
     .flatMap(route =>
       route.includes('[[language=language]]')
         ? availableLanguages.map(language =>
-          route.replace(
-            '[[language=language]]/',
-            language === defaultLanguage ? '' : language + '/'
+            route.replace(
+              '[[language=language]]/',
+              language === defaultLanguage ? '' : language + '/'
+            )
           )
-        )
         : [route]
     )
     .flatMap(route => {
