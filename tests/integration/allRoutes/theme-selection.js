@@ -1,10 +1,15 @@
+import { jest } from '@jest/globals';
+
 const themeInputId = 'theme-selector';
 
 /** @param {import('puppeteer').Page} page */
 export default function testThemeSelection(page) {
   describe('theme selection', () => {
+    jest.retryTimes(3, { logErrorsBeforeRetry: true });
+
     ['light', 'dark'].forEach(theme => {
       describe(`with ${theme} theme as default`, () => {
+        let mainDivElement;
 
         /** @type {import('puppeteer').ElementHandle<HTMLLabelElement>} */
         let defaultThemeEnabledLabelElement;
@@ -12,27 +17,57 @@ export default function testThemeSelection(page) {
         /** @type {import('puppeteer').ElementHandle<HTMLLabelElement>} */
         let otherThemeEnabledLabelElement;
 
-        let mainDivElement;
+        beforeEach(async () => {
+          await page.evaluate(() => window.localStorage.clear());
+          await page.reload();
 
-        beforeAll(async () => {
-          [, defaultThemeEnabledLabelElement, otherThemeEnabledLabelElement, mainDivElement] = await Promise.all([
-            page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: theme }]),
-            page.$(`label[for=${themeInputId}].${theme}-only`),
-            page.$(`label[for=${themeInputId}]:not(.${theme}-only)`),
-            page.$('body > div.contents > div'),
-          ]);
+          [, defaultThemeEnabledLabelElement, otherThemeEnabledLabelElement, mainDivElement] =
+            await Promise.all([
+              page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: theme }]),
+              page.$(`label[for=${themeInputId}].${theme}-only`),
+              page.$(`label[for=${themeInputId}]:not(.${theme}-only)`),
+              page.$('body > div.contents > div'),
+            ]);
+
+          expect(
+            await mainDivElement.evaluate(element => {
+              const mainDivChildren = [...element.children];
+              return ['header', 'main', 'footer'].every(nodeName =>
+                mainDivChildren.some(child => child.nodeName.toLowerCase() === nodeName)
+              );
+            })
+          ).toBeTruthy();
         });
 
-        async function isDefaultThemeEnabled() {
-          return await Promise.all([
-            isThemeLabelVisible(defaultThemeEnabledLabelElement),
-            isThemeLabelInvisible(otherThemeEnabledLabelElement),
-            doesBgColorMatch(mainDivElement, theme)
+        async function expectDefaultThemeEnabled() {
+          await Promise.all([
+            expectThemeLabelVisible(defaultThemeEnabledLabelElement),
+            expectThemeLabelInvisible(otherThemeEnabledLabelElement),
+            expectBgColorMatches(mainDivElement, theme),
+          ]);
+        }
+
+        async function expectOtherThemeEnabled() {
+          await Promise.all([
+            expectThemeLabelVisible(otherThemeEnabledLabelElement),
+            expectThemeLabelInvisible(defaultThemeEnabledLabelElement),
+            expectBgColorMatches(mainDivElement, theme === 'dark' ? 'light' : 'dark'),
           ]);
         }
 
         it("should have the browser's default theme enabled by default", async () => {
-          expect(await isDefaultThemeEnabled()).toBeTruthy()
+          await expectDefaultThemeEnabled();
+        });
+
+        it('should toggle the theme when the icon is clicked', async () => {
+          await defaultThemeEnabledLabelElement.evaluate(element => element.click());
+          await expectOtherThemeEnabled();
+        });
+
+        it('should switch the theme back to default toggled twice', async () => {
+          await defaultThemeEnabledLabelElement.evaluate(element => element.click());
+          await otherThemeEnabledLabelElement.evaluate(element => element.click());
+          await expectDefaultThemeEnabled();
         });
       });
     });
@@ -40,25 +75,27 @@ export default function testThemeSelection(page) {
 }
 
 /** @param {import('puppeteer').ElementHandle<HTMLLabelElement>} labelElement */
-async function isThemeLabelVisible(labelElement) {
+async function expectThemeLabelVisible(labelElement) {
   const iconChildElement = await labelElement.$('svg');
-  if (!await iconChildElement.isVisible()) return false;
+  expect(await iconChildElement.isVisible()).toBeTruthy();
 
-  const [labelBoundingBox, iconBoundingBox] = await Promise.all([labelElement.boundingBox(), iconChildElement.boundingBox()]);
-  return labelBoundingBox.width === iconBoundingBox.width
-    && labelBoundingBox.height === iconBoundingBox.height
-    && labelBoundingBox.x === iconBoundingBox.x
-    && labelBoundingBox.y === iconBoundingBox.y
+  const [labelBoundingBox, iconBoundingBox] = await Promise.all([
+    labelElement.boundingBox(),
+    iconChildElement.boundingBox(),
+  ]);
+  expect(iconBoundingBox).toEqual(labelBoundingBox);
 }
 
 /** @param {import('puppeteer').ElementHandle<HTMLLabelElement>} labelElement */
-async function isThemeLabelInvisible(labelElement) {
-  return !await labelElement.isVisible()
+async function expectThemeLabelInvisible(labelElement) {
+  return expect(await labelElement.isVisible()).toBeFalsy();
 }
 
 /** @param {import('puppeteer').ElementHandle<HTMLDivElement>} mainDivElement */
-async function doesBgColorMatch(mainDivElement, theme) {
+async function expectBgColorMatches(mainDivElement, theme) {
   const expectedBgColor = theme === 'dark' ? 'rgb(9, 9, 11)' : 'rgb(250, 250, 250)';
-  const actualBgColor = await mainDivElement.evaluate(element => window.getComputedStyle(element).getPropertyValue('background-color'));
-  return actualBgColor === expectedBgColor;
+  const actualBgColor = await mainDivElement.evaluate(element =>
+    window.getComputedStyle(element).getPropertyValue('background-color')
+  );
+  return expect(actualBgColor).toEqual(expectedBgColor);
 }

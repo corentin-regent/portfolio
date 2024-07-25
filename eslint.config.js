@@ -18,6 +18,7 @@ export default [
         $state: 'readonly',
 
         beforeAll: 'readonly',
+        beforeEach: 'readonly',
         describe: 'readonly',
         expect: 'readonly',
         it: 'readonly',
