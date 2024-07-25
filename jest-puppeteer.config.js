@@ -9,5 +9,6 @@ export default {
     port: 5173,
     debug: true,
     launchTimeout: 30 * 1000,
+    protocol: 'http',
   },
 };
