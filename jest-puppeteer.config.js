@@ -10,6 +10,6 @@ export default {
     debug: true,
     launchTimeout: 30 * 1000,
     protocol: 'http',
-    host: 'localhost'
+    host: 'localhost',
   },
 };
