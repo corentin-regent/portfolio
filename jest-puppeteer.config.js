@@ -6,6 +6,6 @@ export default {
   server: {
     command: 'npm run dev',
     host: 'localhost',
-    port: 5173
+    port: 5173,
   },
 };
