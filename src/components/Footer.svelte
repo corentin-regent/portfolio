@@ -19,16 +19,16 @@
   <small>&copy; 2024 Corentin Régent</small>
 
   <div>
-    {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/" target="_blank">
+    {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/">
       SvelteKit
     </PrimaryLink>
   </div>
 
   <div>
-    <PrimaryLink url={githubRepoLink} target="_blank">
+    <PrimaryLink url={githubRepoLink}>
       {$messages.get('view-github-repo')}
     </PrimaryLink>
-    <BaseLink url={githubRepoLink} target="_blank" class="ml-1.5">
+    <BaseLink url={githubRepoLink} class="ml-1.5">
       <Github class="w-6 lg:w-8 inline" />
     </BaseLink>
   </div>

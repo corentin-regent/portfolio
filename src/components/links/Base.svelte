@@ -7,6 +7,12 @@
   let href = $derived(url ?? $resolve({ route, language }));
 </script>
 
-<a {...restProps} {href}>
-  {@render children()}
-</a>
+{#if url}
+  <a {...restProps} {href} target="_blank">
+    {@render children()}
+  </a>
+{:else}
+  <a {...restProps} {href}>
+    {@render children()}
+  </a>
+{/if}
