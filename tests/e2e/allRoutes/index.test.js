@@ -9,7 +9,7 @@ const tests = (
       .map(file => 'tests/e2e/allRoutes/' + file)
       .map(module => import(module))
   )
-).map(({ default: test }) => test);
+).map(module => module.default);
 
 describe('Tests for all routes', () => {
   readdirSync('src/routes/', { recursive: true })
