@@ -4,9 +4,9 @@ import defaultLanguage from 'src/stores/language/default.js';
 
 const tests = (
   await Promise.all(
-    readdirSync('tests/integration/allRoutes')
+    readdirSync('tests/e2e/allRoutes')
       .filter(path => !path.endsWith('.test.js'))
-      .map(file => 'tests/integration/allRoutes/' + file)
+      .map(file => 'tests/e2e/allRoutes/' + file)
       .map(module => import(module))
   )
 ).map(({ default: test }) => test);
@@ -19,11 +19,11 @@ describe('Tests for all routes', () => {
     .flatMap(route =>
       route.includes('[[language=language]]')
         ? availableLanguages.map(language =>
-            route.replace(
-              '[[language=language]]/',
-              language === defaultLanguage ? '' : language + '/'
-            )
+          route.replace(
+            '[[language=language]]/',
+            language === defaultLanguage ? '' : language + '/'
           )
+        )
         : [route]
     )
     .flatMap(route => {
