@@ -4,9 +4,9 @@ import defaultLanguage from 'src/stores/language/default.js';
 
 const tests = (
   await Promise.all(
-    readdirSync('tests/e2e/allRoutes')
+    readdirSync('tests/e2e/all-routes')
       .filter(path => !path.endsWith('.test.js'))
-      .map(file => 'tests/e2e/allRoutes/' + file)
+      .map(file => 'tests/e2e/all-routes/' + file)
       .map(module => import(module))
   )
 ).map(module => module.default);
