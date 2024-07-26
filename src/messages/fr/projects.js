@@ -9,7 +9,7 @@ const pageMessages = {
   'open-source-contributions': "Contribution à d'autres projets open-source",
   'page-header': 'Projets personnels',
   'page-main-text':
-    "J'adore découvrir de nouvelles technologies, concepts et paradigmes, et cherche à toujours acquérir de nouvelles compétences. Voici quelques-uns des meilleurs projets sur lesquels j'ai travaillé, dans l'objectif de devenir extrêmement talentueux et polyvalent.",
+    "J'adore découvrir de nouvelles technologies, concepts et paradigmes, et cherche à toujours acquérir de nouvelles compétences. Voici quelques-uns des meilleurs projets sur lesquels j'ai travaillé, dans l'objectif de devenir aussi talentueux et polyvalent que possible.",
 };
 
 const rateControl = {

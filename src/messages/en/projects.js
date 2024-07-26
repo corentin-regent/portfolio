@@ -9,7 +9,7 @@ const pageMessages = {
   'open-source-contributions': 'Contributions to other open-source projects',
   'page-header': 'Personal projects',
   'page-main-text':
-    'I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have been working on, with the aim of becoming extremely talented and versatile.',
+    'I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have been working on, with the aim of becoming as talented and versatile as possible.',
 };
 
 const rateControl = {
