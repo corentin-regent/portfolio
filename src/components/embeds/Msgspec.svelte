@@ -1,6 +1,6 @@
 <script context="module">
-  import Image from '$components/Image.svelte';
   import EmbeddedIcon from '$components/embeds/Icon.svelte';
+  import Msgspec from '$components/icons/logos/Msgspec.svelte';
 </script>
 
 <script>
@@ -8,5 +8,5 @@
 </script>
 
 <EmbeddedIcon {...restProps}>
-  <Image src="/logos/msgspec.svg" alt="msgspec" />
+  <Msgspec />
 </EmbeddedIcon>
