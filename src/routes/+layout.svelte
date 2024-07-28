@@ -1,6 +1,8 @@
 <script context="module">
   import Footer from '$components/Footer.svelte';
   import Header from '$components/Header.svelte';
+  import H2 from '$components/text/H2.svelte';
+  import P from '$components/text/P.svelte';
   import theme from '$runes/theme/index.svelte.js';
   import messages from '$stores/i18n/messages.svelte.js';
   import availableLanguages from '$stores/language/available.js';
@@ -53,6 +55,10 @@
 <div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
   <Header />
   <main class="w-full px-2 lg:px-4 text-center">
+    <div class="max-w-screen-md mx-auto">
+      <H2 class="mb-2">{$messages.get('page-header')}</H2>
+      <P>{$messages.get('page-main-text')}</P>
+    </div>
     {@render children()}
   </main>
   <Footer />

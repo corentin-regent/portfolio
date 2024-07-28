@@ -1,5 +1,6 @@
 @layer base {
   :root {
+    --dark-bg1: #09090b;
     --text-light: white;
 
     /* Light theme */
@@ -13,24 +14,35 @@
     --primary-lighter1: #f07d00;
     --text1: black;
     --text2: #52525b;
+
+    --geodis-main-color: #3200e6;
+    --leagues-main-color1: black;
+    --leagues-main-color2: black;
+    --sncf-purple: #7c2271;
+    --sncf-red: #e41e25;
+    --sopra-orange: #f67200;
+    --sopra-red: #de1823;
   }
 
   @define-mixin light-theme {
-    ~ div .dark-only {
+    ~div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~ div {
+    ~div {
       --anti-bg1: #fafafa;
       --anti-bg2: #d4d4d8;
-      --bg1: #09090b;
+      --bg1: var(--dark-bg1);
       --bg2: #18181b;
       --bg3: #27272a;
       --primary1: #ff5700;
       --text1: white;
       --text2: #9ca3af;
+
+      --leagues-main-color1: white;
+      --leagues-main-color2: #ccc;
 
       .light-only {
         display: none;

@@ -27,9 +27,7 @@
   import Typescript from '$components/icons/technologies/Typescript.svelte';
 
   import Project from '$components/Project.svelte';
-  import H2 from '$components/text/H2.svelte';
   import H3 from '$components/text/H3.svelte';
-  import P from '$components/text/P.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 
@@ -74,11 +72,6 @@
     },
   ];
 </script>
-
-<div class="max-w-screen-md mx-auto">
-  <H2 class="mb-2">{$messages.get('page-header')}</H2>
-  <P>{$messages.get('page-main-text')}</P>
-</div>
 
 {#snippet projects(titleId, projectList)}
   <section id={titleId}>

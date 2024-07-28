@@ -10,6 +10,8 @@ const rootPageMessages = {
   home: 'Home',
   'made-with': 'Made with',
   'my-portfolio': "Corentin Régent's Portfolio",
+  'page-header': "Welcome",
+  'page-main-text': "Hi, I'm Corentin Régent, a passionate software engineer from France. Let's embark on a journey together as you explore my interests, experiences and personal projects.",
   projects: 'Projects',
   'view-github-repo': 'View the GitHub repository',
 };
@@ -34,6 +36,8 @@ const iconDescriptionMessages = {
   'discord-svg-desc': 'The Discord logo, accompanies a reference to a Discord account.',
   'email-svg-desc': 'Envelope icon, accompanies a reference to an email address.',
   'github-svg-desc': 'The GitHub logo, indicates that the resource is available on GitHub.',
+  'leaguesgg-svg-desc':
+    'The Leagues.gg logo, accompanies mentions of the Leagues.gg company and web application.',
   'linkedin-svg-desc': 'The LinkedIn logo, accompanies a reference to a LinkedIn profile.',
   'theme-dark-svg-desc': 'Night icon, the page is rendered using the dark theme.',
   'theme-light-svg-desc': 'Day icon, the page is rendered using the light theme.',
@@ -43,6 +47,11 @@ const placeHolders = {
   'email-placeholder': 'name@example.com',
 };
 
+const dateMessages = {
+  'period-from-to': ({ start, end }) => `${start} – ${end}`,
+  'period-from': start => `Since ${start}`,
+}
+
 export default {
   ...metadata,
   ...rootPageMessages,
@@ -51,4 +60,5 @@ export default {
   ...otherIconTitles,
   ...iconDescriptionMessages,
   ...placeHolders,
+  ...dateMessages,
 };

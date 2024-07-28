@@ -1,4 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
+import plugin from 'tailwindcss/plugin';
 
 export default {
   content: ['./src/**/*.{html,svelte}'],
@@ -15,9 +16,16 @@ export default {
           'bg2',
           'bg3',
           'dark-bg1',
+          'geodis-main-color',
+          'leagues-main-color2',
+          'leagues-main-color1',
           'primary1',
           'primary-darker1',
           'primary-lighter1',
+          'sncf-purple',
+          'sncf-red',
+          'sopra-orange',
+          'sopra-red',
           'text1',
           'text2',
           'text-light',
@@ -32,4 +40,12 @@ export default {
       ...defaultTheme.screens,
     },
   },
+  plugins: [
+    plugin(({ matchUtilities, theme }) =>
+      matchUtilities(
+        { stop: value => ({ stopColor: value }) },
+        { values: theme('colors') }
+      )
+    ),
+  ],
 };
