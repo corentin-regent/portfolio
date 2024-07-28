@@ -9,18 +9,13 @@
 </script>
 
 <script>
-  const { nameId, embed, text, url, technologies, toLeft, class: cls, ...restProps } = $props();
+  const { nameId, embed, text, url, technologies, toLeft } = $props();
 </script>
 
 <article
-  {...restProps}
-  class={classes(
-    cls,
-    'sm:text-justify flex flex-col',
-    toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row'
-  )}
+  class={classes('sm:text-justify flex flex-col', toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row')}
 >
-  <div class="flex items-center mx-auto">
+  <div class="mx-auto">
     <svelte:component this={embed} class="aspect-video min-w-72 w-72 rounded-lg" />
   </div>
   <div class={classes('flex flex-col', toLeft ? 'lg:mr-4' : 'lg:ml-4')}>
@@ -35,7 +30,7 @@
         <Github class="inline w-7" />
       </Link>
     </H4>
-    <div class="flex flex-col-reverse h-full lg:flex-col lg:space-between">
+    <div class="flex flex-col-reverse lg:flex-col grow">
       <P class="mx-auto"><svelte:component this={text} /></P>
       <Technologies
         {technologies}

@@ -76,13 +76,14 @@
 {#snippet projects(titleId, projectList)}
   <section id={titleId}>
     <H3 class="my-4">{$messages.get(titleId)}</H3>
-    <ul class="flex flex-col">
+    <ul>
       {#each projectList as project, index}
         <li
           class={classes(
-            'py-4 lg:py-0 px-2 lg:px-0 mx-auto max-w-screen-sm lg:max-w-screen-xl',
-            '[&:not(:first-child)]:border-t-2 [&:not(:first-child)]:border-anti-bg1 lg:border-none',
-            'lg:[&:not(:first-child)]:before:block lg:[&:not(:first-child)]:before:h-0.5 lg:[&:not(:first-child)]:before:my-4',
+            'px-2 lg:px-0 mx-auto mb-4 max-w-screen-sm lg:max-w-screen-xl',
+            '[&:not(:first-child)]:pt-4 [&:not(:first-child)]:border-t [&:not(:first-child)]:border-anti-bg1',
+            'lg:border-none lg:mb-0 lg:[&:not(:first-child)]:pt-0 lg:[&:not(:first-child)]:before:block',
+            'lg:[&:not(:first-child)]:before:h-0.5 lg:[&:not(:first-child)]:before:my-4',
             'lg:[&:not(:first-child)]:before:bg-gradient-to-r',
             index % 2
               ? 'lg:[&:not(:first-child)]:before:from-transparent lg:[&:not(:first-child)]:before:to-anti-bg1'
