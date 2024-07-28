@@ -1,14 +1,16 @@
 <script context="module">
-  import Footer from '$components/Footer.svelte';
-  import Header from '$components/Header.svelte';
   import H2 from '$components/text/H2.svelte';
   import P from '$components/text/P.svelte';
+  import Footer from './Footer.svelte';
+  import Header from './Header.svelte';
+
   import theme from '$runes/theme/index.svelte.js';
   import messages from '$stores/i18n/messages.svelte.js';
   import availableLanguages from '$stores/language/available.js';
   import defaultLanguage from '$stores/language/default.js';
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import resolve from '$stores/navigation/resolve.svelte.js';
+
   import '../app.css';
 </script>
 

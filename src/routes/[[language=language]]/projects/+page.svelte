@@ -26,10 +26,10 @@
   import Svg from '$components/icons/technologies/Svg.svelte';
   import Typescript from '$components/icons/technologies/Typescript.svelte';
 
-  import Project from '$components/Project.svelte';
   import H3 from '$components/text/H3.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
+  import Project from './Project.svelte';
 
   const myProjects = [
     {

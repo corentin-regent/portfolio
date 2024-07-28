@@ -3,7 +3,7 @@
   import Discord from '$components/icons/logos/Discord.svelte';
   import Github from '$components/icons/logos/Github.svelte';
   import Linkedin from '$components/icons/logos/Linkedin.svelte';
-  import Social from '$components/Social.svelte';
+  import Social from './Social.svelte';
 
   const myEmail = 'corentin.regent.pro@gmail.com';
   const socials = [

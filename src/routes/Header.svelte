@@ -1,7 +1,7 @@
 <script context="module">
-  import ChooseLanguage from '$components/ChooseLanguage.svelte';
-  import ChooseTheme from '$components/ChooseTheme.svelte';
   import Menu from '$components/Menu.svelte';
+  import ChooseLanguage from './ChooseLanguage.svelte';
+  import ChooseTheme from './ChooseTheme.svelte';
 
   const menuItems = [
     { message: 'home', route: '/' },
