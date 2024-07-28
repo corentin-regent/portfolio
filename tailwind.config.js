@@ -42,10 +42,7 @@ export default {
   },
   plugins: [
     plugin(({ matchUtilities, theme }) =>
-      matchUtilities(
-        { stop: value => ({ stopColor: value }) },
-        { values: theme('colors') }
-      )
+      matchUtilities({ stop: value => ({ stopColor: value }) }, { values: theme('colors') })
     ),
   ],
 };
