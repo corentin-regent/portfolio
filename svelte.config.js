@@ -11,9 +11,11 @@ export default {
     alias: {
       '$components/*': 'src/components/*',
       '$config/*': 'src/config/*',
+      '$logos/*': 'src/components/icons/logos/*',
       '$messages/*': 'src/messages/*',
       '$runes/*': 'src/runes/*',
       '$stores/*': 'src/stores/*',
+      '$technologies/*': 'src/components/icons/technologies/*',
       '$utils/*': 'src/utils/*',
     },
     moduleExtensions: ['.js'],

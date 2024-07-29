@@ -11,20 +11,20 @@
   import PortfolioText from './PortfolioText.svelte';
   import RateControlText from './RateControlText.svelte';
 
-  import Bash from '$components/icons/technologies/Bash.svelte';
-  import C from '$components/icons/technologies/C.svelte';
-  import Css from '$components/icons/technologies/Css.svelte';
-  import Docker from '$components/icons/technologies/Docker.svelte';
-  import GithubActions from '$components/icons/technologies/GithubActions.svelte';
-  import Html from '$components/icons/technologies/Html.svelte';
-  import Javascript from '$components/icons/technologies/Javascript.svelte';
-  import Linux from '$components/icons/technologies/Linux.svelte';
-  import Nasm from '$components/icons/technologies/Nasm.svelte';
-  import Nginx from '$components/icons/technologies/Nginx.svelte';
-  import Python from '$components/icons/technologies/Python.svelte';
-  import SvelteKit from '$components/icons/technologies/SvelteKit.svelte';
-  import Svg from '$components/icons/technologies/Svg.svelte';
-  import Typescript from '$components/icons/technologies/Typescript.svelte';
+  import Bash from '$technologies/Bash.svelte';
+  import C from '$technologies/C.svelte';
+  import Css from '$technologies/Css.svelte';
+  import Docker from '$technologies/Docker.svelte';
+  import GithubActions from '$technologies/GithubActions.svelte';
+  import Html from '$technologies/Html.svelte';
+  import Javascript from '$technologies/Javascript.svelte';
+  import Linux from '$technologies/Linux.svelte';
+  import Nasm from '$technologies/Nasm.svelte';
+  import Nginx from '$technologies/Nginx.svelte';
+  import Python from '$technologies/Python.svelte';
+  import SvelteKit from '$technologies/SvelteKit.svelte';
+  import Svg from '$technologies/Svg.svelte';
+  import Typescript from '$technologies/Typescript.svelte';
 
   import H3 from '$components/text/H3.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

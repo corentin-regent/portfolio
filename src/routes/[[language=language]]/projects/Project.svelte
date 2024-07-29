@@ -1,9 +1,9 @@
 <script context="module">
-  import Github from '$components/icons/logos/Github.svelte';
   import Link from '$components/links/Base.svelte';
   import Technologies from '$components/Technologies.svelte';
   import H4 from '$components/text/H4.svelte';
   import P from '$components/text/P.svelte';
+  import Github from '$logos/Github.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 </script>

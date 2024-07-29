@@ -1,8 +1,8 @@
 <script context="module">
   import Email from '$components/icons/Email.svelte';
-  import Discord from '$components/icons/logos/Discord.svelte';
-  import Github from '$components/icons/logos/Github.svelte';
-  import Linkedin from '$components/icons/logos/Linkedin.svelte';
+  import Discord from '$logos/Discord.svelte';
+  import Github from '$logos/Github.svelte';
+  import Linkedin from '$logos/Linkedin.svelte';
   import Social from './Social.svelte';
 
   const myEmail = 'corentin.regent.pro@gmail.com';

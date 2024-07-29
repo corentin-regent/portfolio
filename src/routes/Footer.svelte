@@ -1,7 +1,7 @@
 <script context="module">
-  import Github from '$components/icons/logos/Github.svelte';
   import BaseLink from '$components/links/Base.svelte';
   import PrimaryLink from '$components/links/Primary.svelte';
+  import Github from '$logos/Github.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 

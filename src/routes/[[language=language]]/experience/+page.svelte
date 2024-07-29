@@ -1,9 +1,9 @@
 <script context="module">
-  import Geodis from '$components/icons/logos/Geodis.svelte';
-  import Leaguesgg from '$components/icons/logos/Leaguesgg.svelte';
-  import Polytech from '$components/icons/logos/Polytech.svelte';
-  import Sncf from '$components/icons/logos/Sncf.svelte';
-  import SopraSteria from '$components/icons/logos/SopraSteria.svelte';
+  import Geodis from '$logos/Geodis.svelte';
+  import Leaguesgg from '$logos/Leaguesgg.svelte';
+  import Polytech from '$logos/Polytech.svelte';
+  import Sncf from '$logos/Sncf.svelte';
+  import SopraSteria from '$logos/SopraSteria.svelte';
 
   import GeodisDataText from './GeodisDataText.svelte';
   import LeaguesggInternText from './LeaguesggInternText.svelte';
@@ -13,21 +13,21 @@
   import SncfTraceText from './SncfTraceText.svelte';
   import SopraSteriaApprenticeText from './SopraSteriaApprenticeText.svelte';
 
-  import Airflow from '$components/icons/technologies/Airflow.svelte';
-  import Angular from '$components/icons/technologies/Angular.svelte';
-  import Ansible from '$components/icons/technologies/Ansible.svelte';
-  import AzurePipelines from '$components/icons/technologies/AzurePipelines.svelte';
-  import Cloudera from '$components/icons/technologies/Cloudera.svelte';
-  import Css from '$components/icons/technologies/Css.svelte';
-  import Html from '$components/icons/technologies/Html.svelte';
-  import Javascript from '$components/icons/technologies/Javascript.svelte';
-  import Node from '$components/icons/technologies/Node.svelte';
-  import Python from '$components/icons/technologies/Python.svelte';
-  import Scala from '$components/icons/technologies/Scala.svelte';
-  import Spark from '$components/icons/technologies/Spark.svelte';
-  import Sql from '$components/icons/technologies/Sql.svelte';
-  import SvelteKit from '$components/icons/technologies/SvelteKit.svelte';
-  import Typescript from '$components/icons/technologies/Typescript.svelte';
+  import Airflow from '$technologies/Airflow.svelte';
+  import Angular from '$technologies/Angular.svelte';
+  import Ansible from '$technologies/Ansible.svelte';
+  import AzurePipelines from '$technologies/AzurePipelines.svelte';
+  import Cloudera from '$technologies/Cloudera.svelte';
+  import Css from '$technologies/Css.svelte';
+  import Html from '$technologies/Html.svelte';
+  import Javascript from '$technologies/Javascript.svelte';
+  import Node from '$technologies/Node.svelte';
+  import Python from '$technologies/Python.svelte';
+  import Scala from '$technologies/Scala.svelte';
+  import Spark from '$technologies/Spark.svelte';
+  import Sql from '$technologies/Sql.svelte';
+  import SvelteKit from '$technologies/SvelteKit.svelte';
+  import Typescript from '$technologies/Typescript.svelte';
 
   import H3 from '$components/text/H3.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

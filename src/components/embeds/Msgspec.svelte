@@ -1,6 +1,6 @@
 <script context="module">
   import EmbeddedIcon from '$components/embeds/Icon.svelte';
-  import Msgspec from '$components/icons/logos/Msgspec.svelte';
+  import Msgspec from '$logos/Msgspec.svelte';
 </script>
 
 <script>
