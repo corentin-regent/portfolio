@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.python.org/">
-  <Image class={height} src="/technologies/python.svg" alt="Python" showTooltip />
+  <Image class={imgClass} src="/technologies/python.svg" alt="Python" showTooltip />
 </Link>

@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://nginx.org/en/">
-  <Image class={height} src="/technologies/nginx.svg" alt="Nginx" showTooltip />
+  <Image class={imgClass} src="/technologies/nginx.svg" alt="Nginx" showTooltip />
 </Link>

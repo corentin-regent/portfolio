@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://github.com/features/actions">
-  <Image class={height} src="/technologies/github-actions.svg" alt="GitHub Actions" showTooltip />
+  <Image class={imgClass} src="/technologies/github-actions.svg" alt="GitHub Actions" showTooltip />
 </Link>

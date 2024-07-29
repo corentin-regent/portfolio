@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.ansible.com/">
-  <Image class={height} src="/technologies/ansible.svg" alt="Ansible" showTooltip />
+  <Image class={imgClass} src="/technologies/ansible.svg" alt="Ansible" showTooltip />
 </Link>

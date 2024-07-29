@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.docker.com/">
-  <Image class={height} src="/technologies/docker.svg" alt="Docker" showTooltip />
+  <Image class={imgClass} src="/technologies/docker.svg" alt="Docker" showTooltip />
 </Link>

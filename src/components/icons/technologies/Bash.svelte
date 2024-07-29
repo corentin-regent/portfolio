@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.gnu.org/software/bash/">
-  <Image class={height} src="/technologies/bash.svg" alt="Bash" showTooltip />
+  <Image class={imgClass} src="/technologies/bash.svg" alt="Bash" showTooltip />
 </Link>

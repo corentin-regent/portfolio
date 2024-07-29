@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.nasm.us/">
-  <Image class={height} src="/technologies/nasm.svg" alt="NASM" showTooltip />
+  <Image class={imgClass} src="/technologies/nasm.svg" alt="NASM" showTooltip />
 </Link>

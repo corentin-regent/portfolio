@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.kernel.org/">
-  <Image class={height} src="/technologies/linux.svg" alt="Linux" showTooltip />
+  <Image class={imgClass} src="/technologies/linux.svg" alt="Linux" showTooltip />
 </Link>

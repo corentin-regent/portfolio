@@ -4,9 +4,14 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://azure.microsoft.com/products/devops/pipelines/">
-  <Image class={height} src="/technologies/azure-pipelines.svg" alt="Azure Pipelines" showTooltip />
+  <Image
+    class={imgClass}
+    src="/technologies/azure-pipelines.svg"
+    alt="Azure Pipelines"
+    showTooltip
+  />
 </Link>

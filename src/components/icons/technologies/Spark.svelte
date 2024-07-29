@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://spark.apache.org/">
-  <Image class={height} src="/technologies/spark.svg" alt="Spark" showTooltip />
+  <Image class={imgClass} src="/technologies/spark.svg" alt="Spark" showTooltip />
 </Link>

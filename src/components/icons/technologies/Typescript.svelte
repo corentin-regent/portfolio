@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.typescriptlang.org/">
-  <Image class={height} src="/technologies/typescript.svg" alt="TypeScript" showTooltip />
+  <Image class={imgClass} src="/technologies/typescript.svg" alt="TypeScript" showTooltip />
 </Link>

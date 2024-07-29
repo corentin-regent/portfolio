@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://scala-lang.org/">
-  <Image class={height} src="/technologies/scala.svg" alt="Scala" showTooltip />
+  <Image class={imgClass} src="/technologies/scala.svg" alt="Scala" showTooltip />
 </Link>

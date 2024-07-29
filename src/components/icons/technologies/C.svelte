@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.open-std.org/jtc1/sc22/wg14/">
-  <Image class={height} src="/technologies/c.svg" alt="C" showTooltip />
+  <Image class={imgClass} src="/technologies/c.svg" alt="C" showTooltip />
 </Link>

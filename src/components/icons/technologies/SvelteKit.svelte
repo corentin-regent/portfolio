@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://kit.svelte.dev/">
-  <Image class={height} src="/technologies/svelte-kit.svg" alt="SvelteKit" showTooltip />
+  <Image class={imgClass} src="/technologies/svelte-kit.svg" alt="SvelteKit" showTooltip />
 </Link>

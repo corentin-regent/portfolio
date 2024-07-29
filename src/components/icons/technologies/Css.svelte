@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://developer.mozilla.org/docs/Web/CSS">
-  <Image class={height} src="/technologies/css.svg" alt="CSS" showTooltip />
+  <Image class={imgClass} src="/technologies/css.svg" alt="CSS" showTooltip />
 </Link>

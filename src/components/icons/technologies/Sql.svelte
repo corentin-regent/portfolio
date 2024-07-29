@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://wikipedia.org/wiki/Structured_Query_Language">
-  <Image class={height} src="/technologies/sql.svg" alt="SQL" showTooltip />
+  <Image class={imgClass} src="/technologies/sql.svg" alt="SQL" showTooltip />
 </Link>

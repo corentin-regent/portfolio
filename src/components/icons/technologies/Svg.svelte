@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.w3.org/Graphics/SVG/">
-  <Image class={height} src="/technologies/svg.svg" alt="SVG" showTooltip />
+  <Image class={imgClass} src="/technologies/svg.svg" alt="SVG" showTooltip />
 </Link>

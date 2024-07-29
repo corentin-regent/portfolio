@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://www.cloudera.com/">
-  <Image class={height} src="/technologies/cloudera.svg" alt="Cloudera" showTooltip />
+  <Image class={imgClass} src="/technologies/cloudera.svg" alt="Cloudera" showTooltip />
 </Link>

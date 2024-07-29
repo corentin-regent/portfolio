@@ -9,7 +9,7 @@
 <ul class={classes('flex flex-wrap gap-2', cls)}>
   {#each technologies as technology}
     <li>
-      <svelte:component this={technology} height="h-7" />
+      <svelte:component this={technology} imgClass="h-7" />
     </li>
   {/each}
 </ul>

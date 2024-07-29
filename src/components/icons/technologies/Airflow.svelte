@@ -4,9 +4,9 @@
 </script>
 
 <script>
-  const { height, ...restProps } = $props();
+  const { imgClass, ...restProps } = $props();
 </script>
 
 <Link {...restProps} url="https://airflow.apache.org/">
-  <Image class={height} src="/technologies/airflow.svg" alt="Airflow" showTooltip />
+  <Image class={imgClass} src="/technologies/airflow.svg" alt="Airflow" showTooltip />
 </Link>
