@@ -8,7 +8,7 @@ RUN apk add gzip brotli
 
 RUN npm run build
 
-RUN find /app/build/ \( -name '*.html' -or -name '*.css' -or -name '*.js' -or -name '*.json' -or -name '*.svg' \) \
+RUN find /app/build/ \( -name '*.html' -or -name '*.css' -or -name '*.js' -or -name '*.svg' \) \
     -exec gzip   -k --best '{}' + \
     -exec brotli -k     -9 '{}' +
 
