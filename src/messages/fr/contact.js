@@ -1,7 +1,7 @@
 const metadata = {
-  'page-description':
+  'head-description':
     'Contactez-moi via mes réseaux sociaux ou par e-mail, pour toute collaboration, demande de renseignements ou autre opportunité.',
-  'page-title': 'Me contacter',
+  'head-title': 'Me contacter',
 };
 
 const pageMessages = {

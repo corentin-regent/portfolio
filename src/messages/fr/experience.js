@@ -1,7 +1,7 @@
 const metadata = {
-  'page-description':
+  'head-description':
     "Découvrez mon parcours, en tant qu'ingénieur dans différentes branches de l'informatique, au sein de plusieurs entreprises et pour des clients de grande envergure.",
-  'page-title': 'Expérience',
+  'head-title': 'Expérience',
 };
 
 const pageMessages = {

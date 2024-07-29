@@ -1,7 +1,7 @@
 const metadata = {
-  'page-description':
+  'head-description':
     'Get in touch with me through my social media or via email, for any collaborations, inquiries, or other opportunities.',
-  'page-title': 'Contact me',
+  'head-title': 'Contact me',
 };
 
 const pageMessages = {

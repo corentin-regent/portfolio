@@ -1,7 +1,7 @@
 const metadata = {
-  'page-description':
+  'head-description':
     'Corentin Régent is a passionate software engineer from France, dedicated to continuously enhancing his broad technical skills.',
-  'page-title': 'Home',
+  'head-title': 'Home',
 };
 
 const rootPageMessages = {

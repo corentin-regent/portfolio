@@ -19,8 +19,8 @@
 </script>
 
 <svelte:head>
-  <title>{$messages.get('page-title')} • {$messages.get('my-portfolio')}</title>
-  <meta name="description" content={$messages.get('page-description')} />
+  <title>{$messages.get('head-title')} • {$messages.get('my-portfolio')}</title>
+  <meta name="description" content={$messages.get('head-description')} />
   <meta name="author" content="Corentin Régent" />
 
   <meta lang={$selectedLanguage} />

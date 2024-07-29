@@ -1,7 +1,7 @@
 const metadata = {
-  'page-description':
+  'head-description':
     'Learn about my journey, as an engineer working in different branches of computer science, in several companies and for large-scale clients.',
-  'page-title': 'Experience',
+  'head-title': 'Experience',
 };
 
 const pageMessages = {
