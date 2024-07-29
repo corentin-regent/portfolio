@@ -28,7 +28,8 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - uses: ./.github/actions/setup
+      - name: Setup Node.js and dependencies
+        uses: ./.github/actions/setup
 
       - name: Run linter
         run: npm run lint
@@ -46,7 +47,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/setup
+      - name: Setup Node.js and dependencies
+        uses: ./.github/actions/setup
 
       - name: Execute tests
         run: npm test
@@ -62,7 +64,8 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
-      - uses: ./.github/actions/setup
+      - name: Setup Node.js and dependencies
+        uses: ./.github/actions/setup
 
       - name: Build the HTML output
         env:
@@ -136,7 +139,8 @@ jobs:
           docker pull ${{ env.IMAGE }}
           docker tag ${{ env.IMAGE }} portfolio
 
-      - uses: ./.github/actions/lighthouse
+      - name: Run Lighthouse audits
+        uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
           config-path: ./lighthouse-dev.config.json
@@ -185,7 +189,8 @@ jobs:
           root-url: https://corentin-regent.github.io/portfolio/
           artifact-name: lighthouse-results-prod
 
-      - uses: ./.github/actions/setup
+      - name: Run Lighthouse audits
+        uses: ./.github/actions/setup
 
       - name: Generate Lighthouse report
         run: node scripts/update-lighthouse-report.js '${{ steps.lighthouse.outputs.results-path }}/manifest.json'
