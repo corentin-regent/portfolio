@@ -10,8 +10,9 @@ const rootPageMessages = {
   home: 'Home',
   'made-with': 'Made with',
   'my-portfolio': "Corentin Régent's Portfolio",
-  'page-header': "Welcome",
-  'page-main-text': "Hi, I'm Corentin Régent, a passionate software engineer from France. Let's embark on a journey together as you explore my interests, experiences and personal projects.",
+  'page-header': 'Welcome',
+  'page-main-text':
+    "Hi, I'm Corentin Régent, a passionate software engineer from France. Let's embark on a journey together as you explore my interests, experiences and personal projects.",
   projects: 'Projects',
   'view-github-repo': 'View the GitHub repository',
 };
@@ -50,7 +51,7 @@ const placeHolders = {
 const dateMessages = {
   'period-from-to': ({ start, end }) => `${start} – ${end}`,
   'period-from': start => `Since ${start}`,
-}
+};
 
 export default {
   ...metadata,

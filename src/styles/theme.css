@@ -25,13 +25,13 @@
   }
 
   @define-mixin light-theme {
-    ~div .dark-only {
+    ~ div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~div {
+    ~ div {
       --anti-bg1: #fafafa;
       --anti-bg2: #d4d4d8;
       --bg1: var(--dark-bg1);

@@ -1,6 +1,6 @@
-import messages from "$stores/i18n/messages.svelte.js";
-import selectedLanguage from "$stores/language/selected.svelte.js";
-import { derived } from "svelte/store";
+import messages from '$stores/i18n/messages.svelte.js';
+import selectedLanguage from '$stores/language/selected.svelte.js';
+import { derived } from 'svelte/store';
 
 const monthFormat = {
   year: 'numeric',
@@ -9,7 +9,7 @@ const monthFormat = {
 
 function parseMonth(str) {
   const [year, month] = str.split('-');
-  return new Date(year, month - 1)
+  return new Date(year, month - 1);
 }
 
 export default derived([selectedLanguage, messages], ([$selectedLanguage, $messages]) => {
@@ -19,8 +19,11 @@ export default derived([selectedLanguage, messages], ([$selectedLanguage, $messa
   return {
     periodToString(start, end) {
       return end
-        ? $messages.get('period-from-to', { start: formatMonthString(start), end: formatMonthString(end) })
-        : $messages.get('period-from', formatMonthString(start))
-    }
-  }
+        ? $messages.get('period-from-to', {
+            start: formatMonthString(start),
+            end: formatMonthString(end),
+          })
+        : $messages.get('period-from', formatMonthString(start));
+    },
+  };
 });

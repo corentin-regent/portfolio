@@ -1,4 +1,4 @@
-import capitalize from "$utils/capitalize";
+import capitalize from '$utils/capitalize';
 
 const metadata = {
   'head-description':
@@ -12,8 +12,9 @@ const rootPageMessages = {
   home: 'Accueil',
   'made-with': 'Réalisé avec',
   'my-portfolio': 'Portfolio de Corentin Régent',
-  'page-header': "Welcome",
-  'page-main-text': "Bonjour, je suis Corentin Régent, un ingénieur logiciel passionné. Partons ensemble pour un voyage à la découverte de mes intérêts, expériences et projets personnels.",
+  'page-header': 'Welcome',
+  'page-main-text':
+    'Bonjour, je suis Corentin Régent, un ingénieur logiciel passionné. Partons ensemble pour un voyage à la découverte de mes intérêts, expériences et projets personnels.',
   projects: 'Projets',
   'view-github-repo': 'Voir le dépôt GitHub',
 };
@@ -52,7 +53,7 @@ const placeHolders = {
 const dateMessages = {
   'period-from-to': ({ start, end }) => capitalize(`${start} – ${end}`),
   'period-from': start => `Depuis ${start}`,
-}
+};
 
 export default {
   ...metadata,
