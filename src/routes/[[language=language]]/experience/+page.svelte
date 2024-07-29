@@ -116,7 +116,7 @@
         <li
           class={classes(
             'px-2 lg:px-4 mb-4 mx-auto xl:max-w-screen-xl',
-            '[&:not(:first-child)]:pt-4 [&:not(:first-child)]:border-t [&:not(:first-child)]:border-anti-bg1'
+            'not-first:pt-4 not-first:border-t not-first:border-anti-bg1'
           )}
         >
           <Experience {...experience} />

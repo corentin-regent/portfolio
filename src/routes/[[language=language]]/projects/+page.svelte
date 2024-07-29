@@ -81,13 +81,13 @@
         <li
           class={classes(
             'px-2 lg:px-0 mx-auto mb-4 max-w-screen-sm lg:max-w-screen-xl',
-            '[&:not(:first-child)]:pt-4 [&:not(:first-child)]:border-t [&:not(:first-child)]:border-anti-bg1',
-            'lg:border-none lg:mb-0 lg:[&:not(:first-child)]:pt-0 lg:[&:not(:first-child)]:before:block',
-            'lg:[&:not(:first-child)]:before:h-0.5 lg:[&:not(:first-child)]:before:my-4',
-            'lg:[&:not(:first-child)]:before:bg-gradient-to-r',
+            'not-first:pt-4 not-first:border-t not-first:border-anti-bg1',
+            'lg:border-none lg:mb-0 lg:not-first:pt-0 lg:not-first:before:block',
+            'lg:not-first:before:h-0.5 lg:not-first:before:my-4',
+            'lg:not-first:before:bg-gradient-to-r',
             index % 2
-              ? 'lg:[&:not(:first-child)]:before:from-transparent lg:[&:not(:first-child)]:before:to-anti-bg1'
-              : 'lg:[&:not(:first-child)]:before:from-anti-bg1'
+              ? 'lg:not-first:before:from-transparent lg:not-first:before:to-anti-bg1'
+              : 'lg:not-first:before:from-anti-bg1'
           )}
         >
           <Project {...project} toLeft={index % 2} />

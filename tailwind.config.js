@@ -41,11 +41,15 @@ export default {
     },
   },
   plugins: [
-    plugin(({ matchUtilities, theme }) =>
+    plugin(({ addVariant }) => {
+      addVariant('first-child', '&:not(:first-child)')
+      addVariant('not-hover', '&:not(:hover)')
+    }),
+    plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         { stop: value => ({ stopColor: value }) },
         { values: theme('colors') }
       )
-    ),
+    }),
   ],
 };

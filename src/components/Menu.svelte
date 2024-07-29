@@ -28,7 +28,7 @@
             'uppercase font-bold relative duration-100',
             'after:absolute after:left-0 after:-bottom-0.5 after:w-full after:h-0.5',
             'after:bg-primary1 after:transition-all after:duration-250',
-            !isActive(linkProps) && '[&:not(:hover)]:text-text2 [&:not(:hover)]:after:scale-x-0'
+            !isActive(linkProps) && 'not-hover:text-text2 not-hover:after:scale-x-0'
           )}
           data-sveltekit-noscroll
         >
