@@ -46,10 +46,14 @@
   />
 </svelte:head>
 
+<!--
+The input is positioned at the bottom right of the theme icon
+in order to prevent the browser from scrolling back up on toggle
+-->
 <input
   id="theme-selector"
   type="checkbox"
-  class="sr-only"
+  class="sr-only absolute left-12 top-20"
   checked={!theme.isSameAsSystem}
   onchange={theme.toggle}
 />
