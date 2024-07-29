@@ -1,10 +1,10 @@
-{
+export default {
   "ci": {
     "collect": {
       "method": "node",
       "headful": false,
       "additive": false,
-      "numberOfRuns": 3,
+      "numberOfRuns": 1,
       "startServerCommand": "docker run --rm -p 80:80 portfolio"
     },
     "assert": {
@@ -14,7 +14,7 @@
         "render-blocking-resources": "off",
         "unsized-images": "off",
         "categories:performance": [
-          "warn",
+          "error",
           {
             "minScore": 0.9
           }
@@ -32,7 +32,7 @@
           }
         ],
         "categories:seo": [
-          "warn",
+          "warn",  // while blocking robots from indexing
           {
             "minScore": 1
           }

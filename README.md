@@ -20,16 +20,11 @@ Below are the current scores of my portfolio website:
 
 ![Latest Lighthouse report](/docs/lighthouse-report.png)
 
-These scores are computed as follows:
+These scores are computed after each deployment of the website, as follows:
 
 - Three Lighthouse audits are run on each page
 - Out of these three reports, only the median one is selected
 - The final scores of the website are the average of the scores from each page's median report.
-
-During this process, the static website is served over localhost by an Nginx container, by the
-virtual machine provided by GitHub Actions. Therefore, while the Performance score can provide an
-insight regarding good practices adopted for improved speed, network-dependant indicators such as
-the time for First Contentful Paint do not represent what can be measured in production.
 
 ## License
 

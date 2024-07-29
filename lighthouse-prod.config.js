@@ -1,0 +1,45 @@
+export default {
+  "ci": {
+    "collect": {
+      "method": "node",
+      "headful": false,
+      "additive": false,
+      "numberOfRuns": 3,
+    },
+    "assert": {
+      "preset": "lighthouse:recommended",
+      "assertions": {
+        "is-crawlable": "off",
+        "render-blocking-resources": "off",
+        "unsized-images": "off",
+        "categories:performance": [
+          "warn",
+          {
+            "minScore": 1
+          }
+        ],
+        "categories:accessibility": [
+          "warn",
+          {
+            "minScore": 1
+          }
+        ],
+        "categories:best-practices": [
+          "warn",
+          {
+            "minScore": 1
+          }
+        ],
+        "categories:seo": [
+          "warn",
+          {
+            "minScore": 1
+          }
+        ]
+      }
+    },
+    "upload": {
+      "target": "filesystem"
+    }
+  }
+}
