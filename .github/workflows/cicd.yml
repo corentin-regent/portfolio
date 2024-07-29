@@ -170,6 +170,9 @@ jobs:
       - name: Generate Lighthouse report
         run: node scripts/update-lighthouse-report.js ${{ steps.lighthouse.outputs.resultsPath }}/manifest.json
 
+      - name: Pull eventual changes
+        run: git pull
+
       - name: Commit Lighthouse report
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
