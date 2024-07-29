@@ -139,7 +139,7 @@ jobs:
       - uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
-          config-path: ./lighthouse-dev.config.js
+          config-path: ./lighthouse-dev.config.json
           root-url: http://localhost/
 
   deploy:
@@ -180,7 +180,7 @@ jobs:
       - uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
-          config-path: ./lighthouse-prod.config.js
+          config-path: ./lighthouse-prod.config.json
           root-url: https://corentin-regent.github.io/portfolio/
 
       - uses: ./.github/actions/setup
