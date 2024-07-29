@@ -5,5 +5,5 @@ export default defineConfig({
   plugins: [sveltekit()],
   build: {
     assetsInlineLimit: 0,
-  }
+  },
 });
