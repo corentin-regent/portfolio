@@ -1,4 +1,5 @@
 <script context="module">
+  import docker from '$assets/technologies/docker.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
 </script>
@@ -8,5 +9,5 @@
 </script>
 
 <Link {...restProps} url="https://www.docker.com/">
-  <Image class={imgClass} src="/technologies/docker.svg" alt="Docker" showTooltip />
+  <Image class={imgClass} src={docker} alt="Docker" showTooltip />
 </Link>

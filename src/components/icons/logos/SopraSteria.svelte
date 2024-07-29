@@ -1,4 +1,5 @@
 <script context="module">
+  import sopraSteria from '$assets/logos/sopra-steria.svg';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/logos/sopra-steria.svg" alt="Sopra Steria" showTooltip />
+<Image {...restProps} src={sopraSteria} alt="Sopra Steria" showTooltip />

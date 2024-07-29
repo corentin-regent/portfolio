@@ -1,4 +1,5 @@
 <script context="module">
+  import geodis from '$assets/logos/geodis.svg';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/logos/geodis.svg" alt="Geodis" showTooltip />
+<Image {...restProps} src={geodis} alt="Geodis" showTooltip />

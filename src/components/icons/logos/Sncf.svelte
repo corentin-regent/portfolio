@@ -1,4 +1,5 @@
 <script context="module">
+  import sncf from '$assets/logos/sncf.svg';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/logos/sncf.svg" alt="SNCF" showTooltip />
+<Image {...restProps} src={sncf} alt="SNCF" showTooltip />

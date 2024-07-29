@@ -1,4 +1,5 @@
 <script context="module">
+  import bash from '$assets/technologies/bash.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
 </script>
@@ -8,5 +9,5 @@
 </script>
 
 <Link {...restProps} url="https://www.gnu.org/software/bash/">
-  <Image class={imgClass} src="/technologies/bash.svg" alt="Bash" showTooltip />
+  <Image class={imgClass} src={bash} alt="Bash" showTooltip />
 </Link>

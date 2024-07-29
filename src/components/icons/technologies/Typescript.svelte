@@ -1,4 +1,5 @@
 <script context="module">
+  import typescript from '$assets/technologies/typescript.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
 </script>
@@ -8,5 +9,5 @@
 </script>
 
 <Link {...restProps} url="https://www.typescriptlang.org/">
-  <Image class={imgClass} src="/technologies/typescript.svg" alt="TypeScript" showTooltip />
+  <Image class={imgClass} src={typescript} alt="TypeScript" showTooltip />
 </Link>

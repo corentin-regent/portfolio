@@ -1,4 +1,5 @@
 <script context="module">
+  import msgspec from '$assets/logos/msgspec.svg';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/logos/msgspec.svg" alt="msgspec" showTooltip />
+<Image {...restProps} src={msgspec} alt="msgspec" showTooltip />

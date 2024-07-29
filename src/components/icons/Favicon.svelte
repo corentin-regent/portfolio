@@ -1,4 +1,5 @@
 <script context="module">
+  import favicon from '$assets/favicon.svg';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/favicon.svg" alt="Favicon" />
+<Image {...restProps} src={favicon} alt="Favicon" />

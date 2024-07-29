@@ -9,6 +9,7 @@ export default {
       pages: 'build',
     }),
     alias: {
+      '$assets/*': 'src/assets/*',
       '$components/*': 'src/components/*',
       '$config/*': 'src/config/*',
       '$logos/*': 'src/components/icons/logos/*',

@@ -1,4 +1,5 @@
 <script context="module">
+  import azurePipelines from '$assets/technologies/azure-pipelines.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
 </script>
@@ -8,10 +9,5 @@
 </script>
 
 <Link {...restProps} url="https://azure.microsoft.com/products/devops/pipelines/">
-  <Image
-    class={imgClass}
-    src="/technologies/azure-pipelines.svg"
-    alt="Azure Pipelines"
-    showTooltip
-  />
+  <Image class={imgClass} src={azurePipelines} alt="Azure Pipelines" showTooltip />
 </Link>

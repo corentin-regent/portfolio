@@ -11,6 +11,7 @@
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import resolve from '$stores/navigation/resolve.svelte.js';
 
+  import favicon from '$assets/favicon.svg';
   import '../app.css';
 </script>
 
@@ -26,6 +27,8 @@
   <meta lang={$selectedLanguage} />
   <meta charset="utf-8" />
   <meta name="robots" content="noindex" />
+
+  <link rel="icon" href={favicon} sizes="any" type="image/svg+xml" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="dark light" />

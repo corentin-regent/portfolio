@@ -1,4 +1,5 @@
 <script context="module">
+  import node from '$assets/technologies/node.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';
 </script>
@@ -8,5 +9,5 @@
 </script>
 
 <Link {...restProps} url="https://nodejs.org/">
-  <Image class={imgClass} src="/technologies/node.svg" alt="NodeJS" showTooltip />
+  <Image class={imgClass} src={node} alt="NodeJS" showTooltip />
 </Link>
