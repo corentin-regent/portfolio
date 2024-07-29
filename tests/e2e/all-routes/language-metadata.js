@@ -6,10 +6,12 @@ import { URL } from 'url';
 export default function testLanguageMetadata(page) {
   describe('language metadata', () => {
     it('should have the correct html lang attribute', async () => {
-      const expectedLanguage = availableLanguages.find(lang => new URL(page.url()).pathname.startsWith(`/${lang}/`)) ?? defaultLanguage
-      const htmlElement = await page.$('html')
-      const htmlLanguage = await htmlElement.evaluate(element => element.getAttribute('lang'))
-      expect(htmlLanguage).toEqual(expectedLanguage)
+      const expectedLanguage =
+        availableLanguages.find(lang => new URL(page.url()).pathname.startsWith(`/${lang}/`)) ??
+        defaultLanguage;
+      const htmlElement = await page.$('html');
+      const htmlLanguage = await htmlElement.evaluate(element => element.getAttribute('lang'));
+      expect(htmlLanguage).toEqual(expectedLanguage);
     });
   });
 }

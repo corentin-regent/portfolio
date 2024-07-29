@@ -42,14 +42,11 @@ export default {
   },
   plugins: [
     plugin(({ addVariant }) => {
-      addVariant('first-child', '&:not(:first-child)')
-      addVariant('not-hover', '&:not(:hover)')
+      addVariant('first-child', '&:not(:first-child)');
+      addVariant('not-hover', '&:not(:hover)');
     }),
     plugin(({ matchUtilities, theme }) => {
-      matchUtilities(
-        { stop: value => ({ stopColor: value }) },
-        { values: theme('colors') }
-      )
+      matchUtilities({ stop: value => ({ stopColor: value }) }, { values: theme('colors') });
     }),
   ],
 };

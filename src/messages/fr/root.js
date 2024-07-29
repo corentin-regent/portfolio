@@ -3,7 +3,7 @@ import capitalize from '$utils/capitalize';
 const metadata = {
   'head-description':
     'Corentin Régent est un ingénieur logiciel passionné, en quête perpetuelle de renforcement de ses vastes compétences techniques.',
-  'head-title': "Accueil",
+  'head-title': 'Accueil',
 };
 
 const rootPageMessages = {
