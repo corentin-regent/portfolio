@@ -1,5 +1,5 @@
 import { page } from '$app/stores';
-import defaultLanguage from '$stores/language/default.js';
+import defaultLanguage from '$config/language/default.js';
 import selectedLanguage from '$stores/language/selected.svelte.js';
 import withTrailingSlash from '$utils/withTrailingSlash.js';
 import { derived } from 'svelte/store';

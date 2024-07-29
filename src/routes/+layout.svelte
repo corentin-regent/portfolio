@@ -4,10 +4,10 @@
   import Footer from './Footer.svelte';
   import Header from './Header.svelte';
 
+  import availableLanguages from '$config/language/available.js';
+  import defaultLanguage from '$config/language/default.js';
   import theme from '$runes/theme/index.svelte.js';
   import messages from '$stores/i18n/messages.svelte.js';
-  import availableLanguages from '$stores/language/available.js';
-  import defaultLanguage from '$stores/language/default.js';
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import resolve from '$stores/navigation/resolve.svelte.js';
 

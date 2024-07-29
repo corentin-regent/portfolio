@@ -1,7 +1,7 @@
 <script context="module">
   import Flag from '$components/icons/Flag.svelte';
   import Link from '$components/links/Base.svelte';
-  import availableLanguages from '$stores/language/available.js';
+  import availableLanguages from '$config/language/available.js';
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import classes from '$utils/classes.js';
 </script>

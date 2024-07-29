@@ -1,5 +1,5 @@
-import availableLanguages from '$stores/language/available.js';
-import defaultLanguage from '$stores/language/default.js';
+import availableLanguages from '$config/language/available.js';
+import defaultLanguage from '$config/language/default.js';
 
 export function handle({ event, resolve }) {
   return resolve(event, {
