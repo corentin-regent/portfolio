@@ -27,8 +27,10 @@
   <meta charset="utf-8" />
   <meta name="robots" content="noindex" />
 
-  <meta name="color-scheme" content="dark light" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fafafa" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#09090b" />
 
   <link rel="canonical" href={$resolve({ absolute: true })} />
   {#each availableLanguages as language}
