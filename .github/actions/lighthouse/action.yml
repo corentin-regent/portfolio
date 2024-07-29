@@ -2,6 +2,9 @@ name: Setup
 description: Run Lighthouse audits
 
 inputs:
+  artifact-name:
+    description: The name of the audit artifact to upload
+    required: true
   config-path:
     description: The path to the Lighthouse config file
     required: true
@@ -40,5 +43,6 @@ runs:
       with:
         configPath: ${{ inputs.config-path }}
         uploadArtifacts: true
+        artifactName: ${{ inputs.artifact-name }}
         urls: |
           ${{ steps.urls.outputs.urls }}
