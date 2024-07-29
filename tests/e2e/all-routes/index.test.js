@@ -1,6 +1,6 @@
 import { readdirSync } from 'fs';
-import availableLanguages from 'src/stores/language/available.js';
-import defaultLanguage from 'src/stores/language/default.js';
+import availableLanguages from 'src/config/language/available.js';
+import defaultLanguage from 'src/config/language/default.js';
 
 const tests = (
   await Promise.all(
@@ -19,11 +19,11 @@ describe('Tests for all routes', () => {
     .flatMap(route =>
       route.includes('[[language=language]]')
         ? availableLanguages.map(language =>
-            route.replace(
-              '[[language=language]]/',
-              language === defaultLanguage ? '' : language + '/'
-            )
+          route.replace(
+            '[[language=language]]/',
+            language === defaultLanguage ? '' : language + '/'
           )
+        )
         : [route]
     )
     .flatMap(route => {
