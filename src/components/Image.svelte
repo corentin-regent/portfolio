@@ -1,12 +1,9 @@
 <script>
-  import { base as basePath } from '$app/paths';
-  const { src, alt, showTooltip = false, ...restProps } = $props();
-
-  const srcWithBasePath = $derived(basePath + src);
+  const { alt, showTooltip = false, ...restProps } = $props();
 </script>
 
 {#if showTooltip}
-  <img {...restProps} src={srcWithBasePath} {alt} title={alt} />
+  <img {...restProps} {alt} title={alt} />
 {:else}
-  <img {...restProps} src={srcWithBasePath} {alt} />
+  <img {...restProps} {alt} />
 {/if}
