@@ -8,5 +8,6 @@ export default {
     host: 'localhost',
     port: 5173,
     protocol: 'http',
+    timeout: 30_000,
   },
 };
