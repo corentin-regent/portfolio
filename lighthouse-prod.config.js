@@ -1,45 +1,45 @@
 export default {
-  "ci": {
-    "collect": {
-      "method": "node",
-      "headful": false,
-      "additive": false,
-      "numberOfRuns": 3,
+  ci: {
+    collect: {
+      method: 'node',
+      headful: false,
+      additive: false,
+      numberOfRuns: 3,
     },
-    "assert": {
-      "preset": "lighthouse:recommended",
-      "assertions": {
-        "is-crawlable": "off",
-        "render-blocking-resources": "off",
-        "unsized-images": "off",
-        "categories:performance": [
-          "warn",
+    assert: {
+      preset: 'lighthouse:recommended',
+      assertions: {
+        'is-crawlable': 'off',
+        'render-blocking-resources': 'off',
+        'unsized-images': 'off',
+        'categories:performance': [
+          'warn',
           {
-            "minScore": 1
-          }
+            minScore: 1,
+          },
         ],
-        "categories:accessibility": [
-          "warn",
+        'categories:accessibility': [
+          'warn',
           {
-            "minScore": 1
-          }
+            minScore: 1,
+          },
         ],
-        "categories:best-practices": [
-          "warn",
+        'categories:best-practices': [
+          'warn',
           {
-            "minScore": 1
-          }
+            minScore: 1,
+          },
         ],
-        "categories:seo": [
-          "warn",
+        'categories:seo': [
+          'warn',
           {
-            "minScore": 1
-          }
-        ]
-      }
+            minScore: 1,
+          },
+        ],
+      },
     },
-    "upload": {
-      "target": "filesystem"
-    }
-  }
-}
+    upload: {
+      target: 'filesystem',
+    },
+  },
+};
