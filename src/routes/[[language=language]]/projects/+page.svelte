@@ -5,11 +5,11 @@
   import PortfolioEmbed from '$components/embeds/Portfolio.svelte';
   import RateControlEmbed from '$components/embeds/RateControl.svelte';
 
-  import AssemblifeText from './AssemblifeText.svelte';
-  import MsgspecText from './MsgspecText.svelte';
-  import PoetrelText from './PoetrelText.svelte';
-  import PortfolioText from './PortfolioText.svelte';
-  import RateControlText from './RateControlText.svelte';
+  import TextAssemblife from './TextAssemblife.svelte';
+  import TextMsgspec from './TextMsgspec.svelte';
+  import TextPoetrel from './TextPoetrel.svelte';
+  import TextPortfolio from './TextPortfolio.svelte';
+  import TextRateControl from './TextRateControl.svelte';
 
   import Bash from '$technologies/Bash.svelte';
   import C from '$technologies/C.svelte';
@@ -35,25 +35,25 @@
     {
       nameId: 'rate-control',
       embed: RateControlEmbed,
-      text: RateControlText,
+      text: TextRateControl,
       technologies: [Python, GithubActions],
     },
     {
       nameId: 'poetrel',
       embed: PoetrelEmbed,
-      text: PoetrelText,
+      text: TextPoetrel,
       technologies: [GithubActions, Typescript, Bash],
     },
     {
       nameId: 'assemblife',
       embed: AssemblifeEmbed,
-      text: AssemblifeText,
+      text: TextAssemblife,
       technologies: [Nasm, Linux],
     },
     {
       nameId: 'portfolio',
       embed: PortfolioEmbed,
-      text: PortfolioText,
+      text: TextPortfolio,
       technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
     },
   ].map(({ nameId, ...rest }) => ({
@@ -66,7 +66,7 @@
     {
       nameId: 'msgspec',
       embed: MsgspecEmbed,
-      text: MsgspecText,
+      text: TextMsgspec,
       technologies: [C, Python],
       url: 'https://jcristharif.com/msgspec/',
     },

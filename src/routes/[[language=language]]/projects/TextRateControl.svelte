@@ -2,4 +2,4 @@
   import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
-{$messages.get('rate-control-text')}
+{$messages.get('text-rate-control')}

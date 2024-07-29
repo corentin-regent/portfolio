@@ -5,13 +5,13 @@
   import Sncf from '$logos/Sncf.svelte';
   import SopraSteria from '$logos/SopraSteria.svelte';
 
-  import GeodisDataText from './GeodisDataText.svelte';
-  import LeaguesggInternText from './LeaguesggInternText.svelte';
-  import PolytechIdiaText from './PolytechIdiaText.svelte';
-  import PolytechPeipText from './PolytechPeipText.svelte';
-  import SncfSisText from './SncfSisText.svelte';
-  import SncfTraceText from './SncfTraceText.svelte';
-  import SopraSteriaApprenticeText from './SopraSteriaApprenticeText.svelte';
+  import TextGeodisData from './TextGeodisData.svelte';
+  import TextLeaguesggIntern from './TextLeaguesggIntern.svelte';
+  import TextPolytechIdia from './TextPolytechIdia.svelte';
+  import TextPolytechPeip from './TextPolytechPeip.svelte';
+  import TextSncfSis from './TextSncfSis.svelte';
+  import TextSncfTrace from './TextSncfTrace.svelte';
+  import TextSopraSteriaApprentice from './TextSopraSteriaApprentice.svelte';
 
   import Airflow from '$technologies/Airflow.svelte';
   import Angular from '$technologies/Angular.svelte';
@@ -41,7 +41,7 @@
       period: ['2022-10', '2025-10'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: SopraSteriaApprenticeText,
+      text: TextSopraSteriaApprentice,
       logo: SopraSteria,
     },
     {
@@ -50,7 +50,7 @@
       period: ['2023-08', null],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: GeodisDataText,
+      text: TextGeodisData,
       logo: Geodis,
       technologies: [Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
     },
@@ -60,7 +60,7 @@
       period: ['2024-08', '2024-09'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: SncfTraceText,
+      text: TextSncfTrace,
       logo: Sncf,
       technologies: [Angular, Html, Css, Typescript],
     },
@@ -70,7 +70,7 @@
       period: ['2023-06', '2023-08'],
       cityId: 'copenhagen',
       countryId: 'denmark',
-      text: LeaguesggInternText,
+      text: TextLeaguesggIntern,
       logo: Leaguesgg,
       technologies: [SvelteKit, Html, Css, Javascript, Node, Sql],
     },
@@ -80,7 +80,7 @@
       period: ['2022-10', '2023-06'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: SncfSisText,
+      text: TextSncfSis,
       logo: Sncf,
       technologies: [Angular, Html, Css, Typescript],
     },
@@ -93,7 +93,7 @@
       period: ['2022-10', '2025-10'],
       cityId: 'nantes',
       countryId: 'france',
-      text: PolytechIdiaText,
+      text: TextPolytechIdia,
       logo: Polytech,
     },
     {
@@ -102,7 +102,7 @@
       period: ['2020-09', '2022-05'],
       cityId: 'nantes',
       countryId: 'france',
-      text: PolytechPeipText,
+      text: TextPolytechPeip,
       logo: Polytech,
     },
   ];

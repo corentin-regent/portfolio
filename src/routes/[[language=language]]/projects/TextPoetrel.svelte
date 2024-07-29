@@ -3,11 +3,11 @@
   import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
-{$messages.get('poetrel-text-until-github-actions')}<Link url="https://python-poetry.org/">
+{$messages.get('text-poetrel-until-github-actions')}<Link url="https://python-poetry.org/">
   GitHub Actions
-</Link>{$messages.get('poetrel-text-until-pypi')}<Link url="https://pypi.org/">
+</Link>{$messages.get('text-poetrel-until-pypi')}<Link url="https://pypi.org/">
   PyPI
-</Link>{$messages.get('poetrel-text-until-github-marketplace')}<Link
+</Link>{$messages.get('text-poetrel-until-github-marketplace')}<Link
   url="https://github.com/marketplace/actions/poetrel"
 >
   GitHub Marketplace
