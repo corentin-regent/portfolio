@@ -12,6 +12,7 @@
       "assertions": {
         "is-crawlable": "off",
         "render-blocking-resources": "off",
+        "total-byte-weight": "warn",
         "unsized-images": "off",
         "categories:performance": [
           "error",
