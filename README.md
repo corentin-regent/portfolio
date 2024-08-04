@@ -1,6 +1,6 @@
 # My portfolio website
 
-⚠️ The website is a Work In Progress.
+[![CI/CD](https://github.com/corentin-regent/portfolio/actions/workflows/cicd.yml/badge.svg)](https://github.com/corentin-regent/portfolio/actions/workflows/cicd.yml)
 
 This is the GitHub repository for
 [my portfolio website](https://corentin-regent.github.io/portfolio/). It was made with the
