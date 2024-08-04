@@ -48,7 +48,7 @@
       nameId: 'assemblife',
       embed: AssemblifeEmbed,
       text: TextAssemblife,
-      technologies: [Nasm, Linux],
+      technologies: [Nasm, Linux, Docker, GithubActions],
     },
     {
       nameId: 'portfolio',
