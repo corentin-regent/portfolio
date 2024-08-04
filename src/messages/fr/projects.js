@@ -31,7 +31,7 @@ const poetrel = {
 const assemblife = {
   assemblife: 'Le Jeu de la Vie de Conway en Assembleur',
   'text-assemblife':
-    "Cherchant à mieux comprendre les mécanismes de bas niveau dans les ordinateurs, et à être capable d'effectuer des micro-optimisations sur des applications critiques, je développe actuellement le Jeu de la Vie en utilisant le langage Assembleur. Mon programme est conçu pour l'architecture x86-64, sur Linux, et utilise VGA pour afficher la grille dans une interface graphique.",
+    "Cherchant à mieux comprendre les mécanismes de bas niveau dans les ordinateurs, et à être capable d'effectuer des micro-optimisations sur des applications critiques, j'ai développé le Jeu de la Vie en utilisant le langage Assembleur. Mon programme est conçu pour l'architecture x86-64, sur Linux, et utilise le terminal comme interface graphique.",
 };
 
 const portfolio = {

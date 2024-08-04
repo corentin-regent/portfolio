@@ -31,7 +31,7 @@ const poetrel = {
 const assemblife = {
   assemblife: "Conway's Game of Life in Assembly",
   'text-assemblife':
-    'Aiming to gain a deeper understanding of low-level mechanisms in computers, and to be able to perform micro-optimizations on time-critical applications, I am currently developing the Game of Life using the Assembly language. My program is designed for the x86-64 architecture, on Linux, and uses VGA for displaying the grid in a graphical interface.',
+    'Aiming to gain a deeper understanding of low-level mechanisms in computers, and to be able to perform micro-optimizations on time-critical applications, I developed the Game of Life using the Assembly language. My program was designed for the x86-64 architecture, on Linux, and uses the terminal as a graphical interface.',
 };
 
 const portfolio = {
