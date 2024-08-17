@@ -20,11 +20,13 @@
   import Cloudera from '$technologies/Cloudera.svelte';
   import Css from '$technologies/Css.svelte';
   import Html from '$technologies/Html.svelte';
+  import Java from '$technologies/Java.svelte';
   import Javascript from '$technologies/Javascript.svelte';
   import Node from '$technologies/Node.svelte';
   import Python from '$technologies/Python.svelte';
   import Scala from '$technologies/Scala.svelte';
   import Spark from '$technologies/Spark.svelte';
+  import SpringBoot from '$technologies/SpringBoot.svelte';
   import Sql from '$technologies/Sql.svelte';
   import SvelteKit from '$technologies/SvelteKit.svelte';
   import Typescript from '$technologies/Typescript.svelte';
@@ -55,14 +57,14 @@
       technologies: [Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
     },
     {
-      positionId: 'web-developer',
+      positionId: 'full-stack-developer',
       organization: 'SNCF',
-      period: ['2024-08', '2024-09'],
+      period: ['2024-07', '2024-09'],
       cityId: 'saint-herblain',
       countryId: 'france',
       text: TextSncfTrace,
       logo: Sncf,
-      technologies: [Angular, Html, Css, Typescript],
+      technologies: [Angular, Html, Css, Typescript, Java, SpringBoot],
     },
     {
       positionId: 'full-stack-developer',

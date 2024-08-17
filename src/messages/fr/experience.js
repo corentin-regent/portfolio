@@ -17,7 +17,6 @@ const jobs = {
   'data-engineer': 'Ingénieur des Données',
   'full-stack-developer': 'Développeur Full-Stack',
   'software-engineer': 'Ingénieur logiciel',
-  'web-developer': 'Développeur Web',
 };
 
 const countries = {
@@ -43,7 +42,7 @@ const geodisData = {
 
 const sncfTrace = {
   'text-sncf-trace':
-    "J'ai développé une application web interne pour la SNCF, grâce à laquelle les gestionnaires de l'entreprise peuvent accéder à divers rapports financiers. Étant le seul développeur front-end travaillant sur ce projet, j'ai également implémenté des tests d'intégration robustes et des mesures de cybersécurité, supervisé par un responsable technique.",
+    "J'ai développé une application web interne pour la SNCF, grâce à laquelle les gestionnaires de l'entreprise peuvent accéder à divers rapports financiers. J'étais le seul développeur front-end travaillant sur ce projet, et j'ai également aidé à construire le back-end, notamment pour le processus d'authentification et des mesures de cybersécurité.",
 };
 
 const leaguesggIntern = {

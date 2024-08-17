@@ -17,7 +17,6 @@ const jobs = {
   'data-engineer': 'Data Engineer',
   'full-stack-developer': 'Full-Stack Developer',
   'software-engineer': 'Software Engineer',
-  'web-developer': 'Web Developer',
 };
 
 const countries = {
@@ -43,7 +42,7 @@ const geodisData = {
 
 const sncfTrace = {
   'text-sncf-trace':
-    "I developed an internal web application for the National Company of the French Railways, where the company's accounting officers could access diverse financial reports. Being the only front-end developer working on this project, I also implemented robust integration tests and cybersecurity measures, supervised by a Technical Leader.",
+    "I developed an internal web application for the National Company of the French Railways, where the company's accounting officers could access diverse financial reports. I was the only front-end developer working on this project, and I also helped building the backend, notably for the authentication process and cybersecurity measures.",
 };
 
 const leaguesggIntern = {
