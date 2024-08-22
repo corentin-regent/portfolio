@@ -6,11 +6,7 @@ const minifyHtmlConfig = {
   collapseBooleanAttributes: true,
   collapseInlineTagWhitespace: true,
   collapseWhitespace: true,
-  ignoreCustomComments: [
-    /^\[$/,
-    /^\]$/,
-    /^\]!$/,
-  ],
+  ignoreCustomComments: [/^\[$/, /^\]$/, /^\]!$/],
   minifyJS: true,
   removeAttributeQuotes: true,
   removeComments: true,
