@@ -27,7 +27,7 @@
     </H4>
     <small class="mb-1">
       {$i18nDates.periodToString(...period)}
-      <div class="sm:inline sm:before:content-[',_']">
+      <div class="sm:inline sm:before:content-['|_']">
         {$messages.get(cityId)}, {$messages.get(countryId)}
       </div>
     </small>
