@@ -69,7 +69,8 @@ const polytechIdia = {
 
 const polytechPeip = {
   'polytech-peip': 'Classe Préparatoire Intégrée (PeiP)',
-  'text-polytech-peip': "J'ai suivi une classe préparatoire généraliste de deux ans avant le cycle ingénieur, au cours de laquelle j'ai acquis des compétences solides dans divers domaines des mathématiques et de la physique. J'étais le major de la promotion et me suis classé 3ᵉ sur 1567 étudiants dans le classement national du réseau des écoles Polytech.",
+  'text-polytech-peip':
+    "J'ai suivi une classe préparatoire généraliste de deux ans avant le cycle ingénieur, au cours de laquelle j'ai acquis des compétences solides dans divers domaines des mathématiques et de la physique. J'étais le major de la promotion et me suis classé 3ᵉ sur 1567 étudiants dans le classement national du réseau des écoles Polytech.",
 };
 
 export default {
