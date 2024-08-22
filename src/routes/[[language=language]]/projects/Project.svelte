@@ -15,13 +15,13 @@
 <article
   class={classes('sm:text-justify flex flex-col', toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row')}
 >
-  <div class="mx-auto">
+  <div class="mx-auto hidden lg:block">
     <svelte:component this={embed} class="aspect-video min-w-72 w-72 rounded-lg" />
   </div>
   <div class={classes('flex flex-col', toLeft ? 'lg:mr-4' : 'lg:ml-4')}>
     <H4
       class={classes(
-        'flex items-center justify-center gap-2 mt-2 lg:mt-0',
+        'flex items-center justify-center gap-2',
         toLeft ? 'lg:justify-end' : 'lg:justify-start'
       )}
     >
