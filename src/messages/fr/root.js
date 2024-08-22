@@ -2,7 +2,7 @@ import capitalize from '$utils/capitalize';
 
 const metadata = {
   'head-description':
-    'Corentin Régent est un ingénieur logiciel passionné, en quête perpetuelle de renforcement de ses vastes compétences techniques.',
+    'Corentin Régent est un ingénieur logiciel passionné, en quête perpetuelle de renforcement de ses compétences techniques.',
   'head-title': 'Accueil',
 };
 
@@ -14,7 +14,7 @@ const rootPageMessages = {
   'my-portfolio': 'Portfolio de Corentin Régent',
   'page-header': 'Welcome',
   'page-main-text':
-    'Bonjour, je suis Corentin Régent, un ingénieur logiciel passionné. Partons ensemble pour un voyage à la découverte de mes intérêts, expériences et projets personnels.',
+    'Bonjour, je suis Corentin Régent, un ingénieur logiciel passionné. Partons ensemble pour un voyage à la découverte de mes intérêts, expériences et projets.',
   projects: 'Projets',
   'view-github-repo': 'Voir le dépôt GitHub',
 };

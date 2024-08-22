@@ -59,7 +59,7 @@
     {
       positionId: 'full-stack-developer',
       organization: 'SNCF',
-      period: ['2024-07', '2024-09'],
+      period: ['2024-07', '2024-08'],
       cityId: 'saint-herblain',
       countryId: 'france',
       text: TextSncfTrace,

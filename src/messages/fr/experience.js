@@ -37,17 +37,17 @@ const sopraSteriaApprentice = {
 
 const geodisData = {
   'text-geodis-data':
-    "Je développe actuellement une infrastructure distribuée d'entreposage de données pour Geodis, une entreprise multinationale de logistique qui est divisée en différentes entités sans avoir de système d'information commun. J'ingère et effectue divers traitements sur les données provenant de ces différentes entités, afin de calculer des indicateurs de performance globaux notamment. Je me charge également de la relecture et du test des travaux de mes collègues. Par ailleurs, je m'efforce d'automatiser les tâches répétitives dans nos processus de développement.",
+    "Je développe une infrastructure distribuée d'entreposage de données pour Geodis. J'ingère et effectue divers traitements sur les données provenant des différentes entités de l'entreprise, afin de calculer des indicateurs de performance globaux notamment. Je m'efforce également d'automatiser les tâches répétitives dans nos processus de développement.",
 };
 
 const sncfTrace = {
   'text-sncf-trace':
-    "J'ai développé une application web interne pour la SNCF, grâce à laquelle les gestionnaires de l'entreprise peuvent accéder à divers rapports financiers. J'étais le seul développeur front-end travaillant sur ce projet, et j'ai également aidé à construire le back-end, notamment pour le processus d'authentification et des mesures de cybersécurité.",
+    "J'ai développé une application web interne pour la SNCF, permettant aux gestionnaires de l'entreprise d'accéder à divers rapports financiers. J'étais le seul développeur front-end travaillant sur ce projet, et j'ai également aidé à implémenter l'authentification et des mesures de cybersécurité dans le back-end.",
 };
 
 const leaguesggIntern = {
   'text-leagues-intern-until-webapp-link':
-    "Dans le cadre de mes études, j'ai réalisé un stage à l'étranger au Danemark, dans la start-up derrière le site ",
+    "J'ai réalisé un stage d'été au Danemark, dans la start-up développant la plateforme ",
   'text-leagues-intern-until-lol-player-page':
     ". J'ai implémenté de nombreuses pages et fonctionnalités aux côtés de l'équipe, comme notamment ",
   'text-leagues-intern-lol-player-page': 'les pages de profil des joueurs de League of Legends',
@@ -59,23 +59,17 @@ const leaguesggIntern = {
 };
 
 const sncfSis = {
-  'text-sncf-sis': `Durant ma première année d'alternance, j'ai développé des applications web pour la SNCF, dans le cadre d'un projet intitulé "Systèmes d'Information pour la Supervision" (des trains). Il s'agit des applications que les agents utilisent pour contrôler et planifier en temps réel l'ensemble du trafic ferroviaire en France et dans les régions avoisinantes. C'était ma première expérience professionnelle dans l'informatique, et au départ je ne connaissais rien au développement web. Je me suis donc beaucoup investi pour développer mes compétences, avec un fort soutien de mon équipe, et suis finalement devenu responsable notamment de la rédaction de conceptions techniques de fonctionnalités complexes.`,
+  'text-sncf-sis': `Durant ma première année d'alternance, je travaillais pour la SNCF, et ai participé au développement des applications que les agents utilisent pour contrôler et planifier en temps réel l'ensemble du trafic ferroviaire en France et dans les régions avoisinantes.`,
 };
 
 const polytechIdia = {
   'polytech-idia': "Diplôme d'Ingénieur en Informatique",
-  'text-polytech-idia': `Je suis le cursus "Ingénierie des Données et de l'Intelligence Artificielle", au cours duquel j'ai notamment acquis de nombreuses connaissances dans les domaines des bases de données relationnelles, de l'analyse des données et des algorithmes d'apprentissage automatique. Il s'agit d'une formation par apprentissage : je passe la moitié de mon temps à l'école, et durant l'autre moitié je travaille à Sopra Steria.`,
+  'text-polytech-idia': `Je suis le cursus "Ingénierie des Données et de l'Intelligence Artificielle", au cours duquel j'ai notamment acquis de nombreuses connaissances dans les domaines des bases de données, de l'analyse des données et des algorithmes d'apprentissage automatique. Il s'agit d'une formation par apprentissage : je passe la moitié de mon temps à l'école, et l'autre moitié à Sopra Steria.`,
 };
 
 const polytechPeip = {
   'polytech-peip': 'Classe Préparatoire Intégrée (PeiP)',
-  'text-polytech-peip-before-math-eg':
-    "J'ai suivi une classe préparatoire généraliste de deux ans avant le cycle ingénieur, au cours de laquelle j'ai acquis des compétences solides dans divers domaines des mathématiques ",
-  'text-polytech-peip-math-eg': 'algèbre, calcul infinitésimal, ...',
-  'text-polytech-peip-before-physics-eg': 'et de la physique',
-  'text-polytech-peip-physics-eg': 'mécanique, électromagnétisme, ...',
-  'text-polytech-peip-after-physics-eg':
-    ". J'étais le major de la promotion et me suis classé 3ᵉ sur 1567 étudiants dans le classement national du réseau des écoles Polytech.",
+  'text-polytech-peip': "J'ai suivi une classe préparatoire généraliste de deux ans avant le cycle ingénieur, au cours de laquelle j'ai acquis des compétences solides dans divers domaines des mathématiques et de la physique. J'étais le major de la promotion et me suis classé 3ᵉ sur 1567 étudiants dans le classement national du réseau des écoles Polytech.",
 };
 
 export default {
