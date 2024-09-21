@@ -44,8 +44,12 @@ const portfolio = {
 
 const msgspec = {
   msgspec: 'msgspec',
+  'text-msgspec-until-benchmarks':
+    "msgspec est la librairie ",
+  'text-msgspec-benchmarks':
+    "la plus performante et économe en mémoire",
   'text-msgspec-until-pr':
-    "msgspec est la librairie la plus performante et économe en mémoire pour la sérialisation JSON dans l'écosystème Python. Le projet est écrit en C, hautement optimisé, et interagit directement avec l'API C de Python. Dans ",
+    " pour la sérialisation JSON dans l'écosystème Python. Le projet est écrit en C, hautement optimisé, et interagit directement avec l'API C de Python. Dans ",
   'this-pr': 'cette Pull Request',
   'text-msgspec-after-pr':
     ", j'ai implémenté une fonctionnalité pour imposer des contraintes de validation lors de la désérialisation de nombres de précision arbitraire.",

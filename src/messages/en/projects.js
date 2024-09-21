@@ -44,8 +44,12 @@ const portfolio = {
 
 const msgspec = {
   msgspec: 'msgspec',
+  'text-msgspec-until-benchmarks':
+    "msgspec is the ",
+  'text-msgspec-benchmarks':
+    "fastest and most memory-efficient",
   'text-msgspec-until-pr':
-    "msgspec is the fastest and most memory-efficient library for JSON serialization in the Python ecosystem. It is a highly optimized project written in C, that interacts directly with Python's C API. In ",
+    " package for JSON serialization in the Python ecosystem. It is a highly optimized project written in C, that interacts directly with Python's C API. In ",
   'this-pr': 'this Pull Request',
   'text-msgspec-after-pr':
     ', I implemented a feature for enforcing validation constraints when parsing arbitrary precision numbers.',
