@@ -12,7 +12,7 @@ const rootPageMessages = {
   home: 'Accueil',
   'made-with': 'Réalisé avec',
   'my-portfolio': 'Portfolio de Corentin Régent',
-  'page-header': 'Welcome',
+  'page-header': 'Bienvenue',
   'page-main-text':
     'Bonjour, je suis Corentin Régent, un ingénieur logiciel passionné. Partons ensemble pour un voyage à la découverte de mes intérêts, expériences et projets.',
   projects: 'Projets',
