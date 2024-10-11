@@ -5,6 +5,11 @@ const themeRune = $derived({
   get isSameAsSystem() {
     return selectedTheme.get() === systemTheme.get();
   },
+
+  get colorScheme() {
+    return selectedTheme.get();
+  },
+
   toggle() {
     selectedTheme.set(selectedTheme.get() === 'dark' ? 'light' : 'dark');
   },

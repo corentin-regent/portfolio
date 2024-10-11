@@ -5,6 +5,11 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    scrollbar-color: var(--primary1) transparent;
+    scrollbar-width: thin;
+  }
+
   svg {
     fill: currentColor;
   }

@@ -93,7 +93,7 @@ async function expectThemeLabelInvisible(labelElement) {
 
 /** @param {import('puppeteer').ElementHandle<HTMLDivElement>} mainDivElement */
 async function expectBgColorMatches(mainDivElement, theme) {
-  const expectedBgColor = theme === 'dark' ? 'rgb(9, 9, 11)' : 'rgb(250, 250, 250)';
+  const expectedBgColor = theme === 'dark' ? 'rgb(18, 18, 18)' : 'rgb(255, 255, 255)';
   const actualBgColor = await mainDivElement.evaluate(element =>
     window.getComputedStyle(element).getPropertyValue('background-color')
   );
