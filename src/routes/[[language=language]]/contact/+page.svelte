@@ -7,15 +7,15 @@
 
   const myEmail = 'corentin.regent.pro@gmail.com';
   const socials = [
-    { icon: Email, text: myEmail, linkUrl: `mailto:${myEmail}` },
+    { Icon: Email, text: myEmail, linkUrl: `mailto:${myEmail}` },
     {
-      icon: Linkedin,
+      Icon: Linkedin,
       text: 'Corentin Régent',
       linkUrl: 'https://www.linkedin.com/in/corentin-regent',
     },
-    { icon: Github, text: 'corentin-regent', linkUrl: 'https://github.com/corentin-regent' },
+    { Icon: Github, text: 'corentin-regent', linkUrl: 'https://github.com/corentin-regent' },
     {
-      icon: Discord,
+      Icon: Discord,
       text: '@cocorigon',
       linkUrl: `https://discord.com/users/497849667728703497`,
     },

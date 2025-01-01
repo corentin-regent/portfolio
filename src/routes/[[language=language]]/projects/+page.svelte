@@ -34,26 +34,26 @@
   const myProjects = [
     {
       nameId: 'rate-control',
-      embed: RateControlEmbed,
-      text: TextRateControl,
+      Embed: RateControlEmbed,
+      Text: TextRateControl,
       technologies: [Python, GithubActions],
     },
     {
       nameId: 'poetrel',
-      embed: PoetrelEmbed,
-      text: TextPoetrel,
+      Embed: PoetrelEmbed,
+      Text: TextPoetrel,
       technologies: [GithubActions, Typescript, Bash],
     },
     {
       nameId: 'assemblife',
-      embed: AssemblifeEmbed,
-      text: TextAssemblife,
+      Embed: AssemblifeEmbed,
+      Text: TextAssemblife,
       technologies: [Nasm, Linux, Docker, GithubActions],
     },
     {
       nameId: 'portfolio',
-      embed: PortfolioEmbed,
-      text: TextPortfolio,
+      Embed: PortfolioEmbed,
+      Text: TextPortfolio,
       technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
     },
   ].map(({ nameId, ...rest }) => ({
@@ -65,8 +65,8 @@
   const openSourceContributions = [
     {
       nameId: 'msgspec',
-      embed: MsgspecEmbed,
-      text: TextMsgspec,
+      Embed: MsgspecEmbed,
+      Text: TextMsgspec,
       technologies: [C, Python],
       url: 'https://jcristharif.com/msgspec/',
     },

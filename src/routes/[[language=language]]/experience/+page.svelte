@@ -43,8 +43,8 @@
       period: ['2022-10', '2025-10'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: TextSopraSteriaApprentice,
-      logo: SopraSteria,
+      Text: TextSopraSteriaApprentice,
+      Logo: SopraSteria,
     },
     {
       positionId: 'data-engineer',
@@ -52,8 +52,8 @@
       period: ['2023-08', null],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: TextGeodisData,
-      logo: Geodis,
+      Text: TextGeodisData,
+      Logo: Geodis,
       technologies: [Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
     },
     {
@@ -62,8 +62,8 @@
       period: ['2024-07', '2024-08'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: TextSncfTrace,
-      logo: Sncf,
+      Text: TextSncfTrace,
+      Logo: Sncf,
       technologies: [Angular, Html, Css, Typescript, Java, SpringBoot],
     },
     {
@@ -72,8 +72,8 @@
       period: ['2023-06', '2023-08'],
       cityId: 'copenhagen',
       countryId: 'denmark',
-      text: TextLeaguesggIntern,
-      logo: Leaguesgg,
+      Text: TextLeaguesggIntern,
+      Logo: Leaguesgg,
       technologies: [SvelteKit, Html, Css, Javascript, Node, Sql],
     },
     {
@@ -82,8 +82,8 @@
       period: ['2022-10', '2023-06'],
       cityId: 'saint-herblain',
       countryId: 'france',
-      text: TextSncfSis,
-      logo: Sncf,
+      Text: TextSncfSis,
+      Logo: Sncf,
       technologies: [Angular, Html, Css, Typescript],
     },
   ];
@@ -95,8 +95,8 @@
       period: ['2022-10', '2025-10'],
       cityId: 'nantes',
       countryId: 'france',
-      text: TextPolytechIdia,
-      logo: Polytech,
+      Text: TextPolytechIdia,
+      Logo: Polytech,
     },
     {
       positionId: 'polytech-peip',
@@ -104,8 +104,8 @@
       period: ['2020-09', '2022-05'],
       cityId: 'nantes',
       countryId: 'france',
-      text: TextPolytechPeip,
-      logo: Polytech,
+      Text: TextPolytechPeip,
+      Logo: Polytech,
     },
   ];
 </script>

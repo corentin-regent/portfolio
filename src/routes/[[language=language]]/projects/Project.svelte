@@ -9,14 +9,14 @@
 </script>
 
 <script>
-  const { nameId, embed, text, url, technologies, toLeft } = $props();
+  const { Embed, Text, nameId, url, technologies, toLeft } = $props();
 </script>
 
 <article
   class={classes('sm:text-justify flex flex-col', toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row')}
 >
   <div class="mx-auto hidden lg:block">
-    <svelte:component this={embed} class="aspect-video min-w-72 w-72 rounded-lg" />
+    <Embed class="aspect-video min-w-72 w-72 rounded-lg" />
   </div>
   <div class={classes('flex flex-col', toLeft ? 'lg:mr-4' : 'lg:ml-4')}>
     <H4
@@ -31,7 +31,7 @@
       </Link>
     </H4>
     <div class="flex flex-col-reverse lg:flex-col grow">
-      <P class="mx-auto"><svelte:component this={text} /></P>
+      <P class="mx-auto"><Text /></P>
       <Technologies
         {technologies}
         class={classes(

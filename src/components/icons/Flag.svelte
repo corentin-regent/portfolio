@@ -7,6 +7,7 @@
 
 <script>
   const { language, ...restProps } = $props();
+  const ContryFlag = $derived(flags[language]);
 </script>
 
-<svelte:component this={flags[language]} {...restProps} />
+<ContryFlag {...restProps} />

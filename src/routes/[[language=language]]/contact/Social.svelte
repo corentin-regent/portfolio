@@ -4,15 +4,12 @@
 </script>
 
 <script>
-  const { icon, linkUrl, text, width, height, iconClass } = $props();
+  const { Icon, linkUrl, text, width, height, iconClass } = $props();
 </script>
 
 <div class="flex items-center justify-center -ml-1.5">
   <Link url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
-    <svelte:component
-      this={icon}
-      class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')}
-    />
+    <Icon class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')} />
   </Link>
   <svg
     xmlns="http://www.w3.org/2000/svg"

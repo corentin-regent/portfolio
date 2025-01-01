@@ -7,16 +7,13 @@
 </script>
 
 <script>
-  const { positionId, organization, period, cityId, countryId, text, logo, technologies } =
+  const { Logo, Text, positionId, organization, period, cityId, countryId, technologies } =
     $props();
 </script>
 
 <article class="text-left flex gap-2 sm:gap-4">
   <div class="sm:flex sm:items-center mt-1 sm:mt-0">
-    <svelte:component
-      this={logo}
-      class="w-14 min-w-14 sm:w-24 sm:min-w-24 h-14 sm:h-auto max-h-20"
-    />
+    <Logo class="w-14 min-w-14 sm:w-24 sm:min-w-24 h-14 sm:h-auto max-h-20" />
   </div>
   <div class="flex flex-col">
     <H4>
@@ -34,6 +31,6 @@
     {#if technologies}
       <Technologies {technologies} class="my-1" />
     {/if}
-    <P class="xs:text-justify"><svelte:component this={text} /></P>
+    <P class="xs:text-justify"><Text /></P>
   </div>
 </article>
