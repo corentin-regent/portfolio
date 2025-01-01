@@ -6,13 +6,15 @@
 
   import availableLanguages from '$config/language/available.js';
   import defaultLanguage from '$config/language/default.js';
-  import theme from '$runes/theme/index.svelte.js';
+  import themeRune from '$runes/theme/index.svelte.js';
   import messages from '$stores/i18n/messages.svelte.js';
   import selectedLanguage from '$stores/language/selected.svelte.js';
   import resolve from '$stores/navigation/resolve.svelte.js';
 
   import favicon from '$assets/favicon.svg';
   import '../app.css';
+
+  const theme = $derived(themeRune());
 </script>
 
 <script>

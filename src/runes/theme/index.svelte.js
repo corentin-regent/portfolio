@@ -1,18 +1,20 @@
-import selectedTheme from './selected.svelte';
-import systemTheme from './system.svelte';
+import selectedTheme from './selected.svelte.js';
+import systemTheme from './system.svelte.js';
 
-const themeRune = $derived({
-  get isSameAsSystem() {
-    return selectedTheme.get() === systemTheme.get();
-  },
+const themeRune = $derived.by(() => {
+  return {
+    get isSameAsSystem() {
+      return selectedTheme.get() === systemTheme.get();
+    },
 
-  get colorScheme() {
-    return selectedTheme.get();
-  },
+    get colorScheme() {
+      return selectedTheme.get();
+    },
 
-  toggle() {
-    selectedTheme.set(selectedTheme.get() === 'dark' ? 'light' : 'dark');
-  },
+    toggle() {
+      selectedTheme.set(selectedTheme.get() === 'dark' ? 'light' : 'dark');
+    },
+  }
 });
 
-export default themeRune;
+export default () => themeRune;
