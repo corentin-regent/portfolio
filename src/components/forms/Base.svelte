@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import { enhance } from '$app/forms';
   import Favicon from '$components/icons/Favicon.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

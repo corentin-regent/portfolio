@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import sncf from '$assets/logos/sncf.svg';
   import Image from '$components/Image.svelte';
 </script>

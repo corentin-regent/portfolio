@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Link from '$components/links/Primary.svelte';
   import messages from '$stores/i18n/messages.svelte.js';
 </script>

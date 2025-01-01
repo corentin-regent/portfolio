@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Link from '$components/links/Base.svelte';
   import Technologies from '$components/Technologies.svelte';
   import H4 from '$components/text/H4.svelte';

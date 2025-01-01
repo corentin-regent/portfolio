@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import sopraSteria from '$assets/logos/sopra-steria.svg';
   import Image from '$components/Image.svelte';
 </script>

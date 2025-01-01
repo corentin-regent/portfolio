@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Email from '$components/icons/Email.svelte';
   import Discord from '$logos/Discord.svelte';
   import Github from '$logos/Github.svelte';

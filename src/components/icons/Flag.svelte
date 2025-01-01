@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import en from './flags/en.svelte';
   import fr from './flags/fr.svelte';
 

@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import spark from '$assets/technologies/spark.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';

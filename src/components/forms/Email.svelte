@@ -3,7 +3,7 @@ The postmail form is not working due to CORS.
 I'm leaving this component here as it will be useful later, after some migration.
 -->
 
-<script context="module">
+<script module>
   import Form from '$components/forms/Base.svelte';
   import EmailInput from '$components/inputs/Email.svelte';
   import TextInput from '$components/inputs/Text.svelte';

@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import BaseLink from '$components/links/Base.svelte';
   import PrimaryLink from '$components/links/Primary.svelte';
   import Github from '$logos/Github.svelte';

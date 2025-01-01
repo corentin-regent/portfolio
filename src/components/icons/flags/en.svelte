@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import englishFlag from '$assets/flags/en.svg';
   import Image from '$components/Image.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

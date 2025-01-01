@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import classes from '$utils/classes.js';
 </script>
 

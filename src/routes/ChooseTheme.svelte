@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Dark from '$components/icons/themes/Dark.svelte';
   import Light from '$components/icons/themes/Light.svelte';
   import messages from '$stores/i18n/messages.svelte.js';

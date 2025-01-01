@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import assemblife from '$assets/assemblife.webp';
   import Image from '$components/Image.svelte';
 </script>

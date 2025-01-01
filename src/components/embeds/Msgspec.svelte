@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import EmbeddedIcon from '$components/embeds/Icon.svelte';
   import Msgspec from '$logos/Msgspec.svelte';
 </script>

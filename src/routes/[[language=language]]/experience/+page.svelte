@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Geodis from '$logos/Geodis.svelte';
   import Leaguesgg from '$logos/Leaguesgg.svelte';
   import Polytech from '$logos/Polytech.svelte';

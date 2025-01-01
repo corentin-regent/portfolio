@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import resolve from '$stores/navigation/resolve.svelte.js';
 </script>
 

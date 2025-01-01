@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import H2 from '$components/text/H2.svelte';
   import P from '$components/text/P.svelte';
   import Footer from './Footer.svelte';

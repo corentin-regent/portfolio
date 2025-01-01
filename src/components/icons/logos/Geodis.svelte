@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import geodis from '$assets/logos/geodis.svg';
   import Image from '$components/Image.svelte';
 </script>

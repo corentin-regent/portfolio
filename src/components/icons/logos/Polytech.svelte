@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import polytech from '$assets/logos/polytech.svg';
   import Image from '$components/Image.svelte';
 </script>

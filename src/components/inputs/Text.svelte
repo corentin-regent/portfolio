@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Input from '$components/inputs/Base.svelte';
 </script>
 

@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import favicon from '$assets/favicon.svg';
   import Image from '$components/Image.svelte';
 </script>

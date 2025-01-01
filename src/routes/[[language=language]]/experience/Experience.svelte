@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Technologies from '$components/Technologies.svelte';
   import H4 from '$components/text/H4.svelte';
   import P from '$components/text/P.svelte';

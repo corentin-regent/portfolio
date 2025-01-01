@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import BaseLink from '$components/links/Base.svelte';
   import classes from '$utils/classes.js';
 </script>

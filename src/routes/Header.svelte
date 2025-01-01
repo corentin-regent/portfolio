@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import Menu from '$components/Menu.svelte';
   import ChooseLanguage from './ChooseLanguage.svelte';
   import ChooseTheme from './ChooseTheme.svelte';

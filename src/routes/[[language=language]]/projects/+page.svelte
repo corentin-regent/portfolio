@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import AssemblifeEmbed from '$components/embeds/Assemblife.svelte';
   import MsgspecEmbed from '$components/embeds/Msgspec.svelte';
   import PoetrelEmbed from '$components/embeds/Poetrel.svelte';

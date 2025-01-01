@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import svelteKit from '$assets/technologies/svelte-kit.svg';
   import Image from '$components/Image.svelte';
   import Link from '$components/links/Base.svelte';

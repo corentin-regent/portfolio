@@ -1,4 +1,4 @@
-<script context="module">
+<script module>
   import msgspec from '$assets/logos/msgspec.svg';
   import Image from '$components/Image.svelte';
 </script>
