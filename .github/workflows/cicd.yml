@@ -182,15 +182,13 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - uses: ./.github/actions/lighthouse
+      - name: Run Lighthouse audits
+        uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
           config-path: ./lighthouse-prod.config.json
           root-url: https://corentin-regent.github.io/portfolio/
           artifact-name: lighthouse-results-prod
-
-      - name: Run Lighthouse audits
-        uses: ./.github/actions/setup
 
       - name: Generate Lighthouse report
         run: node scripts/update-lighthouse-report.js '${{ steps.lighthouse.outputs.results-path }}/manifest.json'
