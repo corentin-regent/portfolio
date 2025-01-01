@@ -1,4 +1,5 @@
 import accumulate from 'src/utils/accumulate.js';
+import { describe, expect, it } from 'vitest';
 
 function add(a, b) {
   return a + b;

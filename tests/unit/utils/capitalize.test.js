@@ -1,4 +1,5 @@
 import capitalize from 'src/utils/capitalize.js';
+import { describe, expect, it } from 'vitest';
 
 describe('capitalize', () => {
   it('should make the first letter of a word uppercase', () => {

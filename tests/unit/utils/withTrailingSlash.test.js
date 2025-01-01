@@ -1,4 +1,5 @@
 import withTrailingSlash from 'src/utils/withTrailingSlash.js';
+import { describe, expect, it } from 'vitest';
 
 describe('withTrailingSlash', () => {
   it('should add a trailing slash if absent', () => {

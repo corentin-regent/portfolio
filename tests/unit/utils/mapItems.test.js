@@ -1,4 +1,5 @@
 import mapItems from 'src/utils/mapItems.js';
+import { describe, expect, it } from 'vitest';
 
 describe('mapItems', () => {
   it("should map the object's items using the provided functions", () => {

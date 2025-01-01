@@ -16,15 +16,6 @@ export default [
 
         $derived: 'readonly',
         $state: 'readonly',
-
-        beforeAll: 'readonly',
-        beforeEach: 'readonly',
-        describe: 'readonly',
-        expect: 'readonly',
-        it: 'readonly',
-
-        ROOT_URL: 'readonly',
-        page: 'readonly',
       },
     },
   },

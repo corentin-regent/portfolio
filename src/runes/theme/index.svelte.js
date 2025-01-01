@@ -14,7 +14,7 @@ const themeRune = $derived.by(() => {
     toggle() {
       selectedTheme.set(selectedTheme.get() === 'dark' ? 'light' : 'dark');
     },
-  }
+  };
 });
 
 export default () => themeRune;

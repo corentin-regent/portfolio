@@ -1,4 +1,5 @@
 import mapKeys from 'src/utils/mapKeys.js';
+import { describe, expect, it } from 'vitest';
 
 describe('mapKeys', () => {
   it("should map the object's keys using the provided function", () => {

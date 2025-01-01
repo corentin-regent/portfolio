@@ -1,4 +1,5 @@
 import mapValues from 'src/utils/mapValues.js';
+import { describe, expect, it } from 'vitest';
 
 describe('mapValues', () => {
   it("should map the object's values using the provided function", () => {
