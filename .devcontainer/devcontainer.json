@@ -1,7 +1,7 @@
 {
   "name": "corentin-regent/portfolio",
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
-  "postCreateCommand": "sudo apt update && cat ./chromium-dependencies.txt | xargs sudo apt install -y & npm ci",
+  "postCreateCommand": "npm ci",
   "features": {
     "ghcr.io/devcontainers/features/docker-in-docker": {},
     "ghcr.io/devcontainers/features/node": {},
@@ -15,13 +15,10 @@
         "dbaeumer.vscode-eslint",
         "github.vscode-github-actions",
         "ms-azuretools.vscode-docker",
-        "orta.vscode-jest",
         "svelte.svelte-vscode",
+        "vitest.explorer",
         "yzhang.markdown-all-in-one"
-      ],
-      "settings": {
-        "jest.runMode": "on-demand"
-      }
+      ]
     }
   }
 }
