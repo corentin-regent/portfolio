@@ -22,6 +22,12 @@ updates:
         update-types:
           - "minor"
           - "patch"
+      prod-dependencies:
+        dependency-type: "production"
+        applies-to: version-updates
+        update-types:
+          - "minor"
+          - "patch"
       prod-security:
         dependency-type: "production"
         applies-to: security-updates
