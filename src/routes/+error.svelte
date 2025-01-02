@@ -1,5 +1,5 @@
 <script module>
-  import { getMessage } from '$reactive/index.svelte.js';
+  import { getMessage } from '$runes/index.svelte.js';
 </script>
 
 <script>

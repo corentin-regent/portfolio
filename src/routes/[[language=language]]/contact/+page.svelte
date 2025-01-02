@@ -3,7 +3,7 @@
   import Discord from '$logos/Discord.svelte';
   import Github from '$logos/Github.svelte';
   import Linkedin from '$logos/Linkedin.svelte';
-  import { getMessage, getResolve } from '$reactive/index.svelte.js';
+  import { getMessage, getResolve } from '$runes/index.svelte.js';
   import Social from './Social.svelte';
 
   const myEmail = 'corentin.regent.pro@gmail.com';

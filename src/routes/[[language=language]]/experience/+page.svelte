@@ -1,5 +1,5 @@
 <script module>
-  import { getDateUtils, getMessage, getResolve } from '$reactive/index.svelte.js';
+  import { getDateUtils, getMessage, getResolve } from '$runes/index.svelte.js';
   import classes from '$utils/classes.js';
 
   import Geodis from '$logos/Geodis.svelte';

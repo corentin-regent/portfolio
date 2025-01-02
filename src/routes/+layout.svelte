@@ -10,9 +10,9 @@
     getMessage,
     getResolve,
     getSelectedLanguage,
+    getTheme,
     setupReactiveContext,
-  } from '$reactive/index.svelte.js';
-  import themeRune from '$runes/theme/index.svelte.js';
+  } from '$runes/index.svelte.js';
 
   import favicon from '$assets/favicon.svg';
   import '../app.css';
@@ -24,7 +24,7 @@
   const message = $derived(getMessage());
   const resolve = $derived(getResolve());
   const selectedLanguage = $derived(getSelectedLanguage());
-  const theme = $derived(themeRune());
+  const theme = $derived(getTheme());
 
   const { children } = $props();
 </script>

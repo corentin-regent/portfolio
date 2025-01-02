@@ -1,5 +1,5 @@
 <script module>
-  import { getMessage, getResolve } from '$reactive/index.svelte.js';
+  import { getMessage, getResolve } from '$runes/index.svelte.js';
   import classes from '$utils/classes.js';
 
   import AssemblifeEmbed from '$components/embeds/Assemblife.svelte';

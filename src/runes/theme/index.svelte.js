@@ -1,7 +1,4 @@
-import selectedTheme from './selected.svelte.js';
-import systemTheme from './system.svelte.js';
-
-const theme = $derived.by(() => {
+export default function mkTheme(systemTheme, selectedTheme) {
   return {
     get isSameAsSystem() {
       return selectedTheme.get() === systemTheme.get();
@@ -15,6 +12,4 @@ const theme = $derived.by(() => {
       selectedTheme.set(selectedTheme.get() === 'dark' ? 'light' : 'dark');
     },
   };
-});
-
-export default () => theme;
+}

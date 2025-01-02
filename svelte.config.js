@@ -14,7 +14,6 @@ export default {
       '$config/*': 'src/config/*',
       '$logos/*': 'src/components/icons/logos/*',
       '$messages/*': 'src/messages/*',
-      '$reactive/*': 'src/reactive/*',
       '$runes/*': 'src/runes/*',
       '$technologies/*': 'src/components/icons/technologies/*',
       '$utils/*': 'src/utils/*',
