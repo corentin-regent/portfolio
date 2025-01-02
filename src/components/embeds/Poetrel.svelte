@@ -1,15 +1,8 @@
-<script module>
-  import classes from '$utils/classes.js';
-</script>
-
 <script>
   const { class: cls, ...restProps } = $props();
 </script>
 
-<div
-  {...restProps}
-  class={classes(cls, 'bg-gradient-to-t from-[#0021f3] to-[#62cff4] overflow-hidden')}
->
+<div {...restProps} class={[cls, 'bg-gradient-to-t from-[#0021f3] to-[#62cff4] overflow-hidden']}>
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
     <g fill="#fff" transform="translate(10 2)">
       <path

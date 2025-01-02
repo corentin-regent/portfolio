@@ -1,6 +1,5 @@
 <script module>
   import Link from '$components/links/Base.svelte';
-  import classes from '$utils/classes.js';
 </script>
 
 <script>
@@ -11,13 +10,13 @@
   <Link {resolve} url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
     <Icon
       {message}
-      class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')}
+      class={[iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg']}
     />
   </Link>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 603 110"
-    class={classes(height, 'absolute ml-11')}
+    class={[height, 'absolute ml-11']}
     stroke="currentColor"
     stroke-width="5"
     fill="none"

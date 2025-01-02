@@ -1,6 +1,5 @@
 <script module>
   import { getMessage, getResolve } from '$runes/index.svelte.js';
-  import classes from '$utils/classes.js';
 
   import AssemblifeEmbed from '$components/embeds/Assemblife.svelte';
   import MsgspecEmbed from '$components/embeds/Msgspec.svelte';
@@ -85,16 +84,16 @@
     <ul>
       {#each projectList as project, index}
         <li
-          class={classes(
-            'px-2 lg:px-0 mx-auto mb-4 max-w-screen-sm lg:max-w-screen-xl',
-            'not-first:pt-4 not-first:border-t not-first:border-anti-bg1',
-            'lg:border-none lg:mb-0 lg:not-first:pt-0 lg:not-first:before:block',
-            'lg:not-first:before:h-0.5 lg:not-first:before:my-4',
-            'lg:not-first:before:bg-gradient-to-r',
+          class={[
+            `px-2 lg:px-0 mx-auto mb-4 max-w-screen-sm lg:max-w-screen-xl
+            not-first:pt-4 not-first:border-t not-first:border-anti-bg1
+            lg:border-none lg:mb-0 lg:not-first:pt-0 lg:not-first:before:block
+            lg:not-first:before:h-0.5 lg:not-first:before:my-4
+            lg:not-first:before:bg-gradient-to-r`,
             index % 2
               ? 'lg:not-first:before:from-transparent lg:not-first:before:to-anti-bg1'
-              : 'lg:not-first:before:from-anti-bg1'
-          )}
+              : 'lg:not-first:before:from-anti-bg1',
+          ]}
         >
           <Project {message} {resolve} {...project} toLeft={index % 2} />
         </li>

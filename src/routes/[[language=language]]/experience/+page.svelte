@@ -1,6 +1,5 @@
 <script module>
   import { getDateUtils, getMessage, getResolve } from '$runes/index.svelte.js';
-  import classes from '$utils/classes.js';
 
   import Geodis from '$logos/Geodis.svelte';
   import Leaguesgg from '$logos/Leaguesgg.svelte';
@@ -123,10 +122,8 @@
     <ul>
       {#each experienceList as experience}
         <li
-          class={classes(
-            'px-2 lg:px-4 mb-4 mx-auto xl:max-w-screen-xl',
-            'not-first:pt-4 not-first:border-t not-first:border-anti-bg1'
-          )}
+          class={`px-2 lg:px-4 mb-4 mx-auto xl:max-w-screen-xl
+            not-first:pt-4 not-first:border-t not-first:border-anti-bg1`}
         >
           <Experience {DateUtils} {message} {resolve} {...experience} />
         </li>

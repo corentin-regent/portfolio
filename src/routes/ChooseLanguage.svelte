@@ -2,7 +2,6 @@
   import Flag from '$components/icons/Flag.svelte';
   import Link from '$components/links/Base.svelte';
   import availableLanguages from '$config/language/available.js';
-  import classes from '$utils/classes.js';
 </script>
 
 <script>
@@ -17,10 +16,10 @@
           <Flag
             {message}
             {language}
-            class={classes(
+            class={[
               flagClass,
               selectedLanguage !== language && 'filter grayscale-75 hover:grayscale-0 duration-100'
-            )}
+            ]}
           />
         </Link>
       </li>
