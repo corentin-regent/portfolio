@@ -19,7 +19,7 @@
     'before:h-[1px] before:my-2 lg:before:my-4 before:mx-12 2xl:before:mx-24'
   )}
 >
-  <small>&copy; 2024 Corentin Régent</small>
+  <small>&copy; 2025 Corentin Régent</small>
 
   <div>
     {message('made-with')}&nbsp;<PrimaryLink {resolve} url="https://kit.svelte.dev/"
