@@ -34,10 +34,8 @@
     <input
       type="submit"
       value={message(submitMessageId)}
-      class={
-        `cursor-pointer rounded border border-bg3 col-start-2 col-span-3 leading-10',
-        'uppercase font-bold text-text-light animated-primary-bg`
-      }
+      class={`cursor-pointer rounded border border-bg3 col-start-2 col-span-3 leading-10',
+        'uppercase font-bold text-text-light animated-primary-bg`}
     />
   </div>
 </form>

@@ -8,10 +8,7 @@
 
 <div class="flex items-center justify-center -ml-1.5">
   <Link {resolve} url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
-    <Icon
-      {message}
-      class={[iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg']}
-    />
+    <Icon {message} class={[iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg']} />
   </Link>
   <svg
     xmlns="http://www.w3.org/2000/svg"

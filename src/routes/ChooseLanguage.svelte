@@ -18,7 +18,7 @@
             {language}
             class={[
               flagClass,
-              selectedLanguage !== language && 'filter grayscale-75 hover:grayscale-0 duration-100'
+              selectedLanguage !== language && 'filter grayscale-75 hover:grayscale-0 duration-100',
             ]}
           />
         </Link>
