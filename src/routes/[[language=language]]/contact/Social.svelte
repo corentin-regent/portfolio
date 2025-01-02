@@ -4,12 +4,15 @@
 </script>
 
 <script>
-  const { Icon, linkUrl, text, width, height, iconClass } = $props();
+  const { message, resolve, Icon, linkUrl, text, width, height, iconClass } = $props();
 </script>
 
 <div class="flex items-center justify-center -ml-1.5">
-  <Link url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
-    <Icon class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')} />
+  <Link {resolve} url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
+    <Icon
+      {message}
+      class={classes(iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg')}
+    />
   </Link>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -24,7 +27,7 @@
     <line x1="60" y1="90" x2="600" y2="90" stroke-linecap="round" />
   </svg>
   <div class="flex justify-center ml-5 w-56 font-semibold z-[1]">
-    <Link url={linkUrl}>
+    <Link {resolve} url={linkUrl}>
       {text}
     </Link>
   </div>

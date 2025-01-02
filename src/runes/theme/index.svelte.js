@@ -1,7 +1,7 @@
 import selectedTheme from './selected.svelte.js';
 import systemTheme from './system.svelte.js';
 
-const themeRune = $derived.by(() => {
+const theme = $derived.by(() => {
   return {
     get isSameAsSystem() {
       return selectedTheme.get() === systemTheme.get();
@@ -17,4 +17,4 @@ const themeRune = $derived.by(() => {
   };
 });
 
-export default () => themeRune;
+export default () => theme;

@@ -1,10 +1,6 @@
-<script module>
-  import resolve from '$stores/navigation/resolve.svelte.js';
-</script>
-
 <script>
-  const { children, url, route, language, ...restProps } = $props();
-  let href = $derived(url ?? $resolve({ route, language }));
+  const { resolve, children, url, route, language, ...restProps } = $props();
+  const href = $derived(url ?? resolve({ route, language }));
 </script>
 
 {#if url}

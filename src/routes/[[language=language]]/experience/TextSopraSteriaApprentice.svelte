@@ -1,5 +1,5 @@
-<script module>
-  import messages from '$stores/i18n/messages.svelte.js';
+<script>
+  const { message } = $props();
 </script>
 
-{$messages.get('text-sopra-steria-apprentice')}
+{message('text-sopra-steria-apprentice')}

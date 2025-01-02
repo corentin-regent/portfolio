@@ -1,28 +1,24 @@
 <script module>
-  import { page } from '$app/stores';
+  import { page } from '$app/state';
   import Link from '$components/links/Base.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
-  import resolve from '$stores/navigation/resolve.svelte.js';
   import classes from '$utils/classes.js';
-
-  const trailingSlash = /\/$/;
+  import withTrailingSlash from '$utils/withTrailingSlash.js';
 </script>
 
 <script>
-  const { items, elementClass, liClass } = $props();
+  const { message, resolve, items, elementClass, liClass } = $props();
 
   const isActive = $derived(
-    linkProps =>
-      $resolve(linkProps).replace(trailingSlash, '') ===
-      $page.url.pathname.replace(trailingSlash, '')
+    linkProps => withTrailingSlash(resolve(linkProps)) === withTrailingSlash(page.url.pathname)
   );
 </script>
 
 <nav class={elementClass}>
   <ul>
-    {#each items as { message, ...linkProps }}
+    {#each items as { msg, ...linkProps }}
       <li class={liClass}>
         <Link
+          {resolve}
           {...linkProps}
           class={classes(
             'uppercase font-bold relative duration-100',
@@ -32,7 +28,7 @@
           )}
           data-sveltekit-noscroll
         >
-          {$messages.get(message)}
+          {message(msg)}
         </Link>
       </li>
     {/each}

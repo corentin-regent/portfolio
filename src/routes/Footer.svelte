@@ -2,10 +2,13 @@
   import BaseLink from '$components/links/Base.svelte';
   import PrimaryLink from '$components/links/Primary.svelte';
   import Github from '$logos/Github.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 
   const githubRepoLink = 'https://github.com/corentin-regent/portfolio';
+</script>
+
+<script>
+  const { message, resolve } = $props();
 </script>
 
 <footer
@@ -19,17 +22,17 @@
   <small>&copy; 2024 Corentin Régent</small>
 
   <div>
-    {$messages.get('made-with')}&nbsp;<PrimaryLink url="https://kit.svelte.dev/">
-      SvelteKit
-    </PrimaryLink>
+    {message('made-with')}&nbsp;<PrimaryLink {resolve} url="https://kit.svelte.dev/"
+      >SvelteKit</PrimaryLink
+    >
   </div>
 
   <div>
-    <PrimaryLink url={githubRepoLink}>
-      {$messages.get('view-github-repo')}
+    <PrimaryLink {resolve} url={githubRepoLink}>
+      {message('view-github-repo')}
     </PrimaryLink>
-    <BaseLink url={githubRepoLink} class="ml-1.5">
-      <Github class="w-6 lg:w-8 inline" />
+    <BaseLink {resolve} url={githubRepoLink} class="ml-1.5">
+      <Github {message} class="w-6 lg:w-8 inline" />
     </BaseLink>
   </div>
 </footer>

@@ -6,6 +6,7 @@
     "build": "vite build && node scripts/minify.js",
     "dev": "vite dev",
     "lint": "prettier --write --check . && eslint .",
+    "preview": "vite preview",
     "test": "vitest run"
   },
   "devDependencies": {

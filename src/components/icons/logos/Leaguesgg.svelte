@@ -1,14 +1,10 @@
-<script module>
-  import messages from '$stores/i18n/messages.svelte.js';
-</script>
-
 <script>
-  const { ...restProps } = $props();
+  const { message, ...restProps } = $props();
 </script>
 
 <svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.028 33">
   <title>Leagues.gg</title>
-  <desc>{$messages.get('leaguesgg-svg-desc')}</desc>
+  <desc>{message('leaguesgg-svg-desc')}</desc>
 
   <defs>
     <linearGradient id="leaguesLogoGrad" x1="0.5" x2="0.5" y2="1">

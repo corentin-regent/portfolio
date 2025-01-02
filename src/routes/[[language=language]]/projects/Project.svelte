@@ -4,12 +4,11 @@
   import H4 from '$components/text/H4.svelte';
   import P from '$components/text/P.svelte';
   import Github from '$logos/Github.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 </script>
 
 <script>
-  const { Embed, Text, nameId, url, technologies, toLeft } = $props();
+  const { message, resolve, Embed, Text, nameId, url, technologies, toLeft } = $props();
 </script>
 
 <article
@@ -25,13 +24,13 @@
         toLeft ? 'lg:justify-end' : 'lg:justify-start'
       )}
     >
-      {$messages.get(nameId)}
-      <Link {url}>
-        <Github class="inline w-7" />
+      {message(nameId)}
+      <Link {resolve} {url}>
+        <Github {message} class="inline w-7" />
       </Link>
     </H4>
     <div class="flex flex-col-reverse lg:flex-col grow">
-      <P class="mx-auto"><Text /></P>
+      <P class="mx-auto"><Text {message} {resolve} /></P>
       <Technologies
         {technologies}
         class={classes(

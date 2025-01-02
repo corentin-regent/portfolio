@@ -1,14 +1,10 @@
-<script module>
-  import messages from '$stores/i18n/messages.svelte.js';
-</script>
-
 <script>
-  const { ...restProps } = $props();
+  const { message, ...restProps } = $props();
 </script>
 
 <svg {...restProps} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310">
   <title>LinkedIn</title>
-  <desc>{$messages.get('linkedin-svg-desc')}</desc>
+  <desc>{message('linkedin-svg-desc')}</desc>
 
   <path
     d="M72.16,99.73H9.927c-2.762,0-5,2.239-5,5v199.928c0,2.762,2.238,5,5,5H72.16c2.762,0,5-2.238,5-5V104.73 C77.16,101.969,74.922,99.73,72.16,99.73z"

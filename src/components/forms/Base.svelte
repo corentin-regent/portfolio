@@ -1,12 +1,11 @@
 <script module>
   import { enhance } from '$app/forms';
   import Favicon from '$components/icons/Favicon.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
   import classes from '$utils/classes.js';
 </script>
 
 <script>
-  const { children, class: cls, submitMessageId, ...restProps } = $props();
+  const { message, children, class: cls, submitMessageId, ...restProps } = $props();
   let isSending = $state(false);
   let showLoadingIcon = $state(false);
 </script>
@@ -35,7 +34,7 @@
     {/if}
     <input
       type="submit"
-      value={$messages.get(submitMessageId)}
+      value={message(submitMessageId)}
       class={classes(
         'cursor-pointer rounded border border-bg3 col-start-2 col-span-3 leading-10',
         'uppercase font-bold text-text-light animated-primary-bg'

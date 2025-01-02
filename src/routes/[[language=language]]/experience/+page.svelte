@@ -1,4 +1,7 @@
 <script module>
+  import { getDateUtils, getMessage, getResolve } from '$reactive/index.svelte.js';
+  import classes from '$utils/classes.js';
+
   import Geodis from '$logos/Geodis.svelte';
   import Leaguesgg from '$logos/Leaguesgg.svelte';
   import Polytech from '$logos/Polytech.svelte';
@@ -32,8 +35,6 @@
   import Typescript from '$technologies/Typescript.svelte';
 
   import H3 from '$components/text/H3.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
-  import classes from '$utils/classes.js';
   import Experience from './Experience.svelte';
 
   const professionalExperiences = [
@@ -110,9 +111,15 @@
   ];
 </script>
 
+<script>
+  const DateUtils = $derived(getDateUtils());
+  const message = $derived(getMessage());
+  const resolve = $derived(getResolve());
+</script>
+
 {#snippet experiences(titleId, experienceList)}
   <section id={titleId}>
-    <H3 class="my-4">{$messages.get(titleId)}</H3>
+    <H3 class="my-4">{message(titleId)}</H3>
     <ul>
       {#each experienceList as experience}
         <li
@@ -121,7 +128,7 @@
             'not-first:pt-4 not-first:border-t not-first:border-anti-bg1'
           )}
         >
-          <Experience {...experience} />
+          <Experience {DateUtils} {message} {resolve} {...experience} />
         </li>
       {/each}
     </ul>

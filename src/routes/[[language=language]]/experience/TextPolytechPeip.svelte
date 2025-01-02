@@ -1,5 +1,5 @@
-<script module>
-  import messages from '$stores/i18n/messages.svelte.js';
+<script>
+  const { message } = $props();
 </script>
 
-{$messages.get('text-polytech-peip')}
+{message('text-polytech-peip')}

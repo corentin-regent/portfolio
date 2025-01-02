@@ -1,5 +1,9 @@
 <script module>
-  import messages from '$stores/i18n/messages.svelte.js';
+  import { getMessage } from '$reactive/index.svelte.js';
 </script>
 
-{$messages.get('looks-like-youre-lost')}
+<script>
+  const message = $derived(getMessage());
+</script>
+
+{message('looks-like-youre-lost')}

@@ -1,4 +1,7 @@
 <script module>
+  import { getMessage, getResolve } from '$reactive/index.svelte.js';
+  import classes from '$utils/classes.js';
+
   import AssemblifeEmbed from '$components/embeds/Assemblife.svelte';
   import MsgspecEmbed from '$components/embeds/Msgspec.svelte';
   import PoetrelEmbed from '$components/embeds/Poetrel.svelte';
@@ -27,8 +30,6 @@
   import Typescript from '$technologies/Typescript.svelte';
 
   import H3 from '$components/text/H3.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
-  import classes from '$utils/classes.js';
   import Project from './Project.svelte';
 
   const myProjects = [
@@ -73,9 +74,14 @@
   ];
 </script>
 
+<script>
+  const message = $derived(getMessage());
+  const resolve = $derived(getResolve());
+</script>
+
 {#snippet projects(titleId, projectList)}
   <section id={titleId}>
-    <H3 class="my-4">{$messages.get(titleId)}</H3>
+    <H3 class="my-4">{message(titleId)}</H3>
     <ul>
       {#each projectList as project, index}
         <li
@@ -90,7 +96,7 @@
               : 'lg:not-first:before:from-anti-bg1'
           )}
         >
-          <Project {...project} toLeft={index % 2} />
+          <Project {message} {resolve} {...project} toLeft={index % 2} />
         </li>
       {/each}
     </ul>

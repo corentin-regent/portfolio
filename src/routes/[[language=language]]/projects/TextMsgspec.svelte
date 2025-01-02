@@ -1,14 +1,19 @@
 <script module>
   import Link from '$components/links/Primary.svelte';
-  import messages from '$stores/i18n/messages.svelte.js';
 </script>
 
-{$messages.get('text-msgspec-until-benchmarks')}<Link
+<script>
+  const { message, resolve } = $props();
+</script>
+
+{message('text-msgspec-until-benchmarks')}<Link
+  {resolve}
   url="https://jcristharif.com/msgspec/benchmarks.html"
 >
-  {$messages.get('text-msgspec-benchmarks')}
-</Link>{$messages.get('text-msgspec-until-pr')}<Link
+  {message('text-msgspec-benchmarks')}
+</Link>{message('text-msgspec-until-pr')}<Link
+  {resolve}
   url="https://github.com/jcrist/msgspec/pull/692"
 >
-  {$messages.get('this-pr')}
-</Link>{$messages.get('text-msgspec-after-pr')}
+  {message('this-pr')}
+</Link>{message('text-msgspec-after-pr')}
