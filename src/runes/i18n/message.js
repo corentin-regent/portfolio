@@ -3,7 +3,7 @@ import allMessages from '$messages/index.js';
 
 export default function mkMessage(namespaces) {
   const availableMessages = namespaces.reduce(
-    (messages, namespace) => ({ ...messages, ...allMessages[namespace] }),
+    (messages, namespace) => Object.assign(messages, allMessages[namespace]),
     {}
   );
   return building
