@@ -14,9 +14,8 @@ Javascript users will have their experience improved though, thanks to progressi
 ## Lighthouse audits
 
 Audits from [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) are run
-automatically as a part of the Continuous Integration process.
-
-Below are the current scores of my portfolio website:
+automatically as a part of the Continuous Integration process. Here are the results of the latest
+execution:
 
 ![Latest Lighthouse report](/docs/lighthouse-report.png)
 
