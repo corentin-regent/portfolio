@@ -19,10 +19,10 @@ export default function mkResolve(page, selectedLanguage) {
     includeDefaultLanguage = false,
   }) => {
     const includeLanguage = includeDefaultLanguage || language !== defaultLanguage;
-    const routeWithLanguage = includeLanguage
-      ? `/${language}${route}`
-      : route;
+    const routeWithLanguage = includeLanguage ? `/${language}${route}` : route;
     const routeWithBasePathAndLanguage = basePath + routeWithLanguage;
-    return withTrailingSlash(absolute ? CANONICAL_ORIGIN + routeWithBasePathAndLanguage : routeWithBasePathAndLanguage);
+    return withTrailingSlash(
+      absolute ? CANONICAL_ORIGIN + routeWithBasePathAndLanguage : routeWithBasePathAndLanguage
+    );
   };
 }
