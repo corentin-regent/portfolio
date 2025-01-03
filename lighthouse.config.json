@@ -20,13 +20,13 @@
           }
         ],
         "categories:accessibility": [
-          "warn",
+          "error",
           {
             "minScore": 1
           }
         ],
         "categories:best-practices": [
-          "warn",
+          "error",
           {
             "minScore": 1
           }

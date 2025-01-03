@@ -1,6 +1,7 @@
 # My portfolio website
 
 [![CI/CD](https://github.com/corentin-regent/portfolio/actions/workflows/cicd.yml/badge.svg)](https://github.com/corentin-regent/portfolio/actions/workflows/cicd.yml)
+[![Lighthouse](https://github.com/corentin-regent/portfolio/actions/workflows/lighthouse.yml/badge.svg)](https://github.com/corentin-regent/portfolio/actions/workflows/lighthouse.yml)
 
 This is the GitHub repository for
 [my portfolio website](https://corentin-regent.github.io/portfolio/). It was made with the
@@ -13,9 +14,8 @@ Javascript users will have their experience improved though, thanks to progressi
 
 ## Lighthouse audits
 
-Audits from [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) are run
-automatically as a part of the Continuous Integration process. Here are the results of the latest
-execution:
+Audits from [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) at every
+modification of the website. Here are the results of the latest execution:
 
 ![Latest Lighthouse report](/docs/lighthouse-report.png)
 
