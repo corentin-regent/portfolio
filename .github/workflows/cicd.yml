@@ -7,12 +7,8 @@ on:
       - '.devcontainer/**'
       - '.github/dependabot.yml'
       - '.gitignore'
-      - 'LICENSE*'
+      - 'LICENSE'
       - 'README.md'
-
-env:
-  REGISTRY: ghcr.io # GitHub Container Registry
-  IMAGE_NAME: ${{ github.repository }}
 
 jobs:
   lint:
@@ -67,7 +63,7 @@ jobs:
       - name: Setup Node.js and dependencies
         uses: ./.github/actions/setup
 
-      - name: Build the HTML output
+      - name: Build the static files
         env:
           BASE_PATH: '/${{ github.event.repository.name }}'
         run: npm run build
@@ -77,54 +73,11 @@ jobs:
         with:
           path: 'build/'
 
-  docker:
-    name: Build & Push Docker Image
-    runs-on: ubuntu-latest
-    needs:
-      - build
-
-    outputs:
-      digest: ${{ steps.build-push.outputs.digest }}
-
-    permissions:
-      contents: read
-      packages: write
-    concurrency: github-packages
-    environment:
-      name: github-packages
-      url: https://github.com/corentin-regent/portfolio/pkgs/container/portfolio
-
-    steps:
-      - name: Check out repository
-        uses: actions/checkout@v4
-
-      - name: Log in to the Container registry
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ env.REGISTRY }}
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Extract metadata for Docker
-        id: metadata
-        uses: docker/metadata-action@v5
-        with:
-          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
-
-      - name: Build and push Docker image
-        id: build-push
-        uses: docker/build-push-action@v6
-        with:
-          context: .
-          push: true
-          tags: ${{ steps.metadata.outputs.tags }}
-          labels: ${{ steps.metadata.outputs.labels }}
-
   audit-dev:
     name: Run Lighthouse audits on a local webserver
     runs-on: ubuntu-latest
     needs:
-      - docker
+      - build
 
     steps:
       - name: Check out repository
@@ -132,19 +85,15 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
 
-      - name: Pull Docker image
-        env:
-          IMAGE: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}@${{ needs.docker.outputs.digest }}
-        run: |
-          docker pull ${{ env.IMAGE }}
-          docker tag ${{ env.IMAGE }} portfolio
+      - name: Setup Node.js and dependencies
+        uses: ./.github/actions/setup
 
       - name: Run Lighthouse audits
         uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
           config-path: ./lighthouse-dev.config.json
-          root-url: http://localhost/
+          root-url: http://localhost:4173/
           artifact-name: lighthouse-results-dev
 
   deploy:

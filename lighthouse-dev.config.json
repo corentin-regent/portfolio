@@ -5,7 +5,7 @@
       "headful": false,
       "additive": false,
       "numberOfRuns": 3,
-      "startServerCommand": "docker run --rm -p 80:80 portfolio"
+      "startServerCommand": "npm run preview"
     },
     "assert": {
       "preset": "lighthouse:recommended",
