@@ -3,6 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/base:bookworm",
   "postCreateCommand": "npm ci",
   "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker": {},
     "ghcr.io/devcontainers/features/node": {
       "version": "22"
     },
@@ -11,9 +12,11 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "ahmadalli.vscode-nginx-conf",
         "bierner.markdown-preview-github-styles",
         "dbaeumer.vscode-eslint",
         "github.vscode-github-actions",
+        "ms-azuretools.vscode-docker",
         "svelte.svelte-vscode",
         "vitest.explorer",
         "yzhang.markdown-all-in-one"

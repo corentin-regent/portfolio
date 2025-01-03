@@ -4,7 +4,8 @@
       "method": "node",
       "headful": false,
       "additive": false,
-      "numberOfRuns": 3
+      "numberOfRuns": 3,
+      "startServerCommand": "docker run --rm -p 80:80 portfolio"
     },
     "assert": {
       "preset": "lighthouse:recommended",
@@ -14,9 +15,9 @@
         "total-byte-weight": "warn",
         "unsized-images": "off",
         "categories:performance": [
-          "warn",
+          "error",
           {
-            "minScore": 1
+            "minScore": 0.95
           }
         ],
         "categories:accessibility": [

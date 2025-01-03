@@ -7,8 +7,8 @@ on:
     branches: main
 
 jobs:
-  audit:
-    name: Run Lighthouse audits on the website
+  audit-prod:
+    name: Run Lighthouse audits on the production website
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
@@ -25,9 +25,9 @@ jobs:
         uses: ./.github/actions/lighthouse
         id: lighthouse
         with:
-          config-path: ./lighthouse.config.json
+          config-path: ./lighthouse-prod.config.json
           root-url: https://corentin-regent.github.io/portfolio/
-          artifact-name: lighthouse-results
+          artifact-name: lighthouse-results-prod
 
       - name: Generate Lighthouse report
         if: success() || failure()
