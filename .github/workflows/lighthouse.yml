@@ -30,12 +30,15 @@ jobs:
           artifact-name: lighthouse-results
 
       - name: Generate Lighthouse report
+        if: success() || failure()
         run: node scripts/update-lighthouse-report.js '${{ steps.lighthouse.outputs.results-path }}/manifest.json'
 
       - name: Pull eventual changes
+        if: success() || failure()
         run: git pull
 
       - name: Commit Lighthouse report
+        if: success() || failure()
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Refresh Lighthouse report [skip ci]'
