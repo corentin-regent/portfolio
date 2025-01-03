@@ -5,11 +5,8 @@ import { optimize as minifySvg } from 'svgo';
 const minifyHtmlConfig = {
   collapseBooleanAttributes: true,
   collapseInlineTagWhitespace: true,
-  collapseWhitespace: true,
-  ignoreCustomComments: [/^\[$/, /^\]$/, /^\]!$/],
   minifyJS: true,
   removeAttributeQuotes: true,
-  removeComments: true,
   removeEmptyAttributes: true,
   removeOptionalTags: true,
   removeRedundantAttributes: true,
