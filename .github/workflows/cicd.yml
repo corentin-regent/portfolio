@@ -88,6 +88,11 @@ jobs:
       - name: Setup Node.js and dependencies
         uses: ./.github/actions/setup
 
+      - name: Build the static files
+        env:
+          BASE_PATH: '/${{ github.event.repository.name }}'
+        run: npm run build
+
       - name: Run Lighthouse audits
         uses: ./.github/actions/lighthouse
         id: lighthouse
