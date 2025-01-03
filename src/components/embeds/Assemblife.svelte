@@ -1,4 +1,5 @@
 <script module>
+  import { assets } from '$app/paths';
   import Image from '$components/Image.svelte';
 </script>
 
@@ -6,4 +7,4 @@
   const { ...restProps } = $props();
 </script>
 
-<Image {...restProps} src="/assemblife.webp" alt="Assemblife" />
+<Image {...restProps} src={`${assets}/assemblife.webp`} alt="Assemblife" />
