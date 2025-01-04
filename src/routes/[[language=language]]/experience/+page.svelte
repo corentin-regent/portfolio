@@ -30,7 +30,7 @@
   import Spark from '$technologies/Spark.svelte';
   import SpringBoot from '$technologies/SpringBoot.svelte';
   import Sql from '$technologies/Sql.svelte';
-  import SvelteKit from '$technologies/SvelteKit.svelte';
+  import Svelte from '$technologies/Svelte.svelte';
   import Typescript from '$technologies/Typescript.svelte';
 
   import H3 from '$components/text/H3.svelte';
@@ -74,7 +74,7 @@
       countryId: 'denmark',
       Text: TextLeaguesggIntern,
       Logo: Leaguesgg,
-      technologies: [SvelteKit, Html, Css, Javascript, Node, Sql],
+      technologies: [Svelte, Html, Css, Javascript, Node, Sql],
     },
     {
       positionId: 'software-engineer',

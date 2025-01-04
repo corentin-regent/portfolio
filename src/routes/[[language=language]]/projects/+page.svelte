@@ -24,7 +24,7 @@
   import Nasm from '$technologies/Nasm.svelte';
   import Nginx from '$technologies/Nginx.svelte';
   import Python from '$technologies/Python.svelte';
-  import SvelteKit from '$technologies/SvelteKit.svelte';
+  import Svelte from '$technologies/Svelte.svelte';
   import Svg from '$technologies/Svg.svelte';
   import Typescript from '$technologies/Typescript.svelte';
 
@@ -57,7 +57,7 @@
       nameId: 'portfolio',
       Embed: PortfolioEmbed,
       Text: TextPortfolio,
-      technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
+      technologies: [Svelte, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
       urls: [
         'https://github.com/corentin-regent/portfolio',
         'https://github.com/corentin-regent/portfolio-back',
