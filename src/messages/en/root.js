@@ -8,10 +8,8 @@ const rootPageMessages = {
   contact: 'Contact',
   experience: 'Experience',
   home: 'Home',
-  'made-with': 'Made with',
   'my-portfolio': "Corentin Régent's Portfolio",
   projects: 'Projects',
-  'view-github-repo': 'View the GitHub repository',
 };
 
 const languageMessages = {

@@ -10,10 +10,8 @@ const rootPageMessages = {
   contact: 'Contact',
   experience: 'Expérience',
   home: 'Accueil',
-  'made-with': 'Réalisé avec',
   'my-portfolio': 'Portfolio de Corentin Régent',
   projects: 'Projets',
-  'view-github-repo': 'Voir le dépôt GitHub',
 };
 
 const languageMessages = {
