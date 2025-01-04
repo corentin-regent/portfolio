@@ -11,7 +11,7 @@ I'm leaving this component here as it will be useful later, after some migration
   import Label from '$components/Label.svelte';
 
   const postmailToken = '9212hx4bkn6rtrbd4sp1uvhw';
-  const myEmail = 'corentin.regent.pro@gmail.com';
+  const myEmail = 'corentin.regent@gmail.com';
 </script>
 
 <script>
