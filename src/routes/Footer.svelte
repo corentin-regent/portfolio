@@ -1,8 +1,12 @@
 <script module>
-  import BaseLink from '$components/links/Base.svelte';
+  import Link from '$components/links/Base.svelte';
   import Github from '$logos/Github.svelte';
 
-  const githubRepoLink = 'https://github.com/corentin-regent/portfolio';
+  const githubRepoLinks = [
+    'https://github.com/corentin-regent/portfolio',
+    'https://github.com/corentin-regent/portfolio-back',
+    'https://github.com/corentin-regent/portfolio-deploy',
+  ];
 </script>
 
 <script>
@@ -16,8 +20,10 @@
 >
   <small>
     &copy; 2025 Corentin Régent
-    <BaseLink {resolve} url={githubRepoLink} class="ml-1.5">
-      <Github {message} class="w-8 inline" />
-    </BaseLink>
+    {#each githubRepoLinks as githubRepoLink}
+      <Link {resolve} url={githubRepoLink} class="ml-1.5">
+        <Github {message} class="w-8 inline" />
+      </Link>
+    {/each}
   </small>
 </footer>

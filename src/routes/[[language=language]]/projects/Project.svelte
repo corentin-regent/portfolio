@@ -7,7 +7,7 @@
 </script>
 
 <script>
-  const { message, resolve, Embed, Text, nameId, url, technologies, toLeft } = $props();
+  const { message, resolve, Embed, Text, nameId, urls, technologies, toLeft } = $props();
 </script>
 
 <article class={['sm:text-justify flex flex-col', toLeft ? 'lg:flex-row-reverse' : 'lg:flex-row']}>
@@ -22,9 +22,11 @@
       ]}
     >
       {message(nameId)}
-      <Link {resolve} {url}>
-        <Github {message} class="inline w-7" />
-      </Link>
+      {#each urls as url}
+        <Link {resolve} {url}>
+          <Github {message} class="inline w-7" />
+        </Link>
+      {/each}
     </H4>
     <div class="flex flex-col-reverse lg:flex-col grow">
       <P class="mx-auto"><Text {message} {resolve} /></P>

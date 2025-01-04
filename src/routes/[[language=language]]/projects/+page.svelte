@@ -37,30 +37,34 @@
       Embed: RateControlEmbed,
       Text: TextRateControl,
       technologies: [Python, GithubActions],
+      urls: ['https://github.com/corentin-regent/rate-control'],
     },
     {
       nameId: 'poetrel',
       Embed: PoetrelEmbed,
       Text: TextPoetrel,
       technologies: [GithubActions, Typescript, Bash],
+      urls: ['https://github.com/corentin-regent/poetrel'],
     },
     {
       nameId: 'assemblife',
       Embed: AssemblifeEmbed,
       Text: TextAssemblife,
       technologies: [Nasm, Linux, Docker, GithubActions],
+      urls: ['https://github.com/corentin-regent/assemblife'],
     },
     {
       nameId: 'portfolio',
       Embed: PortfolioEmbed,
       Text: TextPortfolio,
       technologies: [SvelteKit, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
+      urls: [
+        'https://github.com/corentin-regent/portfolio',
+        'https://github.com/corentin-regent/portfolio-back',
+        'https://github.com/corentin-regent/portfolio-deploy',
+      ],
     },
-  ].map(({ nameId, ...rest }) => ({
-    nameId,
-    url: 'https://github.com/corentin-regent/' + nameId,
-    ...rest,
-  }));
+  ];
 
   const openSourceContributions = [
     {
@@ -68,7 +72,7 @@
       Embed: MsgspecEmbed,
       Text: TextMsgspec,
       technologies: [C, Python],
-      url: 'https://jcristharif.com/msgspec/',
+      urls: ['https://jcristharif.com/msgspec/'],
     },
   ];
 </script>
