@@ -28,7 +28,7 @@ const metrics = [
   ['seo', 'SEO'],
 ];
 
-function extractScores(manifest) {
+export function extractScores(manifest) {
   const summaries = manifest.filter(audit => audit.isRepresentativeRun).map(audit => audit.summary);
   const sumScores = summaries.reduce(
     (agg, incoming) =>
@@ -38,7 +38,7 @@ function extractScores(manifest) {
       ),
     {}
   );
-  return mapValues(sumScores, sumScore => sumScore / summaries.length);
+  return mapValues(sumScores, ({ value: sumScore }) => sumScore / summaries.length);
 }
 
 function mkSvgReport(scores) {
@@ -151,7 +151,6 @@ function pointOnArc(centerX, centerY, radius, angle) {
 if (import.meta.url.endsWith(process.argv[1])) {
   const manifestFilePath = process.argv[2];
   const manifest = JSON.parse(readFileSync(manifestFilePath, { encoding: 'utf-8' }));
-  console.log(readFileSync(manifestFilePath, { encoding: 'utf-8' })) // eslint-disable-line
   const scores = extractScores(manifest);
   const svgReport = mkSvgReport(scores);
   if (!existsSync('img/')) {
