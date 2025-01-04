@@ -1,6 +1,6 @@
 const metadata = {
   'head-description':
-    'Corentin Régent is a passionate software engineer from France, dedicated to continuously enhancing his technical skills.',
+    "Hi, I'm Corentin Régent, a passionate software engineer from France. Let's embark on a journey together as you explore my interests, experiences and projects",
   'head-title': 'Home',
 };
 
@@ -10,9 +10,6 @@ const rootPageMessages = {
   home: 'Home',
   'made-with': 'Made with',
   'my-portfolio': "Corentin Régent's Portfolio",
-  'page-header': 'Welcome',
-  'page-main-text':
-    "Hi, I'm Corentin Régent, a passionate software engineer from France. Let's embark on a journey together as you explore my interests, experiences and projects.",
   projects: 'Projects',
   'view-github-repo': 'View the GitHub repository',
 };

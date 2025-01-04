@@ -1,6 +1,4 @@
 <script module>
-  import H2 from '$components/text/H2.svelte';
-  import P from '$components/text/P.svelte';
   import Footer from './Footer.svelte';
   import Header from './Header.svelte';
 
@@ -76,10 +74,6 @@ in order to prevent the browser from scrolling back up on toggle
 <div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
   <Header {message} {resolve} {selectedLanguage} />
   <main class="w-full px-2 lg:px-4 text-center">
-    <div class="max-w-screen-md mx-auto">
-      <H2 class="mb-2">{message('page-header')}</H2>
-      <P>{message('page-main-text')}</P>
-    </div>
     {@render children()}
   </main>
   <Footer {message} {resolve} />

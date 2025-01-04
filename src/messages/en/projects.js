@@ -1,15 +1,12 @@
 const metadata = {
   'head-description':
-    'I have gained valuable technical skills by working on diverse personal projects, throughout my journey in the world of computer science. Here are showcased some of the greatest of these projects.',
-  'head-title': 'Personal projects',
+    'I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have been working on in my spare time.',
+  'head-title': 'Projects',
 };
 
 const pageMessages = {
   'my-projects': 'My own projects',
   'open-source-contributions': 'Contributions to other open-source projects',
-  'page-header': 'Personal projects',
-  'page-main-text':
-    'I enjoy discovering new technologies, concepts and paradigms, and am seeking to always acquire new skills. Here are showcased some of the greatest projects I have realised on my free time.',
 };
 
 const rateControl = {

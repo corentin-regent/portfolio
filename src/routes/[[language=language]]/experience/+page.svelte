@@ -118,7 +118,7 @@
 
 {#snippet experiences(titleId, experienceList)}
   <section id={titleId}>
-    <H3 class="my-4">{message(titleId)}</H3>
+    <H3 class="mb-4">{message(titleId)}</H3>
     <ul>
       {#each experienceList as experience}
         <li

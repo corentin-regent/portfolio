@@ -1,15 +1,12 @@
 const metadata = {
   'head-description':
-    "J'ai acquis de précieuses compétences techniques en travaillant sur divers projets personnels, tout au long de mon parcours dans le monde de l'informatique. Voici quelques-uns des meilleurs de ces projets.",
-  'head-title': 'Projets personnels',
+    "J'adore découvrir de nouvelles technologies, concepts et paradigmes, et cherche à toujours acquérir de nouvelles compétences. Voici quelques-uns des meilleurs projets auxquels j'ai pu me consacrer sur mon temps libre.",
+  'head-title': 'Projets',
 };
 
 const pageMessages = {
   'my-projects': 'Mes propres projets',
   'open-source-contributions': "Contribution à d'autres projets open-source",
-  'page-header': 'Projets personnels',
-  'page-main-text':
-    "J'adore découvrir de nouvelles technologies, concepts et paradigmes, et cherche à toujours acquérir de nouvelles compétences. Voici quelques-uns des meilleurs projets que j'ai réalisé sur mon temps libre.",
 };
 
 const rateControl = {

@@ -79,8 +79,8 @@
 </script>
 
 {#snippet projects(titleId, projectList)}
-  <section id={titleId}>
-    <H3 class="my-4">{message(titleId)}</H3>
+  <section class="mb-4" id={titleId}>
+    <H3 class="mb-4">{message(titleId)}</H3>
     <ul>
       {#each projectList as project, index}
         <li

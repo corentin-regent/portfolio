@@ -1,13 +1,10 @@
 const metadata = {
   'head-description':
-    'Learn about my journey, as an engineer working in different branches of computer science, in several companies and for large-scale clients.',
+    'Learn about my journey as a Computer Science engineer.',
   'head-title': 'Experience',
 };
 
 const pageMessages = {
-  'page-header': 'Experience',
-  'page-main-text':
-    'Here you will find the different stages of my career as a Computer Science engineer.',
   'professional-journey': 'Professional journey',
   education: 'Education',
 };

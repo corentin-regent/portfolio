@@ -1,13 +1,10 @@
 const metadata = {
   'head-description':
-    "Découvrez mon parcours, en tant qu'ingénieur dans différentes branches de l'informatique, au sein de plusieurs entreprises et pour des clients de grande envergure.",
+    "Découvrez mon parcours en tant qu'ingénieur en informatique.",
   'head-title': 'Expérience',
 };
 
 const pageMessages = {
-  'page-header': 'Expérience',
-  'page-main-text':
-    "Vous trouverez ici les différentes étapes de ma carrière en tant qu'ingénieur en informatique.",
   'professional-journey': 'Parcours professionnel',
   education: 'Études',
 };
