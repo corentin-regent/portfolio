@@ -1,6 +1,5 @@
 const metadata = {
-  'head-description':
-    'Learn about my journey as a Computer Science engineer.',
+  'head-description': 'Learn about my journey as a Computer Science engineer.',
   'head-title': 'Experience',
 };
 

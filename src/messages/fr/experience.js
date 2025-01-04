@@ -1,6 +1,5 @@
 const metadata = {
-  'head-description':
-    "Découvrez mon parcours en tant qu'ingénieur en informatique.",
+  'head-description': "Découvrez mon parcours en tant qu'ingénieur en informatique.",
   'head-title': 'Expérience',
 };
 

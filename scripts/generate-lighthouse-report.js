@@ -151,7 +151,7 @@ function pointOnArc(centerX, centerY, radius, angle) {
 if (import.meta.url.endsWith(process.argv[1])) {
   const manifestFilePath = process.argv[2];
   const manifest = JSON.parse(readFileSync(manifestFilePath, { encoding: 'utf-8' }));
-  console.log(readFileSync(manifestFilePath, { encoding: 'utf-8' })) // eslint-disable-line
+  console.log(readFileSync(manifestFilePath, { encoding: 'utf-8' })); // eslint-disable-line
   const scores = extractScores(manifest);
   const svgReport = mkSvgReport(scores);
   if (!existsSync('img/')) {
