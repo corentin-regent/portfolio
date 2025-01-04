@@ -148,7 +148,7 @@ function pointOnArc(centerX, centerY, radius, angle) {
   };
 }
 
-if (require.main === module) {
+if (import.meta.url.endsWith(process.argv[1])) {
   const manifestFilePath = process.argv[2];
   const manifest = JSON.parse(readFileSync(manifestFilePath, { encoding: 'utf-8' }));
   const scores = extractScores(manifest);
