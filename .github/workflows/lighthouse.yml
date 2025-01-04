@@ -31,7 +31,7 @@ jobs:
 
       - name: Generate Lighthouse report
         if: success() || failure()
-        run: node scripts/update-lighthouse-report.js '${{ steps.lighthouse.outputs.results-path }}/manifest.json'
+        run: node scripts/generate-lighthouse-report.js '${{ steps.lighthouse.outputs.results-path }}/manifest.json'
 
       - name: Pull eventual changes
         if: success() || failure()
@@ -42,4 +42,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: 'Refresh Lighthouse report [skip ci]'
-          file_pattern: docs/lighthouse-report.png
+          file_pattern: img/lighthouse-report.svg

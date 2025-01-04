@@ -10,7 +10,9 @@ export default [
   {
     languageOptions: {
       globals: {
+        module: 'readonly',
         process: 'readonly',
+        require: 'readonly',
         setTimeout: 'readonly',
         window: 'readonly',
 
