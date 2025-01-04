@@ -6,7 +6,7 @@ const metadata = {
 
 const pageMessages = {
   'my-projects': 'Mes propres projets',
-  'open-source-contributions': "Contribution à d'autres projets open-source",
+  'open-source-contributions': "Contributions notables à d'autres projets open-source",
 };
 
 const rateControl = {
