@@ -72,7 +72,7 @@
       Embed: MsgspecEmbed,
       Text: TextMsgspec,
       technologies: [C, Python],
-      urls: ['https://jcristharif.com/msgspec/'],
+      urls: ['https://github.com/jcrist/msgspec'],
     },
   ];
 </script>
