@@ -32,6 +32,7 @@ const iconDescriptionMessages = {
   'discord-svg-desc': 'The Discord logo, accompanies a reference to a Discord account.',
   'email-svg-desc': 'Envelope icon, accompanies a reference to an email address.',
   'github-svg-desc': 'The GitHub logo, indicates that the resource is available on GitHub.',
+  'kafka-svg-desc': 'The Kafka logo, indicates that the project involved using Kafka.',
   'leaguesgg-svg-desc':
     'The Leagues.gg logo, accompanies mentions of the Leagues.gg company and web application.',
   'linkedin-svg-desc': 'The LinkedIn logo, accompanies a reference to a LinkedIn profile.',

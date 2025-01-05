@@ -28,16 +28,18 @@
 
     --leagues-main-color1: black;
     --leagues-main-color2: black;
+
+    --kafka-color: #231f20;
   }
 
   @define-mixin light-theme {
-    ~ div .dark-only {
+    ~div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~ div {
+    ~div {
       --anti-bg1: var(--light-bg1);
       --anti-bg2: var(--light-bg2);
 
@@ -52,6 +54,8 @@
 
       --leagues-main-color1: white;
       --leagues-main-color2: #ccc;
+
+      --kafka-color: white;
 
       .light-only {
         display: none;

@@ -38,7 +38,7 @@
       </div>
     </small>
     {#if technologies}
-      <Technologies {technologies} class="my-1" />
+      <Technologies {message} {technologies} class="my-1" />
     {/if}
     <P class="xs:text-justify"><Text {message} {resolve} /></P>
   </div>

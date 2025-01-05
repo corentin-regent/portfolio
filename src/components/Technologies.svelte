@@ -1,11 +1,11 @@
 <script>
-  const { technologies, class: cls } = $props();
+  const { message, technologies, class: cls } = $props();
 </script>
 
 <ul class={[cls, 'flex flex-wrap gap-2']}>
   {#each technologies as Technology}
     <li>
-      <Technology imgClass="h-7" />
+      <Technology {message} imgClass="h-7" />
     </li>
   {/each}
 </ul>

@@ -24,6 +24,8 @@
   import Html from '$technologies/Html.svelte';
   import Java from '$technologies/Java.svelte';
   import Javascript from '$technologies/Javascript.svelte';
+  import Kafka from '$technologies/Kafka.svelte';
+  import Nifi from '$technologies/Nifi.svelte';
   import Node from '$technologies/Node.svelte';
   import Python from '$technologies/Python.svelte';
   import Scala from '$technologies/Scala.svelte';
@@ -54,7 +56,7 @@
       countryId: 'france',
       Text: TextGeodisData,
       Logo: Geodis,
-      technologies: [Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
+      technologies: [Kafka, Nifi, Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
     },
     {
       positionId: 'full-stack-developer',

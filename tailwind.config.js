@@ -16,6 +16,7 @@ export default {
           'bg2',
           'bg3',
           'dark-bg1',
+          'kafka-color',
           'leagues-main-color2',
           'leagues-main-color1',
           'primary1',

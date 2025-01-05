@@ -18,11 +18,11 @@
   import Css from '$technologies/Css.svelte';
   import Docker from '$technologies/Docker.svelte';
   import GithubActions from '$technologies/GithubActions.svelte';
+  import Go from '$technologies/Go.svelte';
   import Html from '$technologies/Html.svelte';
   import Javascript from '$technologies/Javascript.svelte';
   import Linux from '$technologies/Linux.svelte';
   import Nasm from '$technologies/Nasm.svelte';
-  import Nginx from '$technologies/Nginx.svelte';
   import Python from '$technologies/Python.svelte';
   import Svelte from '$technologies/Svelte.svelte';
   import Svg from '$technologies/Svg.svelte';
@@ -43,7 +43,7 @@
       nameId: 'poetrel',
       Embed: PoetrelEmbed,
       Text: TextPoetrel,
-      technologies: [GithubActions, Typescript, Bash],
+      technologies: [Typescript, Bash, GithubActions],
       urls: ['https://github.com/corentin-regent/poetrel'],
     },
     {
@@ -57,7 +57,7 @@
       nameId: 'portfolio',
       Embed: PortfolioEmbed,
       Text: TextPortfolio,
-      technologies: [Svelte, Html, Css, Javascript, Svg, GithubActions, Docker, Nginx],
+      technologies: [Svelte, Html, Css, Javascript, Svg, Go, Docker, GithubActions],
       urls: [
         'https://github.com/corentin-regent/portfolio',
         'https://github.com/corentin-regent/portfolio-back',
