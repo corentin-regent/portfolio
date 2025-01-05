@@ -9,7 +9,6 @@ const pageMessages = {
 };
 
 const jobs = {
-  'apprentice-computer-science': 'Apprenti Ingénieur en Informatique',
   'data-engineer': 'Ingénieur des Données',
   'full-stack-developer': 'Développeur Full-Stack',
   'software-engineer': 'Ingénieur logiciel',
@@ -24,11 +23,6 @@ const cities = {
   copenhagen: 'Copenhague',
   nantes: 'Nantes',
   'saint-herblain': 'Saint-Herblain',
-};
-
-const sopraSteriaApprentice = {
-  'text-sopra-steria-apprentice':
-    "J'ai travaillé à Sopra Steria pendant les trois années de mon apprentissage, pour plusieurs clients de grande envergure. J'ai volontairement changé de projet plusieurs fois, afin d'acquérir davantage de compétences dans différents contextes ; ces expériences sont détaillées ci-dessous.",
 };
 
 const geodisData = {
@@ -75,7 +69,6 @@ export default {
   ...jobs,
   ...countries,
   ...cities,
-  ...sopraSteriaApprentice,
   ...geodisData,
   ...sncfTrace,
   ...leaguesggIntern,

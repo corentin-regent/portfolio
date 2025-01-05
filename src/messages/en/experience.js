@@ -9,7 +9,6 @@ const pageMessages = {
 };
 
 const jobs = {
-  'apprentice-computer-science': 'Apprentice Computer Science Engineer',
   'data-engineer': 'Data Engineer',
   'full-stack-developer': 'Full-Stack Developer',
   'software-engineer': 'Software Engineer',
@@ -24,11 +23,6 @@ const cities = {
   copenhagen: 'Copenhagen',
   nantes: 'Nantes',
   'saint-herblain': 'Saint-Herblain',
-};
-
-const sopraSteriaApprentice = {
-  'text-sopra-steria-apprentice':
-    'I have worked for large-scale clients at Sopra Steria during the three years of my apprenticeship. I voluntarily changed projects several times, in order to gather more knowledge in different contexts; these experiences are detailed below.',
 };
 
 const geodisData = {
@@ -77,7 +71,6 @@ export default {
   ...jobs,
   ...countries,
   ...cities,
-  ...sopraSteriaApprentice,
   ...geodisData,
   ...sncfTrace,
   ...leaguesggIntern,

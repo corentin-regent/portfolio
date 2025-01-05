@@ -5,7 +5,6 @@
   import Leaguesgg from '$logos/Leaguesgg.svelte';
   import Polytech from '$logos/Polytech.svelte';
   import Sncf from '$logos/Sncf.svelte';
-  import SopraSteria from '$logos/SopraSteria.svelte';
 
   import TextGeodisData from './TextGeodisData.svelte';
   import TextLeaguesggIntern from './TextLeaguesggIntern.svelte';
@@ -13,7 +12,6 @@
   import TextPolytechPeip from './TextPolytechPeip.svelte';
   import TextSncfSis from './TextSncfSis.svelte';
   import TextSncfTrace from './TextSncfTrace.svelte';
-  import TextSopraSteriaApprentice from './TextSopraSteriaApprentice.svelte';
 
   import Airflow from '$technologies/Airflow.svelte';
   import Angular from '$technologies/Angular.svelte';
@@ -40,17 +38,8 @@
 
   const professionalExperiences = [
     {
-      positionId: 'apprentice-computer-science',
-      organization: 'Sopra Steria',
-      period: ['2022-10', '2025-10'],
-      cityId: 'saint-herblain',
-      countryId: 'france',
-      Text: TextSopraSteriaApprentice,
-      Logo: SopraSteria,
-    },
-    {
       positionId: 'data-engineer',
-      organization: 'Geodis',
+      organization: 'Geodis (Sopra Steria)',
       period: ['2023-08', null],
       cityId: 'saint-herblain',
       countryId: 'france',
@@ -60,7 +49,7 @@
     },
     {
       positionId: 'full-stack-developer',
-      organization: 'SNCF',
+      organization: 'SNCF (Sopra Steria)',
       period: ['2024-07', '2024-08'],
       cityId: 'saint-herblain',
       countryId: 'france',
@@ -80,7 +69,7 @@
     },
     {
       positionId: 'software-engineer',
-      organization: 'SNCF',
+      organization: 'SNCF (Sopra Steria)',
       period: ['2022-10', '2023-06'],
       cityId: 'saint-herblain',
       countryId: 'france',
