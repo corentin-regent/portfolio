@@ -33,13 +33,13 @@
   }
 
   @define-mixin light-theme {
-    ~div .dark-only {
+    ~ div .dark-only {
       display: none;
     }
   }
 
   @define-mixin dark-theme {
-    ~div {
+    ~ div {
       --anti-bg1: var(--light-bg1);
       --anti-bg2: var(--light-bg2);
 
