@@ -48,7 +48,7 @@
       technologies: [Kafka, Nifi, Spark, Scala, Ansible, Airflow, Cloudera, Python, AzurePipelines],
     },
     {
-      positionId: 'full-stack-developer',
+      positionId: 'software-engineer',
       organization: 'SNCF (Sopra Steria)',
       period: ['2024-07', '2024-08'],
       cityId: 'saint-herblain',
@@ -58,7 +58,7 @@
       technologies: [Angular, Html, Css, Typescript, Java, SpringBoot],
     },
     {
-      positionId: 'full-stack-developer',
+      positionId: 'software-engineer',
       organization: 'Leagues.gg',
       period: ['2023-06', '2023-08'],
       cityId: 'copenhagen',

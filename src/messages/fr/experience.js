@@ -9,8 +9,7 @@ const pageMessages = {
 };
 
 const jobs = {
-  'data-engineer': 'Ingénieur des Données',
-  'full-stack-developer': 'Développeur Full-Stack',
+  'data-engineer': 'Ingénieur de données',
   'software-engineer': 'Ingénieur logiciel',
 };
 
@@ -53,12 +52,12 @@ const sncfSis = {
 };
 
 const polytechIdia = {
-  'polytech-idia': "Diplôme d'Ingénieur en Informatique",
-  'text-polytech-idia': `Je suis le cursus "Ingénierie des Données et de l'Intelligence Artificielle", au cours duquel j'ai notamment acquis de nombreuses connaissances dans les domaines des bases de données, de l'analyse des données et des algorithmes d'apprentissage automatique. Il s'agit d'une formation par apprentissage : je passe la moitié de mon temps à l'école, et l'autre moitié à Sopra Steria.`,
+  'polytech-idia': "Diplôme d'ingénieur en informatique",
+  'text-polytech-idia': `Je poursuis le cursus "Ingénierie des Données et de l'Intelligence Artificielle", au cours duquel j'ai notamment acquis de nombreuses connaissances dans les domaines des bases de données, de l'analyse des données et des algorithmes d'apprentissage automatique. Il s'agit d'une formation par apprentissage : je passe la moitié de mon temps à l'école, et l'autre moitié à Sopra Steria.`,
 };
 
 const polytechPeip = {
-  'polytech-peip': 'Classe Préparatoire Intégrée (PeiP)',
+  'polytech-peip': 'Classe préparatoire intégrée (PeiP)',
   'text-polytech-peip':
     "J'ai suivi une classe préparatoire généraliste de deux ans avant le cycle ingénieur, au cours de laquelle j'ai acquis des compétences solides dans divers domaines des mathématiques et de la physique. J'étais le major de la promotion et me suis classé 3ᵉ sur 1567 étudiants dans le classement national du réseau des écoles Polytech.",
 };

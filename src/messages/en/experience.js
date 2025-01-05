@@ -9,9 +9,8 @@ const pageMessages = {
 };
 
 const jobs = {
-  'data-engineer': 'Data Engineer',
-  'full-stack-developer': 'Full-Stack Developer',
-  'software-engineer': 'Software Engineer',
+  'data-engineer': 'Data engineer',
+  'software-engineer': 'Software engineer',
 };
 
 const countries = {
