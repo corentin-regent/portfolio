@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "@sveltejs/kit": "^2.15.1",
-    "svelte": "^5.16.0",
-    "tailwindcss": "^4.0.0"
+    "svelte": "^5.20.4",
+    "tailwindcss": "^4.0.8"
   },
   "devDependencies": {
     "@sveltejs/adapter-static": "^3.0.8",
