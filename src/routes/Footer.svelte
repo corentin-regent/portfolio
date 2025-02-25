@@ -14,9 +14,11 @@
 </script>
 
 <footer
-  class={`text-center grid mt-auto mb-4 leading-6
-    before:bg-gradient-to-r before:from-transparent before:via-anti-bg1
-    before:h-[1px] before:mb-4 before:mt-2 lg:before:mt-4 before:mx-12 2xl:before:mx-24`}
+  class={[
+    'text-center grid mt-auto mb-4 leading-6',
+    'before:bg-linear-to-r before:from-transparent before:via-dark-bg1 dark:before:via-light-bg1',
+    'before:h-[1px] before:mb-4 before:mt-2 lg:before:mt-4 before:mx-12 2xl:before:mx-24',
+  ]}
 >
   <small>
     &copy; 2025 Corentin Régent

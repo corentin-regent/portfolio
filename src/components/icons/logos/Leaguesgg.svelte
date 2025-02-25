@@ -8,8 +8,8 @@
 
   <defs>
     <linearGradient id="leaguesLogoGrad" x1="0.5" x2="0.5" y2="1">
-      <stop offset="0.586" class="stop-leagues-main-color2" />
-      <stop offset="1" class="stop-leagues-main-color1" />
+      <stop offset="0.586" class="stop-black dark:stop-[#ccc]" />
+      <stop offset="1" class="stop-black dark:stop-white" />
     </linearGradient>
   </defs>
 

@@ -113,8 +113,10 @@
     <ul>
       {#each experienceList as experience}
         <li
-          class={`px-2 lg:px-4 mb-4 mx-auto xl:max-w-screen-xl
-            not-first:pt-4 not-first:border-t not-first:border-anti-bg1`}
+          class={[
+            'px-2 lg:px-4 mb-4 mx-auto xl:max-w-(--breakpoint-xl)',
+            'not-first:pt-4 not-first:border-t not-first:border-dark-bg1 dark:not-first:border-light-bg1',
+          ]}
         >
           <Experience {DateUtils} {message} {resolve} {...experience} />
         </li>

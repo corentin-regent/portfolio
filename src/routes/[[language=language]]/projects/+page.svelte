@@ -89,14 +89,14 @@
       {#each projectList as project, index}
         <li
           class={[
-            `px-2 lg:px-0 mx-auto mb-4 max-w-screen-sm lg:max-w-screen-xl
-            not-first:pt-4 not-first:border-t not-first:border-anti-bg1
-            lg:border-none lg:mb-0 lg:not-first:pt-0 lg:not-first:before:block
-            lg:not-first:before:h-0.5 lg:not-first:before:my-4
-            lg:not-first:before:bg-gradient-to-r`,
+            'px-2 lg:px-0 mx-auto mb-4 max-w-(--breakpoint-sm) lg:max-w-(--breakpoint-xl)',
+            'not-first:pt-4 not-first:border-t not-first:border-dark-bg1 dark:not-first:border-light-bg1',
+            'lg:border-none lg:mb-0 lg:not-first:pt-0 lg:not-first:before:block',
+            'lg:not-first:before:h-0.5 lg:not-first:before:my-4',
+            'lg:not-first:before:bg-linear-to-r',
             index % 2
-              ? 'lg:not-first:before:from-transparent lg:not-first:before:to-anti-bg1'
-              : 'lg:not-first:before:from-anti-bg1',
+              ? 'lg:not-first:before:from-transparent lg:not-first:before:to-dark-bg1 dark:lg:not-first:before:to-light-bg1'
+              : 'lg:not-first:before:from-dark-bg1 dark:lg:not-first:before:from-light-bg1',
           ]}
         >
           <Project {message} {resolve} {...project} toLeft={index % 2} />

@@ -71,7 +71,9 @@ in order to prevent the browser from scrolling back up on toggle
   onchange={theme.toggle}
 />
 
-<div class="flex flex-col min-w-screen min-h-screen bg-bg1 text-text1">
+<div
+  class="flex flex-col min-w-full min-h-screen bg-light-bg1 dark:bg-dark-bg1 text-text-dark1 dark:text-text-light1"
+>
   <Header {message} {resolve} {selectedLanguage} />
   <main class="w-full px-2 lg:px-4 text-center">
     {@render children()}

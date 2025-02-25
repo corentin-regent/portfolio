@@ -6,6 +6,9 @@
   const { children, class: cls, ...restProps } = $props();
 </script>
 
-<BaseLink {...restProps} class={[cls, 'text-primary1 hover:underline']}>
+<BaseLink
+  {...restProps}
+  class={[cls, 'text-primary-dark1 dark:text-primary-light1 hover:underline']}
+>
   {@render children()}
 </BaseLink>

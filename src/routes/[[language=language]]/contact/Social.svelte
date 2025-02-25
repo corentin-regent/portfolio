@@ -7,8 +7,8 @@
 </script>
 
 <div class="flex items-center justify-center">
-  <Link {resolve} url={linkUrl} class="rounded-full overflow-hidden z-[1] text-text-light">
-    <Icon {message} class={[iconClass, width, height, 'bg-gradient-to-t primary-gradient-bg']} />
+  <Link {resolve} url={linkUrl} class="rounded-full overflow-hidden z-1 text-text-light1">
+    <Icon {message} class={[iconClass, width, height, 'bg-linear-to-t primary-gradient-bg']} />
   </Link>
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +22,7 @@
     <path d="M36,80 C48,90 50,90 60,90" />
     <line x1="60" y1="90" x2="550" y2="90" stroke-linecap="round" />
   </svg>
-  <div class="flex justify-center ml-4 w-52 font-semibold z-[1]">
+  <div class="flex justify-center ml-4 w-52 font-semibold z-1">
     <Link {resolve} url={linkUrl}>
       {text}
     </Link>

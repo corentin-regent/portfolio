@@ -1,26 +1,120 @@
-@import-glob "styles/**/*.css";
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+  --animate-spin-non-uniform: spin 2s ease-in-out infinite;
 
-@layer base {
-  :root {
-    scrollbar-color: var(--primary1) transparent;
-    scrollbar-width: thin;
+  --breakpoint-xs: 512px;
+
+  --color-dark-bg1: #121212;
+  --color-dark-bg2: #18181b;
+  --color-light-bg1: #ffffff;
+  --color-light-bg2: #d4d4d8;
+
+  --color-text-dark1: black;
+  --color-text-dark2: #52525b;
+  --color-text-light1: white;
+  --color-text-light2: #9ca3af;
+
+  --color-primary-light1: #ff5700;
+  --color-primary-lighter1: #f07d00;
+  --color-primary-dark1: #dc3000;
+  --color-primary-darker1: #cf022b;
+}
+
+@custom-variant not-hover (&:not(:hover));
+
+@custom-variant dark {
+  @media (prefers-color-scheme: dark) {
+    &:where(#theme-selector:not(:checked) ~ *),
+    &:where(#theme-selector:not(:checked) ~ * *) {
+      @slot;
+    }
   }
 
-  svg {
-    fill: currentColor;
+  @media (prefers-color-scheme: light) {
+    &:where(#theme-selector:checked ~ *),
+    &:where(#theme-selector:checked ~ * *) {
+      @slot;
+    }
   }
 }
 
-@layer utilities {
-  .primary-gradient-bg {
-    @apply from-primary-lighter1 to-primary-darker1;
+@utility primary-gradient-bg {
+  @apply from-primary-lighter1 to-primary-darker1;
+}
+
+@utility noisy-bg {
+  background-image: url(/noise.webp);
+}
+
+@utility stop-* {
+  stop-color: --value(color, [color]);
+  stop-color: --value(--color- *);
+}
+
+@utility dark-theme {
+  .light-only {
+    display: none;
+  }
+}
+
+@utility light-theme {
+  .dark-only {
+    display: none;
+  }
+}
+
+@layer base {
+  svg {
+    fill: currentColor;
   }
 
-  .noisy-bg {
-    background-image: url(/noise.webp);
+  :root {
+    scrollbar-color: var(--color-primary-light1) transparent;
+    scrollbar-width: thin;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    #theme-selector:not(:checked) ~ * {
+      @apply dark-theme;
+    }
+
+    #theme-selector:checked ~ * {
+      @apply light-theme;
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    #theme-selector:not(:checked) ~ * {
+      @apply light-theme;
+    }
+
+    #theme-selector:checked ~ * {
+      @apply dark-theme;
+    }
+  }
+}
+
+/* ANIMATIONS */
+
+@utility animated-primary-bg {
+  background-size: 1000px 1000px;
+  background-repeat: repeat;
+  background-image: linear-gradient(
+    -45deg,
+    var(--primary-darker1),
+    var(--primary-lighter1),
+    var(--primary-darker1),
+    var(--primary-lighter1),
+    var(--primary-darker1)
+  );
+  animation: traverseBg linear 16s reverse infinite;
+}
+
+@layer utilities {
+  @keyframes traverseBg {
+    100% {
+      background-position: 1000px 1000px;
+    }
   }
 }

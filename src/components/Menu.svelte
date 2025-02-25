@@ -20,10 +20,11 @@
           {resolve}
           {...linkProps}
           class={[
-            `uppercase font-bold relative duration-100
-            after:absolute after:left-0 after:-bottom-0.5 after:w-full after:h-0.5
-            after:bg-primary1 after:transition-all after:duration-250`,
-            !isActive(linkProps) && 'not-hover:text-text2 not-hover:after:scale-x-0',
+            'uppercase font-bold relative duration-100',
+            'after:absolute after:left-0 after:-bottom-0.5 after:w-full after:h-0.5',
+            'after:bg-primary-dark1 dark:after:bg-primary-light1 after:transition-all after:duration-250',
+            !isActive(linkProps) &&
+              'not-hover:text-text-dark2 dark:not-hover:text-text-light2 not-hover:after:scale-x-0',
           ]}
           data-sveltekit-noscroll
         >
